@@ -1,27 +1,19 @@
 {
-  "name": "one-to-one",
+  "name": "onetoone",
   "version": "1.0.0",
-<<<<<<< HEAD
-=======
   "description": "",
->>>>>>> origin
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Lemur-Media-Studio/One-to-one.git"
+    "url": "git+https://github.com/Lemur-Media-Studio/OneToOne.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Lemur-Media-Studio/One-to-one/issues"
+    "url": "https://github.com/Lemur-Media-Studio/OneToOne/issues"
   },
-<<<<<<< HEAD
-  "homepage": "https://github.com/Lemur-Media-Studio/One-to-one#readme",
-  "description": ""
-=======
-  "homepage": "https://github.com/Lemur-Media-Studio/One-to-one#readme"
->>>>>>> origin
+  "homepage": "https://github.com/Lemur-Media-Studio/OneToOne#readme"
 }
