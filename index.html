@@ -27,7 +27,7 @@
 
     <!-- SECCION BOTONES -->
     <div class="background-opaco w-50 mx-auto">
-        <h2 class="d-flex justify-content-center pt-2">Gracias por utilizar nuestros servicios</h2>
+        <h2 class="d-flex justify-content-center pt-2 bienvenidos-gracias">Gracias por utilizar nuestros servicios</h2>
 
         <p class="d-flex justify-content-center">Si usted ya tiene una cuenta:</p>
 
@@ -62,10 +62,10 @@
                                         <div class="form-floating">
                                             <input type="password" class="form-control" id="floatingPassword"
                                                 placeholder="Password">
-                                            <label for="floatingPassword" class="form-label">Contraseña</label>
+                                            <label for="floatingPassword" class="form-label mx-2">Contraseña</label>
                                         </div>
                                         <div class="col-auto">
-                                            <span id="passwordHelpInline" class="form-text">
+                                            <span id="passwordHelpInline" class="form-text olvido-contraseña">
                                                 ¿Olvidó su contraseña?
                                             </span>
                                         </div>
@@ -77,14 +77,14 @@
                                 </form>
                             </div>
                             <div class="col-auto mx-auto">
-                                <span id="passwordHelpInline" class="form-text">
+                                <span id="passwordHelpInline" class="form-text login-cursiva">
                                     Si no tiene una cuenta:
                                 </span>
                                 <div class="d-flex justify-content-center">
                                     <a href="">Regístrese</a>
                                 </div>
-                                <div class="d-flex justify-content-center pt-3">
-                                    O
+                                <div class="d-flex justify-content-center pt-2 login-cursiva">
+                                    o
                                 </div>
                             </div>
                             <div class="col-auto">
@@ -120,14 +120,14 @@
                     <div class="login-border">
                         <div class="modal-content">
                             <!-- BOTÓN DE CIERRE 2 -->
-                            <button type="button" class="btn-close pt-4 login-boton-cierre d-block"
+                            <button type="button" class="btn-close pt-4 login-boton-cierre-2 d-block"
                                 data-bs-dismiss="modal" aria-label="Close"></button>
                             <div class="modal-header">
                                 <h5 class="modal-title mx-auto" id="exampleModalLabel"><img src="img/logo.png"
                                         alt="logo one to one" class="img-fluid"></h5>
                             </div>
                             <div class="modal-body">
-                                <h2>Crear una cuenta</h2>
+                                <h2 class="login-crear-cuenta">Crear una cuenta</h2>
                                 <form>
                                     <div class="form-floating mb-3">
                                         <input type="nombre" class="form-control" id="floatingInput"
@@ -148,17 +148,16 @@
                                         <div class="form-floating">
                                             <input type="password" class="form-control" id="floatingPassword"
                                                 placeholder="Password">
-                                            <label for="floatingPassword" class="form-label">Contraseña</label>
+                                            <label for="floatingPassword" class="form-label mx-2">Contraseña</label>
                                         </div>
-                                        <div class="col-auto">
-                                            <span id="passwordHelpInline" class="form-text">
+                                        <div class="d-grid gap-2 col-6 mx-auto pt-3 login-border-iniciar w-100">
+                                            <button class="btn btn-primary login-iniciar" type="button">Crear cuenta</button>
+                                        </div>
+                                        <div class="col-auto pt-2">
+                                            <span id="passwordHelpInline" class="form-text login-cursiva">
                                                 ¿Ya tiene una cuenta?
                                             </span>
                                         </div>
-                                    </div>
-                                    <div class="d-grid gap-2 col-6 mx-auto pt-2 login-border-iniciar w-100">
-                                        <button class="btn btn-primary login-iniciar" type="button">Iniciar
-                                            sesión</button>
                                     </div>
                                 </form>
                             </div>

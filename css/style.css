@@ -25,7 +25,9 @@
 }
 body {
   background-image: url(../img/fondo-puerto.jpg);
-  background-position-y: 950px;
+  background-position-y: -100px;
+  background-repeat: no-repeat !important;
+  background-size: cover;
 }
 
 .modal-header {
@@ -45,7 +47,12 @@ body {
 
 .login-boton-cierre {
   position: relative;
-  left: 356px;
+  left: 350px;
+}
+
+.login-boton-cierre-2 {
+  position: relative;
+  left: 415px;
 }
 
 .form-control {
@@ -56,7 +63,18 @@ body {
 }
 
 .form-label {
+  font-family: BentonBook !important;
+  font-size: 18px !important;
+}
+
+.form-label {
   color: #B4AC9D !important;
+}
+
+.olvido-contraseña {
+  font-family: BentonBook !important;
+  font-size: 12px !important;
+  font-style: italic !important;
 }
 
 .login-iniciar {
@@ -64,11 +82,25 @@ body {
   border: 1px #847d72 solid !important;
   border-radius: 15px !important;
   color: white !important;
+  font-family: BentonBlack !important;
+  font-size: 20px !important;
 }
 
 .login-border-iniciar {
   border-bottom: 1px solid #847d72 !important;
   padding: 15px;
+}
+
+.login-cursiva {
+  font-family: BentonBook !important;
+  font-size: 18px !important;
+  font-style: italic !important;
+}
+
+.modal-body .login-crear-cuenta {
+  color: #002A3C !important;
+  font-family: BentonBlack !important;
+  font-size: 30px !important;
 }
 
 .customers-bienvenidos {
@@ -83,7 +115,7 @@ body {
   border-radius: 40px;
   width: 25% !important;
 }
-.background-opaco h2 {
+.background-opaco .bienvenidos-gracias {
   font-family: BentonMedium !important;
   font-size: 25px !important;
   color: #002A3C !important;
