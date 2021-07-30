@@ -1,11 +1,11 @@
 console.log('CONEXION CON BACK HECHA')
 
-const signupForm = document.querySelector('#signup-form');
+const loginForm = document.querySelector('#login-form');
 
-signupForm.addEventListener('submit', (e) =>{
+loginForm.addEventListener('submit', (e) =>{
     e.preventDefault();
-    const email = document.querySelector('#email').value;
-    const pass = document.querySelector('#password').value;
+    const email = document.querySelector('#idemail').value;
+    const pass = document.querySelector('#idpass').value;
 
 
     auth.createUserWithEmailAndPassword(email, pass)
