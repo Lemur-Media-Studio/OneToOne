@@ -1,37 +1,11 @@
 @charset "UTF-8";
-/* SuperFly One */
-/*Regla que permite elegir mi fuente*/
-@font-face {
-  /*El nombre que le pongo, puede ser cualquiera*/
-  font-family: "SuperFlyOne";
-  /*Ruta desde donde traigo la fuente y el formato para los navegadores*/
-  src: url("../fonts/SuperFlyOne.ttf") format("woff");
-}
-/*Para traer fuentes que están descargadas -yo no lo estoy usando-*/
-/* BentonSans Medium */
-@font-face {
-  font-family: "BentonMedium";
-  src: url(../fonts/BentonSans-Medium.ttf) format("woff");
-}
-/* BentonSans Book */
-@font-face {
-  font-family: "BentonBook";
-  src: url(../fonts/BentonSans-Book.ttf) format("woff");
-}
-/* BentonSans Black */
-@font-face {
-  font-family: "BentonBlack";
-  src: url(../fonts/BentonSans-Black.ttf) format("woff");
-}
 body {
   background-image: url(../img/fondo-puerto.jpg);
-  background-position-y: -100px;
-  background-repeat: no-repeat !important;
-  background-size: cover;
+  background-position-y: 950px;
 }
 
 .modal-header {
-  border: none !important;
+  border: none;
 }
 
 .login-border {
@@ -47,7 +21,7 @@ body {
 
 .login-boton-cierre {
   position: relative;
-  left: 350px;
+  left: 356px;
 }
 
 .login-boton-cierre-2 {
@@ -71,12 +45,6 @@ body {
   color: #B4AC9D !important;
 }
 
-.olvido-contraseña {
-  font-family: BentonBook !important;
-  font-size: 12px !important;
-  font-style: italic !important;
-}
-
 .login-iniciar {
   background-color: #002A3C !important;
   border: 1px #847d72 solid !important;
@@ -89,6 +57,12 @@ body {
 .login-border-iniciar {
   border-bottom: 1px solid #847d72 !important;
   padding: 15px;
+}
+
+.olvido-contraseña {
+  font-family: BentonBook !important;
+  font-size: 12px !important;
+  font-style: italic !important;
 }
 
 .login-cursiva {
@@ -133,6 +107,31 @@ body {
   margin-bottom: 10px;
   background-color: #002A3C;
   border-radius: 35px;
+}
+
+/* SuperFly One */
+/*Regla que permite elegir mi fuente*/
+@font-face {
+  /*El nombre que le pongo, puede ser cualquiera*/
+  font-family: "SuperFlyOne";
+  /*Ruta desde donde traigo la fuente y el formato para los navegadores*/
+  src: url("../fonts/SuperFlyOne.ttf") format("woff");
+}
+/*Para traer fuentes que están descargadas -yo no lo estoy usando-*/
+/* BentonSans Medium */
+@font-face {
+  font-family: "BentonMedium";
+  src: url(../fonts/BentonSans-Medium.ttf) format("woff");
+}
+/* BentonSans Book */
+@font-face {
+  font-family: "BentonBook";
+  src: url(../fonts/BentonSans-Book.ttf) format("woff");
+}
+/* BentonSans Black */
+@font-face {
+  font-family: "BentonBlack";
+  src: url(../fonts/BentonSans-Black.ttf) format("woff");
 }
 
 /*# sourceMappingURL=style.css.map */

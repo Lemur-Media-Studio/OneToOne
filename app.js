@@ -1,5 +1,12 @@
 console.log('CONEXION CON BACK HECHA')
 
+const loginForm = document.querySelector('#login-form');
+
+loginForm.addEventListener('submit', (e) =>{
+    e.preventDefault();
+    const email = document.querySelector('#idemail').value;
+    const pass = document.querySelector('#idpass').value;
+=======
 const signupForm = document.querySelector('#signup-form');
 
 signupForm.addEventListener('submit', (e) =>{

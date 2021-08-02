@@ -1,12 +1,10 @@
 body {
     background-image: url(../img/fondo-puerto.jpg);
-    background-position-y: -100px;
-    background-repeat: no-repeat !important;
-    background-size: cover;
+    background-position-y: 950px;
 }
 
 .modal-header {
-    border: none !important;
+    border: none;
 }
 
 .login-border {
@@ -22,7 +20,7 @@ body {
 
 .login-boton-cierre {
     position: relative;
-    left: 350px;
+    left: 356px;
 }
 
 .login-boton-cierre-2{
@@ -46,12 +44,6 @@ body {
     color: $beige-claro !important;
 }
 
-.olvido-contraseña {
-    font-family: BentonBook !important;
-    font-size: 12px !important;
-    font-style: italic !important;
-}
-
 .login-iniciar {
     background-color: $azul !important;
     border: 1px $beige-medio solid !important;
@@ -64,6 +56,12 @@ body {
 .login-border-iniciar {
     border-bottom: 1px solid $beige-medio !important;
     padding: 15px;
+}
+
+.olvido-contraseña {
+    font-family: BentonBook !important;
+    font-size: 12px !important;
+    font-style: italic !important;
 }
 
 .login-cursiva {
