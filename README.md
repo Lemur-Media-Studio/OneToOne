@@ -1,5 +1,6 @@
 Asi funciona:
 Agrego producto por form
+
 ![captura 1](https://user-images.githubusercontent.com/80124560/130792892-3ebb0f05-5db5-4436-8ac4-e410bb3d8b89.PNG)
 
 Clientes y Productos son como "2 tablas de excel" ahi creo una tabla para productos y una para clientes. Comparten las variables name y producto, eso es para que haya conexion entre una tabla y otra.
