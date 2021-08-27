@@ -86,20 +86,6 @@ body {
   font-size: 30px !important;
 }
 
-.imagen-whatsapp {
-  position: relative;
-  left: 1850px;
-  top: 220px;
-  filter: drop-shadow(0 0 0.5rem black);
-}
-
-/* sticky
-    position: -webkit-sticky;
-    position: sticky;
-    top: 870px !important;
-    right: 20px;
-    float: right;
-*/
 .customers-bienvenidos {
   font-family: SuperFlyOne !important;
   font-size: 200px;
@@ -169,6 +155,33 @@ body {
 @font-face {
   font-family: "BentonBlack";
   src: url(../fonts/BentonSans-Black.ttf) format("woff");
+}
+.body-productos {
+  background-color: #fff !important;
+  background-image: none !important;
+}
+
+header {
+  background-color: #002A3C !important;
+}
+header ul {
+  display: flex !important;
+  justify-content: end !important;
+}
+
+.bienvenido-usuario {
+  background-color: #B4AC9D;
+  padding: 1px 10px 1px 10px !important;
+}
+
+.productos-titulo {
+  font-family: "BentonBlack" !important;
+  color: #002A3C;
+  font-size: 30px !important;
+  position: relative;
+  left: 50px;
+  padding-top: 80px;
+  padding-bottom: 25px;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,13 @@
+.body-productos {
+    background-color: #fff !important;
+    background-image: none !important;
+}
+
+header {
+    background-color: $azul !important;
+
+    ul{
+        display: flex !important;
+        justify-content: end !important;
+    }
+}
