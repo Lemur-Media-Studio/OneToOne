@@ -10,3 +10,5 @@ Clientes y Productos son como "2 tablas de excel" ahi creo una tabla para produc
 
 Si agrego otro producto figura en la coleccion productos y tmb figura como ultimo producto en la coleccion usuarios.
 
+
+https://console.firebase.google.com/project/inicio-logueo-one/firestore/data/~2F
