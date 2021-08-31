@@ -1,6 +1,13 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 @import "base/colours.scss";
 @import "components/login";
 @import "components/bienvenidos";
 @import "base/fonts.scss";
 @import "components/header";
 @import "components/productos";
+@import "components/admin";

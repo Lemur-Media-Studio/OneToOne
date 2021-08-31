@@ -1,4 +1,10 @@
 @charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   background-image: url(../img/fondo-puerto.jpg);
   background-position-y: 950px;
@@ -156,11 +162,6 @@ body {
   font-family: "BentonBlack";
   src: url(../fonts/BentonSans-Black.ttf) format("woff");
 }
-.body-productos {
-  background-color: #fff !important;
-  background-image: none !important;
-}
-
 header {
   background-color: #002A3C !important;
 }
@@ -182,6 +183,57 @@ header ul {
   left: 50px;
   padding-top: 80px;
   padding-bottom: 25px;
+}
+
+.body-productos {
+  background-color: #fff !important;
+  background-image: none !important;
+}
+
+.admin-body {
+  background-image: none !important;
+  background-color: #fff !important;
+}
+
+.admin-header {
+  background-color: #002A3C !important;
+}
+
+.admin-titulo {
+  background-color: #B4AC9D;
+  font-family: "BentonMedium" !important;
+  color: #002A3C;
+  padding-top: 5px;
+}
+
+.admin-form {
+  font-family: BentonBook !important;
+  font-size: 18px !important;
+  color: #3F545B !important;
+  background-color: rgba(166, 175, 179, 0.507) !important;
+  margin: 5px;
+}
+
+/* BOTON ENVIAR */
+.admin-btn-enviar {
+  min-width: 130px;
+  height: 40px;
+  color: #fff;
+  padding: 5px 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  border-radius: 5px;
+  border: none;
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5), 7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  background: #002A3C;
+}
+
+.admin-btn-enviar:active {
+  top: 2px;
 }
 
 /*# sourceMappingURL=style.css.map */
