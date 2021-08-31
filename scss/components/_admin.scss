@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.admin-body {
+    background-image: none !important;
+    background-color: #fff !important;
+}
+
+.admin-header{
+    background-color: $azul !important;
+}
+
+.admin-titulo{
+    background-color: $beige-claro;
+}
+
+/* BOTON ENVIAR */
+
+.admin-btn-enviar {
+    min-width: 130px;
+    height: 40px;
+    color: #fff;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 5px;
+    border: none;
+    box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5), 7px 7px 20px 0px rgba(0,0,0,.1), 4px 4px 5px 0px rgba(0,0,0,.1);
+    background: $azul;
+  }
+
+  .admin-btn-enviar:active {
+    top: 2px;
+  }

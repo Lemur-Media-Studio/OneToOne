@@ -1,6 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   background-image: url(../img/fondo-puerto.jpg);
   background-position-y: 950px;
+}
+
+.modal-header {
+  border: none;
+}
+
+.login-border {
+  border: 25px solid rgba(132, 125, 114, 0.507) !important;
+  border-radius: 40px !important;
+}
+
+.modal-content {
+  background-color: #B4AC9D !important;
+  border: 1px solid rgba(132, 125, 114, 0.507) !important;
+  border-radius: 15px !important;
+}
+
+.login-boton-cierre {
+  position: relative;
+  left: 356px;
+}
+
+.form-control {
+  background-color: #847d72 !important;
+  border: 1px #847d72 solid !important;
+  border-radius: 15px !important;
+  color: #B4AC9D !important;
+}
+
+.form-label {
+  color: #B4AC9D !important;
+}
+
+.login-iniciar {
+  background-color: #002A3C !important;
+  border: 1px #847d72 solid !important;
+  border-radius: 15px !important;
+  color: white !important;
+}
+
+.login-border-iniciar {
+  border-bottom: 1px solid #847d72 !important;
+  padding: 15px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.admin-body {
+  background-image: none !important;
+  background-color: #fff !important;
+}
+
+.admin-header {
+  background-color: #002A3C !important;
+}
+
+.admin-titulo {
+  background-color: #B4AC9D;
+}
+
+/* BOTON ENVIAR */
+.admin-btn-enviar {
+  min-width: 130px;
+  height: 40px;
+  color: #fff;
+  padding: 5px 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  border-radius: 5px;
+  border: none;
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5), 7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  background: #002A3C;
+}
+
+.admin-btn-enviar:active {
+  top: 2px;
 }
 
 /*# sourceMappingURL=style.css.map */
