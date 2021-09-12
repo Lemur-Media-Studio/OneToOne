@@ -1,6 +1,11 @@
+body {
+    background-image: url(../img/fondo-puerto.jpg);
+    background-position-y: 950px !important;
+}
+
 .customers-bienvenidos{
     font-family: SuperFlyOne !important;
-    font-size: 200px;
+    font-size: 200px !important;
     color: $azul;
 }
 
@@ -33,12 +38,12 @@
     }
 }
 
-.imagen-whatsapp {
+/* .imagen-whatsapp {
     position: relative;
     left: 1850px;
     top: 220px;
     filter: drop-shadow(0 0 0.5rem black); 
-}
+} */
 
 /* sticky
     position: -webkit-sticky;

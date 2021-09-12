@@ -5,11 +5,30 @@
   box-sizing: border-box;
 }
 
-body {
-  background-image: url(../img/fondo-puerto.jpg);
-  background-position-y: 950px;
+/* SuperFly One */
+/*Regla que permite elegir mi fuente*/
+@font-face {
+  /*El nombre que le pongo, puede ser cualquiera*/
+  font-family: "SuperFlyOne";
+  /*Ruta desde donde traigo la fuente y el formato para los navegadores*/
+  src: url("../fonts/SuperFlyOne.ttf") format("woff");
 }
-
+/*Para traer fuentes que están descargadas -yo no lo estoy usando-*/
+/* BentonSans Medium */
+@font-face {
+  font-family: "BentonMedium";
+  src: url(../fonts/BentonSans-Medium.ttf) format("woff");
+}
+/* BentonSans Book */
+@font-face {
+  font-family: "BentonBook";
+  src: url(../fonts/BentonSans-Book.ttf) format("woff");
+}
+/* BentonSans Black */
+@font-face {
+  font-family: "BentonBlack";
+  src: url(../fonts/BentonSans-Black.ttf) format("woff");
+}
 .modal-header {
   border: none;
 }
@@ -92,9 +111,14 @@ body {
   font-size: 30px !important;
 }
 
+body {
+  background-image: url(../img/fondo-puerto.jpg);
+  background-position-y: 950px !important;
+}
+
 .customers-bienvenidos {
   font-family: SuperFlyOne !important;
-  font-size: 200px;
+  font-size: 200px !important;
   color: #002A3C;
 }
 
@@ -124,13 +148,12 @@ body {
   border-radius: 35px;
 }
 
-.imagen-whatsapp {
-  position: relative;
-  left: 1850px;
-  top: 220px;
-  filter: drop-shadow(0 0 0.5rem black);
-}
-
+/* .imagen-whatsapp {
+    position: relative;
+    left: 1850px;
+    top: 220px;
+    filter: drop-shadow(0 0 0.5rem black); 
+} */
 /* sticky
     position: -webkit-sticky;
     position: sticky;
@@ -138,30 +161,6 @@ body {
     right: 20px;
     float: right;
 */
-/* SuperFly One */
-/*Regla que permite elegir mi fuente*/
-@font-face {
-  /*El nombre que le pongo, puede ser cualquiera*/
-  font-family: "SuperFlyOne";
-  /*Ruta desde donde traigo la fuente y el formato para los navegadores*/
-  src: url("../fonts/SuperFlyOne.ttf") format("woff");
-}
-/*Para traer fuentes que están descargadas -yo no lo estoy usando-*/
-/* BentonSans Medium */
-@font-face {
-  font-family: "BentonMedium";
-  src: url(../fonts/BentonSans-Medium.ttf) format("woff");
-}
-/* BentonSans Book */
-@font-face {
-  font-family: "BentonBook";
-  src: url(../fonts/BentonSans-Book.ttf) format("woff");
-}
-/* BentonSans Black */
-@font-face {
-  font-family: "BentonBlack";
-  src: url(../fonts/BentonSans-Black.ttf) format("woff");
-}
 header {
   background-color: #002A3C !important;
 }
@@ -234,6 +233,191 @@ header ul {
 
 .admin-btn-enviar:active {
   top: 2px;
+}
+
+/* MOBILE STYLES */
+@media only screen and (max-width: 450px) {
+  /* BIENVENIDOS */
+  body {
+    background-image: url(../img/fondo-mobile.png) !important;
+    background-size: cover !important;
+    background-position-y: 0px !important;
+  }
+
+  .logo-one {
+    height: 40px !important;
+  }
+
+  .customers-bienvenidos {
+    font-family: "SuperFlyOne" !important;
+    font-size: 100px !important;
+    color: #002A3C;
+  }
+
+  .background-opaco {
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px transparent;
+    border-radius: 40px;
+    width: 85% !important;
+  }
+  .background-opaco .bienvenidos-gracias {
+    font-family: "BentonMedium" !important;
+    font-size: 16px !important;
+    color: #002A3C !important;
+  }
+  .background-opaco p {
+    font-family: "BentonBook" !important;
+    font-size: 14px !important;
+    color: #002A3C !important;
+  }
+  .background-opaco .login-iniciar-bienvenidos {
+    width: 50% !important;
+    font-family: "BentonBlack" !important;
+    font-size: 14px !important;
+    margin-top: -15px;
+    margin-bottom: 10px;
+    background-color: #002A3C;
+    border-radius: 35px;
+  }
+
+  .imagen-whatsapp {
+    margin-top: 40%;
+    margin-right: 20px;
+    position: sticky !important;
+    filter: drop-shadow(0 0 0.5rem black);
+  }
+}
+/* LOGIN */
+.logo-login {
+  height: 50px !important;
+}
+
+.login-border {
+  border: 25px solid rgba(166, 175, 179, 0.507) !important;
+  border-radius: 40px !important;
+}
+
+.modal-content {
+  background-color: white !important;
+  border: 1px solid rgba(132, 125, 114, 0.507) !important;
+  border-radius: 15px !important;
+}
+
+.login-boton-cierre {
+  position: relative;
+  left: 270px !important;
+}
+
+.login-boton-cierre-2 {
+  position: relative;
+  left: 270px !important;
+}
+
+.form-control {
+  background-color: #a6afb3 !important;
+  border: 1px #002A3C solid !important;
+  border-radius: 15px !important;
+  color: #3f545b !important;
+}
+
+.form-label {
+  font-family: BentonBook !important;
+  font-size: 12px !important;
+}
+
+.form-label {
+  color: #3F545B !important;
+}
+
+.login-iniciar {
+  background-color: #002A3C !important;
+  border: 1px #847d72 solid !important;
+  border-radius: 15px !important;
+  color: white !important;
+  font-family: BentonBlack !important;
+  font-size: 15px !important;
+}
+
+.login-iniciar-rs {
+  background-color: #002A3C !important;
+  border: 1px #847d72 solid !important;
+  border-radius: 15px !important;
+  color: white !important;
+  font-family: BentonMedium !important;
+  font-size: 15px !important;
+}
+
+.login-border-iniciar {
+  border-bottom: 1px solid #847d72 !important;
+  padding: 15px;
+}
+
+.olvido-contraseña {
+  font-family: BentonBook !important;
+  font-size: 10px !important;
+  font-style: italic !important;
+}
+
+.login-cursiva {
+  font-family: BentonBook !important;
+  font-size: 12px !important;
+  font-style: italic !important;
+}
+
+.modal-body .login-crear-cuenta {
+  color: #002A3C !important;
+  font-family: BentonBlack !important;
+  font-size: 22px !important;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* MACBOOK PRO 13" - NOTEBOOKS STYLES */
+@media only screen and (min-width: 1200px) and (max-width: 1440px) {
+  /* BIENVENIDOS */
+  body {
+    background-image: url(../img/fondo-puerto.jpg);
+    background-size: cover !important;
+    background-position-y: 0px !important;
+  }
+
+  .customers-bienvenidos {
+    font-family: "SuperFlyOne" !important;
+    font-size: 160px !important;
+    color: #002A3C;
+  }
+
+  .background-opaco {
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px transparent;
+    border-radius: 40px;
+    width: 30% !important;
+  }
+  .background-opaco .bienvenidos-gracias {
+    font-family: "BentonMedium" !important;
+    font-size: 22px !important;
+    color: #002A3C !important;
+  }
+  .background-opaco p {
+    font-family: "BentonBook" !important;
+    font-size: 18px !important;
+    color: #002A3C !important;
+  }
+  .background-opaco .login-iniciar-bienvenidos {
+    width: 50% !important;
+    font-family: "BentonBlack" !important;
+    font-size: 22px !important;
+    margin-top: -15px;
+    margin-bottom: 10px;
+    background-color: #002A3C;
+    border-radius: 35px;
+  }
+
+  .imagen-whatsapp {
+    margin-top: 150px;
+    margin-right: 50px;
+    position: sticky !important;
+    filter: drop-shadow(0 0 0.5rem black);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
