@@ -31,7 +31,6 @@ todoForm.addEventListener('submit', async e => {
     const description = todoForm['todo_description'].value;
 
     await create(name, id, producto, description); // Llamo a mi función create
-
     todoForm.reset(); // Reseteamos los campos
 });
 
