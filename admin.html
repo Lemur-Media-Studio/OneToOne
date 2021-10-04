@@ -13,6 +13,9 @@
   <!-- CSS -->
   <link rel="stylesheet" href="./css/style.css">
 
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/f2f2acd656.js" crossorigin="anonymous"></script>
+
   <!-- The core Firebase JS SDK is always required and must be listed first -->
   <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
 
@@ -54,7 +57,7 @@
 
     <h1 class="text-center admin-titulo">PANEL DE ADMINISTRADOR</h1>
 
-    <!-- Formulario admin -->
+    <!-- FORM ADMIN -->
     <form id="todo_form" class="text-center mt-5">
       <div>
         <input type="text" class="admin-form w-50" id="todo_name" placeholder="Nombre del usuario">
@@ -70,6 +73,123 @@
       </div>
       <button class="admin-btn-enviar" id='btn_todo_form'>Guardar</button>
     </form>
+    <!-- FIN FORM -->
+
+    <!-- FORM USUARIOS Y PRODUCTOS -->
+    <section class="container text-center mt-5">
+      <div class="row">
+
+        <!-- USUARIOS -->
+        <div class="col-6 admin-border">
+          <h3 class="text-start mx-3 mt-3">USUARIOS REGISTRADOS</h3>
+          <hr>
+          <div class="row">
+            <div class="col">
+              <input type="text" class="admin-datos w-100" id="todo_url" placeholder="CLIENTE 1">
+            </div>
+            <div class="col">
+              <input type="text" class="admin-datos w-100" id="todo_url" placeholder="DATO 2">
+            </div>
+            <div class="col">
+              <input type="text" class="admin-datos w-150" id="todo_url" placeholder="ÚLTIMO PROD. COMPRADO">
+            </div>
+            <div class="col btn-group">
+              <button class="btn bg-success px-2" style="color: #fff;">UID</button>
+              <button class="btn bg-danger px-2"><i class="fas fa-trash-alt" style="color: #fff;"></i></button>
+              <button class="btn bg-warning px-2" style="color: #fff;">EDITAR</button>
+            </div>
+          </div>
+
+          <div class="row mt-2">
+            <div class="col">
+              <input type="text" class="admin-datos w-100" id="todo_url" placeholder="CLIENTE 2">
+            </div>
+            <div class="col">
+              <input type="text" class="admin-datos w-100" id="todo_url" placeholder="DATO 2">
+            </div>
+            <div class="col">
+              <input type="text" class="admin-datos w-150" id="todo_url" placeholder="ÚLTIMO PROD. COMPRADO">
+            </div>
+            <div class="col btn-group">
+              <button class="btn bg-success px-2" style="color: #fff;">UID</button>
+              <button class="btn bg-danger px-2"><i class="fas fa-trash-alt" style="color: #fff;"></i></button>
+              <button class="btn bg-warning px-2" style="color: #fff;">EDITAR</button>
+            </div>
+          </div>
+
+          <div class="row mt-2">
+            <div class="col">
+              <input type="text" class="admin-datos w-100" id="todo_url" placeholder="CLIENTE 3">
+            </div>
+            <div class="col">
+              <input type="text" class="admin-datos w-100" id="todo_url" placeholder="DATO 2">
+            </div>
+            <div class="col">
+              <input type="text" class="admin-datos w-150" id="todo_url" placeholder="ÚLTIMO PROD. COMPRADO">
+            </div>
+            <div class="col btn-group">
+              <button class="btn bg-success px-2" style="color: #fff;">UID</button>
+              <button class="btn bg-danger px-2"><i class="fas fa-trash-alt" style="color: #fff;"></i></button>
+              <button class="btn bg-warning px-2" style="color: #fff;">EDITAR</button>
+            </div>
+          </div>
+        </div>
+        <!-- FIN USUARIOS -->
+
+        <!-- PRODUCTOS -->
+          <div class="col-6 admin-productos admin-border">
+            <h3 class="text-start mx-3 mt-3">PRODUCTOS</h3>
+            <hr>
+            <div class="row">
+              <div class="col">
+                <input type="text" class="admin-datos w-100" id="todo_url" placeholder="PRODUCTO 1">
+              </div>
+              <div class="col">
+                <input type="text" class="admin-datos w-100" id="todo_url" placeholder="DATO 2">
+              </div>
+              <div class="col btn-group">
+                <button class="btn bg-success px-2" style="color: #fff;">UID</button>
+                <button class="btn bg-info px-2" style="color: #fff;">FID</button>
+                <button class="btn bg-danger px-2"><i class="fas fa-trash-alt" style="color: #fff;"></i></button>
+                <button class="btn bg-warning px-2" style="color: #fff;">EDITAR</button>
+              </div>
+            </div>
+  
+            <div class="row mt-2">
+              <div class="col">
+                <input type="text" class="admin-datos w-100" id="todo_url" placeholder="PRODUCTO 2">
+              </div>
+              <div class="col">
+                <input type="text" class="admin-datos w-100" id="todo_url" placeholder="DATO 2">
+              </div>
+              <div class="col btn-group">
+                <button class="btn bg-success px-2" style="color: #fff;">UID</button>
+                <button class="btn bg-info px-2" style="color: #fff;">FID</button>
+                <button class="btn bg-danger px-2"><i class="fas fa-trash-alt" style="color: #fff;"></i></button>
+                <button class="btn bg-warning px-2" style="color: #fff;">EDITAR</button>
+              </div>
+            </div>
+  
+            <div class="row mt-2">
+              <div class="col">
+                <input type="text" class="admin-datos w-100" id="todo_url" placeholder="PRODUCTO 3">
+              </div>
+              <div class="col">
+                <input type="text" class="admin-datos w-100" id="todo_url" placeholder="DATO 2">
+              </div>
+              <div class="col btn-group">
+                <button class="btn bg-success px-2" style="color: #fff;">UID</button>
+                <button class="btn bg-info px-2" style="color: #fff;">FID</button>
+                <button class="btn bg-danger px-2"><i class="fas fa-trash-alt" style="color: #fff;"></i></button>
+                <button class="btn bg-warning px-2" style="color: #fff;">EDITAR</button>
+              </div>
+            </div>
+          </div>
+          <!-- FIN PRODUCTOS -->
+
+      </div>
+    </section>
+
     
   
 <!-- llamo a mi app.js.... dentro esta declarada la funcion del boton "Enviar"

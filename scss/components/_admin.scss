@@ -20,7 +20,25 @@
     color: #3F545B !important;
     background-color: rgba(166, 175, 179, 0.507) !important;
     margin: 5px;
-    
+}
+
+.admin-datos{
+    font-family: "BentonBook" !important;
+    font-size: 18px !important;
+    color: $azul !important;
+    background-color: #fff !important;
+    margin: 5px;
+}
+
+.admin-productos {
+    position: relative !important;
+    left: 10px !important;
+}
+
+.admin-border{
+    border: 1px transparent solid;
+    border-top-left-radius: 30px;
+    background-color: rgba(166, 175, 179, 0.507) !important; 
 }
 
 /* BOTON ENVIAR */
