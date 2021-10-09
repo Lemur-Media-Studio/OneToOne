@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- css -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/f2f2acd656.js" crossorigin="anonymous"></script>
+  <title>Calculadora - One to One Trade Consulting</title>
+</head>
+
+<body class="body-calculadora">
+  <!-- menu -->
+<!--   <header class="d-flex align-items-center">
+    <img src="img/logo.png" alt="Logo de One to one">
+    <ul class="nav justify-content-end align-items-center">
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="index.html">INICIO</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="calculadora.html">CALCULADORA</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">TIENDA</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">CONTACTO</a>
+      </li>
+       REDES SOCIALES 
+      <li class="mx-2">
+        <a href="https://facebook.com/OneToOne.Consultancy" target="_blank" class="fa fa-facebook"></a>
+      </li>
+      <li class="mx-2">
+        <a href="https://www.twitter.com/onetooneok" target="_blank" class="fa fa-twitter"></a>
+      </li>
+      <li class="mx-2">
+        <a href="https://www.linkedin.com/company/onetooneok" target="_blank" class="fa fa-linkedin"></a>
+      </li>
+      <li class="mx-2">
+        <a href="https://www.instagram.com/onetooneok" target="_blank" class="fa fa-instagram"></a>
+      </li>
+    </ul>
+  </header> -->
+
+  <!-- seccion calculadora -->
+  <section class="container section-container-calculadora">
+    <div class="fondo-calculadora">
+      <h1 class="titulo-calculadora">Calculadora de envío</h1>
+      <p class="parrafo-calculadora"><strong>o</strong> El costo del envío varía en relación al peso final del paquete.
+      </p>
+      <h4 class="subtitulo-calculadora">¡Envío gratis a Capital Federal!</h4>
+
+      <hr>
+
+      <div class="row">
+        <div class="col-6">
+          <p class="titulo-inputs-calculadora">¿Qué desea comprar?</p>
+          <div class="input-group mb-3">
+            <select class="form-select opcion-input" id="inputGroupSelect01">
+              <option selected class="opciones-box-input">Ningún producto seleccionado...</option>
+              <option value="1" class="opciones-box-input">Uno</option>
+              <option value="2" class="opciones-box-input">Dos</option>
+              <option value="3" class="opciones-box-input">Tres</option>
+              <option value="4" class="opciones-box-input">Cuatro</option>
+              <option value="5" class="opciones-box-input">Cinco</option>
+              <option value="6" class="opciones-box-input">Seis</option>
+              <option value="7" class="opciones-box-input">Siete</option>
+              <option value="8" class="opciones-box-input">Ocho</option>
+              <option value="9" class="opciones-box-input">Nueve</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-6">
+          <p class="titulo-inputs-calculadora">Lugar de Origen</p>
+          <div class="input-group mb-3">
+            <select class="form-select opcion-input" id="inputGroupSelect01">
+              <option selected class="opciones-box-input">Ningún país seleccionado...</option>
+              <option value="1" class="opciones-box-input">Uno</option>
+              <option value="2" class="opciones-box-input">Dos</option>
+              <option value="3" class="opciones-box-input">Tres</option>
+              <option value="4" class="opciones-box-input">Cuatro</option>
+              <option value="5" class="opciones-box-input">Cinco</option>
+              <option value="6" class="opciones-box-input">Seis</option>
+              <option value="7" class="opciones-box-input">Siete</option>
+              <option value="8" class="opciones-box-input">Ocho</option>
+              <option value="9" class="opciones-box-input">Nueve</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-6">
+          <p class="titulo-inputs-calculadora">¿Cuánto cuesta su pedido?</p>
+          <div class="input-group mb-3">
+            <label class="input-group-text subtitulo-inputs-calculadora position-subtitulo1"
+              for="inputGroupSelect01"><strong>USD</strong></label>
+            <input type="text" class="form-control inputs-calculadora1"
+              aria-label="Text input with segmented dropdown button">
+          </div>
+        </div>
+        <div class="col-6">
+          <p class="titulo-inputs-calculadora">¿Cuál es el peso de su compra?</p>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control inputs-calculadora2"
+              aria-label="Text input with segmented dropdown button">
+            <label class="input-group-text subtitulo-inputs-calculadora position-subtitulo2"
+              for="inputGroupSelect02"><strong>KG</strong></label>
+          </div>
+        </div>
+      </div>
+
+      <div class="vstack gap-2 col-md-5 mx-auto">
+        <button type="button" class="btn btn-secondary boton-calculadora"><img src="img/calculadora-01.png" height="50"
+            alt="calculadora">CALCULAR</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- section accordion -->
+  <section class="section-container-accordion">
+    <div class="accordion" id="accordionExample">
+      <div class="accordion-item">
+        <h4 class="accordion-header" id="headingOne">
+          <button class="accordion-button accordion-boton" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            o LEER
+          </button>
+        </h4>
+        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+          data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <h4 class="titulo-accordion">Lista de Productos (desglose):</h4>
+
+            <p><strong>o</strong> Accesorios</p>
+            <p><strong>o</strong> Accesorios de electrónica, audio, foto y video</p>
+            <p><strong>o</strong> Belleza y salud​</p>
+            <p><strong>o</strong> Biberones, Mamaderas</p>
+            <p><strong>o</strong> Carritos de bebé</p>
+            <p><strong>o</strong> Computadoras, Notebooks, Laptops (+USD100 a la fórmula)</p>
+            <p><strong>o</strong> Tablets (+USD70 a la fórmula)</p>
+            <p><strong>o</strong> Deportes y entretenimiento</p>
+            <p><strong>o</strong> Hogar</p>
+            <p><strong>o</strong> Joyería</p>
+            <p><strong>o</strong> Juguetes</p>
+            <p><strong>o</strong> Luces e iluminación</p>
+            <p><strong>o</strong> Otros</p>
+            <p><strong>o</strong> Relojes – incluyendo Smartwatch</p>
+            <p><strong>o</strong> Ropa</p>
+            <p><strong>o</strong> Sillas de bebé</p>
+            <p><strong>o</strong> Zapatos y zapatillas</p>
+
+            <p><strong>-​Precio del producto (USD)</strong></p>
+
+            <p><strong>-​Peso (KG)</strong></p>
+            
+            <h4 class="titulo-accordion">Productos prohibidos:</h4>
+            <h5>Los siguientes productos están prohibidos o restringidos, por lo que solicitamos que antes de la compra
+              nos
+              consulten.</h5>
+
+            <p><strong>•</strong> Medicamentos y productos para el cuidado de la salud</p>
+            <p><strong>•</strong> Cuidado industrial: kit de primeros auxilios.</p>
+            <p><strong>•</strong> Bienes preciosos: oro, plata, platino, piedras preciosas, relojes con oro, plata o
+              piedras preciosas.</p>
+            <p><strong>•</strong> Accesorios de vehículos:</p>
+            <p><strong>•</strong> Cuadriciclos y motos: cascos y defensas.</p>
+            <p><strong>•</strong> Autos y van: accesorios internos y externos.</p>
+            <p><strong>•</strong> Audio del vehículo: ventanas traseras.</p>
+            <p><strong>•</strong> Llanta: para automóviles, para camiones y para motos.</p>
+            <p><strong>•</strong> Neumáticos: cámaras de ruedas, cubiertas de ruedas para motos, neumáticos para coches
+              y furgonetas.</p>
+            <p><strong>•</strong> Repuestos para automóviles y camiones: componentes de seguridad, vidrios, frenos,
+              luces, interiores. y
+              refacciones externas, suspensiones, dirección y transmisiones.</p>
+            <p><strong>•</strong> Repuestos para motos: chasis.</p>
+            <p><strong>•</strong> Afinación y rendimiento: cromado, afinación de iluminación, polarizado.</p>
+            <p><strong>•</strong> Bebidas blancas.</p>
+            <p><strong>•</strong> Alimentos: productos de manufactura casera, carnes de cualquier especie animal,
+              chacinados, embutidos,
+              jamones, miel, productos y derivados lácteos, alimentos sin identificación o rótulo.</p>
+            <p><strong>•</strong> Vegetales: frutas y hortalizas frescas; flores y plantas de jardín; plantas frutales,
+              ornamentales y
+              forestales; vegetales y sus partes (semillas, raíces, yemas, etc.).</p>
+            <p><strong>•</strong> Otros productos: alimentos para animales, productos apícolas (cera, propóleo, etc.),
+              productos
+              veterinarios (sueros, vacunas y otros), insectos, bacterias, hongos, material reproductivo y otros
+              microorganismos para investigación.</p>
+            <p><strong>•</strong> Objetos de valor (obras de arte).</p>
+            <p><strong>•</strong> Valores al Portador (cheques, acciones, bonos, etc.).</p>
+            <p><strong>•</strong> Papel moneda.</p>
+            <p><strong>•</strong> Monedas metálicas.</p>
+            <p><strong>•</strong> Platino, oro o plata, manufacturados o no.</p>
+            <p><strong>•</strong> Pedrería (piedras preciosas, diamantes, esmeraldas, etc.).</p>
+            <p><strong>•</strong> Alhajas y otros objetos preciosos, incluso perlas naturales, de cultivo o sintéticas.
+            </p>
+            <p><strong>•</strong> Armas de fuego, pólvoras, municiones y afines.</p>
+            <p><strong>•</strong> Corrosivos.</p>
+            <p><strong>•</strong> Explosivos.</p>
+            <p><strong>•</strong> Gases comprimidos y aerosoles.</p>
+            <p><strong>•</strong> Líquidos inflamables.</p>
+            <p><strong>•</strong> Materiales oxidantes.</p>
+            <p><strong>•</strong> Sólidos inflamables.</p>
+            <p><strong>•</strong> Venenos: líquido, sólido o gas.</p>
+            <p><strong>•</strong> Animales vivos o especies vegetales vivientes.</p>
+            <p><strong>•</strong> Asbestos (amianto).</p>
+            <p><strong>•</strong> Drogas, narcóticos o estupefacientes prohibidas por ley: cocaína, marihuana, opio,
+              morfina; los
+              estupefacientes, narcóticos y los medicamentos psicotrópicos y psicofármacos en general.</p>
+            <p><strong>•</strong> Material biológico.</p>
+            <p><strong>•</strong> Material radioactivo.</p>
+            <p><strong>•</strong> Pinturas, barnices y sustancias similares.</p>
+            <p><strong>•</strong> Polvos secos colorantes y no colorantes.</p>
+            <p><strong>•</strong> Baterías de más de 20Wh.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+    integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.min.js"
+    integrity="sha384-PsUw7Xwds7x08Ew3exXhqzbhuEYmA2xnwc8BuD6SEr+UmEHlX8/MCltYEodzWA4u" crossorigin="anonymous">
+  </script>
+</body>
+
+</html>
