@@ -1,181 +1,220 @@
 /* MOBILE STYLES */
-@media only screen and (max-width: 450px){
-    
-        /* BIENVENIDOS */
-        body {
-            background-image: url(../img/fondo-mobile.png) !important;
-            background-size: cover !important;
-            background-position-y: 0px !important;
+@media only screen and (max-width: 450px) {
+
+    /* BIENVENIDOS */
+    .body-bienvenidos {
+        background-image: url(../img/fondo-mobile.png) !important;
+        background-size: cover !important;
+        background-position-y: 0px !important;
+    }
+
+    .logo-one {
+        height: 40px !important;
+    }
+
+    .customers-bienvenidos {
+        font-family: "SuperFlyOne" !important;
+        font-size: 100px !important;
+        color: $azul;
+    }
+
+    .background-opaco {
+        background-color: rgb(255, 255, 255, 0.9);
+        border: 1px transparent;
+        border-radius: 40px;
+        width: 85% !important;
+
+        .bienvenidos-gracias {
+            font-family: "BentonMedium" !important;
+            font-size: 16px !important;
+            color: $azul !important;
         }
 
-        .logo-one{
-            height: 40px !important;
+        p {
+            font-family: "BentonBook" !important;
+            font-size: 14px !important;
+            color: $azul !important;
         }
-        
-        .customers-bienvenidos{
-            font-family: "SuperFlyOne" !important;
-            font-size: 100px !important;
-            color: $azul;
-        }
-        
-        .background-opaco {
-            background-color: rgb(255, 255, 255, 0.9);
-            border: 1px transparent;
-            border-radius: 40px;
-            width: 85% !important;
-        
-            .bienvenidos-gracias {
-                font-family: "BentonMedium" !important;
-                font-size: 16px !important;
-                color: $azul !important;
-            }
-        
-            p {
-                font-family: "BentonBook" !important;
-                font-size: 14px !important;
-                color: $azul !important;
-            }
-        
-            .login-iniciar-bienvenidos {
-                width: 50% !important;
-                font-family: "BentonBlack" !important;
-                font-size: 14px !important;
-                margin-top: -15px;
-                margin-bottom: 10px;
-                background-color: $azul;
-                border-radius: 35px;
-            }
-        }
-        
-        .imagen-whatsapp {
-            margin-top: 40%;
-            margin-right: 20px;
-            position: sticky !important;
-            filter: drop-shadow(0 0 0.5rem black); 
+
+        .login-iniciar-bienvenidos {
+            width: 50% !important;
+            font-family: "BentonBlack" !important;
+            font-size: 14px !important;
+            margin-top: -15px;
+            margin-bottom: 10px;
+            background-color: $azul;
+            border-radius: 35px;
         }
     }
 
-    /* LOGIN */
-    .logo-login{
-        height: 50px !important;
+    .imagen-whatsapp {
+        margin-top: 40%;
+        margin-right: 20px;
+        position: sticky !important;
+        filter: drop-shadow(0 0 0.5rem black);
     }
 
-    .login-border {
-        border: 25px solid rgba(166, 175, 179, 0.507) !important;
-        border-radius: 40px !important; 
+    /* calculadora */
+
+    .titulo-calculadora {
+        font-size: 23px !important;
     }
 
-    .modal-content {
-        background-color: white !important;
-        border: 1px solid rgba(132, 125, 114, 0.507) !important;
-        border-radius: 15px !important;
+    .parrafo-calculadora {
+        font-size: 16px !important;
     }
 
-    .login-boton-cierre {
-        position: relative;
-        left: 270px !important;
+    .subtitulo-calculadora {
+        font-size: 16px !important;
     }
 
-    .login-boton-cierre-2{
-        position: relative;
-        left: 270px !important;
+    .titulo-inputs-calculadora {
+        font-size: 16px !important;
     }
 
-    .form-control {
-        background-color: rgb(166, 175, 179) !important;
-        border: 1px $azul solid !important;
-        border-radius: 15px !important;
-        color: #3f545b !important;
+    .opciones-box-input {
+        font-size: 16px !important;
     }
 
-    .form-label {
-        font-family: BentonBook !important;
-        font-size: 12px !important;
+    .subtitulo-inputs-calculadora {
+        font-size: 14px !important;
     }
 
-    .form-label {
-        color: #3F545B !important;
-    }
-
-    .login-iniciar {
-        background-color: $azul !important;
-        border: 1px $beige-medio solid !important;
-        border-radius: 15px !important;
-        color: white !important;
-        font-family: BentonBlack !important;
+    .boton-calculadora {
         font-size: 15px !important;
     }
 
-    .login-iniciar-rs {
-        background-color: $azul !important;
-        border: 1px $beige-medio solid !important;
-        border-radius: 15px !important;
-        color: white !important;
-        font-family: BentonMedium !important;
-        font-size: 15px !important;
+    .titulo-accordion {
+        font-size: 25px !important;
     }
 
-    .login-border-iniciar {
-        border-bottom: 1px solid $beige-medio !important;
-        padding: 15px;
+    .accordion-body {
+        font-size: 16px !important;
     }
+}
 
-    .olvido-contraseña {
-        font-family: BentonBook !important;
-        font-size: 10px !important;
-        font-style: italic !important;
-    }
+/* LOGIN */
+.logo-login {
+    height: 50px !important;
+}
 
-    .login-cursiva {
-        font-family: BentonBook !important;
-        font-size: 12px !important;
-        font-style: italic !important;
-    }
+.login-border {
+    border: 25px solid rgba(166, 175, 179, 0.507) !important;
+    border-radius: 40px !important;
+}
 
-    .modal-body {
-        .login-crear-cuenta {
+.modal-content {
+    background-color: white !important;
+    border: 1px solid rgba(132, 125, 114, 0.507) !important;
+    border-radius: 15px !important;
+}
+
+.login-boton-cierre {
+    position: relative;
+    left: 270px !important;
+}
+
+.login-boton-cierre-2 {
+    position: relative;
+    left: 270px !important;
+}
+
+.form-control1 {
+    background-color: rgb(166, 175, 179) !important;
+    border: 1px $azul solid !important;
+    border-radius: 15px !important;
+    color: #3f545b !important;
+}
+
+.form-label {
+    font-family: BentonBook !important;
+    font-size: 12px !important;
+}
+
+.form-label {
+    color: #3F545B !important;
+}
+
+.login-iniciar {
+    background-color: $azul !important;
+    border: 1px $beige-medio solid !important;
+    border-radius: 15px !important;
+    color: white !important;
+    font-family: BentonBlack !important;
+    font-size: 15px !important;
+}
+
+.login-iniciar-rs {
+    background-color: $azul !important;
+    border: 1px $beige-medio solid !important;
+    border-radius: 15px !important;
+    color: white !important;
+    font-family: BentonMedium !important;
+    font-size: 15px !important;
+}
+
+.login-border-iniciar {
+    border-bottom: 1px solid $beige-medio !important;
+    padding: 15px;
+}
+
+.olvido-contraseña {
+    font-family: BentonBook !important;
+    font-size: 10px !important;
+    font-style: italic !important;
+}
+
+.login-cursiva {
+    font-family: BentonBook !important;
+    font-size: 12px !important;
+    font-style: italic !important;
+}
+
+.modal-body {
+    .login-crear-cuenta {
         color: $azul !important;
         font-family: BentonBlack !important;
         font-size: 22px !important;
-        }
+    }
+
 }
 
 /* ///////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
 /* MACBOOK PRO 13" - NOTEBOOKS STYLES */
-@media only screen and (min-width: 1200px) and (max-width: 1440px){
-    
+@media only screen and (min-width: 1200px) and (max-width: 1440px) {
+
     /* BIENVENIDOS */
-    body {
+    .body-bienvenidos {
         background-image: url(../img/fondo-puerto.jpg);
         background-size: cover !important;
         background-position-y: 0px !important;
     }
-    
-    .customers-bienvenidos{
+
+    .customers-bienvenidos {
         font-family: "SuperFlyOne" !important;
         font-size: 160px !important;
         color: $azul;
     }
-    
+
     .background-opaco {
         background-color: rgb(255, 255, 255, 0.9);
         border: 1px transparent;
         border-radius: 40px;
         width: 30% !important;
-    
+
         .bienvenidos-gracias {
             font-family: "BentonMedium" !important;
             font-size: 22px !important;
             color: $azul !important;
         }
-    
+
         p {
             font-family: "BentonBook" !important;
             font-size: 18px !important;
             color: $azul !important;
         }
-    
+
         .login-iniciar-bienvenidos {
             width: 50% !important;
             font-family: "BentonBlack" !important;
@@ -186,11 +225,12 @@
             border-radius: 35px;
         }
     }
-    
+
     .imagen-whatsapp {
         margin-top: 150px;
         margin-right: 50px;
         position: sticky !important;
-        filter: drop-shadow(0 0 0.5rem black); 
+        filter: drop-shadow(0 0 0.5rem black);
     }
 }
+
