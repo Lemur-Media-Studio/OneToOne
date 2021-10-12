@@ -101,15 +101,15 @@
           <div class="input-group mb-3">
             <label class="input-group-text subtitulo-inputs-calculadora position-subtitulo1"
               for="inputGroupSelect01"><strong>USD</strong></label>
-            <input type="text" class="form-control inputs-calculadora1"
-              aria-label="Text input with segmented dropdown button">
+            <input type="number" class="form-control inputs-calculadora1"
+              aria-label="Text input with segmented dropdown button" id="idvalor">
           </div>
         </div>
         <div class="col-6">
           <p class="titulo-inputs-calculadora">¿Cuál es el peso de su compra?</p>
           <div class="input-group mb-3">
-            <input type="text" class="form-control inputs-calculadora2"
-              aria-label="Text input with segmented dropdown button">
+            <input type="number" class="form-control inputs-calculadora2"
+              aria-label="Text input with segmented dropdown button" id="idpeso">
             <label class="input-group-text subtitulo-inputs-calculadora position-subtitulo2"
               for="inputGroupSelect02"><strong>KG</strong></label>
           </div>
@@ -117,7 +117,7 @@
       </div>
 
       <div class="vstack gap-2 col-md-5 mx-auto">
-        <button type="button" class="btn btn-secondary boton-calculadora"><img src="img/calculadora-01.png" height="50"
+        <button type="button" class="btn btn-secondary boton-calculadora" onclick="calculo()"><img src="img/calculadora-01.png" height="50"
             alt="calculadora">CALCULAR</button>
       </div>
     </div>
@@ -234,6 +234,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.min.js"
     integrity="sha384-PsUw7Xwds7x08Ew3exXhqzbhuEYmA2xnwc8BuD6SEr+UmEHlX8/MCltYEodzWA4u" crossorigin="anonymous">
   </script>
+  <script src="scripts/calcu.js"></script>
 </body>
 
 </html>
