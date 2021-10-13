@@ -17,7 +17,7 @@
 
 <body class="body-calculadora">
   <!-- menu -->
-<!--   <header class="d-flex align-items-center">
+  <!--   <header class="d-flex align-items-center">
     <img src="img/logo.png" alt="Logo de One to one">
     <ul class="nav justify-content-end align-items-center">
       <li class="nav-item">
@@ -117,8 +117,32 @@
       </div>
 
       <div class="vstack gap-2 col-md-5 mx-auto">
-        <button type="button" class="btn btn-secondary boton-calculadora" onclick="calculo()"><img src="img/calculadora-01.png" height="50"
-            alt="calculadora">CALCULAR</button>
+        <button type="button" class="btn btn-secondary boton-calculadora" data-bs-toggle="modal" data-bs-target="#staticBackdrop" onclick="calculo()"><img
+            src="img/calculadora-01.png" height="50" alt="calculadora">CALCULAR</button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+          aria-labelledby="staticBackdropLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header modal-calculadora">
+                <h5 class="modal-title titulo-modal" id="staticBackdropLabel">Costo de importación</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" fill="white" aria-label="Close"></button>
+              </div>
+              <div class="modal-body" id="productoenvio">
+                
+              </div>
+              <div class="modal-body" id="productofinal">
+                
+              </div>
+              <div class="modal-footer">
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+
       </div>
     </div>
   </section>
@@ -131,7 +155,7 @@
           <button class="accordion-button accordion-boton" type="button" data-bs-toggle="collapse"
             data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
             o LEGALES
-            
+
           </button>
         </h4>
         <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
@@ -160,7 +184,7 @@
             <p><strong>-​Precio del producto (USD)</strong></p>
 
             <p><strong>-​Peso (KG)</strong></p>
-            
+
             <h4 class="titulo-accordion">Productos prohibidos:</h4>
             <h5>Los siguientes productos están prohibidos o restringidos, por lo que solicitamos que antes de la compra
               nos
