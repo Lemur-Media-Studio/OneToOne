@@ -5,52 +5,68 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- css -->
+
+  <!-- MAIN CSS -->
   <link rel="stylesheet" href="css/style.css">
-  <!-- bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
   <!-- Font Awesome -->
   <script src="https://kit.fontawesome.com/f2f2acd656.js" crossorigin="anonymous"></script>
   <title>Calculadora - One to One Trade Consulting</title>
 </head>
 
 <body class="body-calculadora">
-  <!-- menu -->
-  <!--   <header class="d-flex align-items-center">
-    <img src="img/logo.png" alt="Logo de One to one">
-    <ul class="nav justify-content-end align-items-center">
-      <li class="nav-item">
-        <a class="nav-link active" aria-current="page" href="index.html">INICIO</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="calculadora.html">CALCULADORA</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">TIENDA</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">CONTACTO</a>
-      </li>
-       REDES SOCIALES 
-      <li class="mx-2">
-        <a href="https://facebook.com/OneToOne.Consultancy" target="_blank" class="fa fa-facebook"></a>
-      </li>
-      <li class="mx-2">
-        <a href="https://www.twitter.com/onetooneok" target="_blank" class="fa fa-twitter"></a>
-      </li>
-      <li class="mx-2">
-        <a href="https://www.linkedin.com/company/onetooneok" target="_blank" class="fa fa-linkedin"></a>
-      </li>
-      <li class="mx-2">
-        <a href="https://www.instagram.com/onetooneok" target="_blank" class="fa fa-instagram"></a>
-      </li>
-    </ul>
-  </header> -->
+      <!-- HEADER -->
+      <header>
+        <nav class="navbar navbar-expand-lg">
+          <div class="container">
+            <a class="navbar-brand" href="https://one-oneconsulting.com"><img src="img/logo.png" alt="Logo de One to One" class="logo-one"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="https://one-oneconsulting.com">Inicio</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">Clientes</a>
+                </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="calculadora.html">Calculadora</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="ecomm.html">Tienda</a>
+                  </li>
+                  <li class="nav-item last-item">
+                    <a class="nav-link" href="blog.html">Blog</a>
+                  </li>
+                <div class="social-mobile d-flex">
+                  <li class="nav-item">
+                    <a href="https://www.facebook.com/OneToOne.Consultancy" target="_blank" class="redes fa fa-facebook"></a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="https://www.twitter.com/onetooneok" target="_blank" class="redes fa fa-twitter"></a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="https://www.linkedin.com/company/onetooneok" target="_blank" class="redes fa fa-linkedin"></a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="https://www.instagram.com/onetooneok" target="_blank" class="redes fa fa-instagram"></a>
+                  </li>
+                </div>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
 
   <!-- seccion calculadora -->
   <section class="container section-container-calculadora">
-    <div class="fondo-calculadora">
+    <div class="fondo-calculadora mt-5">
       <h1 class="titulo-calculadora">Calculadora de envío</h1>
       <p class="parrafo-calculadora"><strong>o</strong> El costo del envío varía en relación al peso final del paquete.
       </p>
@@ -163,7 +179,7 @@
 
           </button>
         </h4>
-        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+        <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
           data-bs-parent="#accordionExample">
           <div class="accordion-body">
             <h4 class="titulo-accordion">Lista de Productos (desglose):</h4>
@@ -254,19 +270,102 @@
     </div>
   </section>
 
+      <!-- FOOTER -->
+      <footer id="footer" class="mt-5">
+        <div class="footer-top">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-3 col-md-6 footer-contact">
+                <h4>Contacto</h4>
+                <p>
+                  645 W. 9TH ST. <br>
+                  Los Angeles. CA [90015]<br>
+                  Estados Unidos de América <br><br>
+                  <strong>Teléfono:</strong> [+1] 213 306 6554<br>
+                  <strong>Email:</strong> info@one-oneconsulting.com<br>
+                </p>
+              </div>
+    
+              <div class="col-lg-2 col-md-6 footer-links">
+                <h4>Enlaces de interés</h4>
+                <ul>
+                  <li><i class="bx bx-chevron-right"></i> <a href="#">Inicio</a></li>
+                  <li><i class="bx bx-chevron-right"></i> <a href="#">Clientes</a>
+                  <li><i class="bx bx-chevron-right"></i> <a href="#">Calculadora</a></li>
+                  <li><i class="bx bx-chevron-right"></i> <a href="#">Cursos</a></li>
+                  <li><i class="bx bx-chevron-right"></i> <a href="#">Blog</a></li>
+                </ul>
+              </div>
+              <div class="col-lg-3 col-md-6 footer-links">
+    <!--             <h4>Servicios</h4>
+                <ul>
+                  <li><i class="bx bx-chevron-right"></i> <a href="#">Maíz</a></li>
+                  <li><i class="bx bx-chevron-right"></i> <a href="#">Soja</a></li>
+                  <li><i class="bx bx-chevron-right"></i> <a href="#">Cebada</a></li>
+                  <li><i class="bx bx-chevron-right"></i> <a href="#">Harina</a></li> -->
+                </ul>
+              </div> 
+    
+              <div class="col-lg-4 col-md-6">
+                <h4>Síganos en nuestras redes</h4>
+                <p class="p-footer">Manténganse al tanto de todas las novedades de One to One Trade Consulting.</p>
+                <div class="social-links text-left pt-3 pt-md-0 mt-2">
+                  <a href="https://www.facebook.com/OneToOne.Consultancy" target="_blank" class="redes fa fa-facebook"></a>
+                  <a href="https://www.twitter.com/onetooneok" target="_blank" class="redes fa fa-twitter"></a>
+                  <a href="https://www.linkedin.com/company/onetooneok" target="_blank" class="redes fa fa-linkedin"></a>
+                  <a href="https://www.instagram.com/onetooneok" target="_blank" class="redes fa fa-instagram"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="copyright-wrap d-md-flex py-4">
+            <div class="mr-md-auto text-center text-md-left">
+              <div class="copyright">
+                &copy; Copyright <strong><span>One to One Trade Consulting</span></strong>. All Rights Reserved
+              </div>
+              <div class="credits">
+                Designed & developed by Lemur Media Studio</a>
+              </div>
+            </div>
+            <div class="social-links text-center text-md-right pt-3 pt-md-0">
+              <img src="img/logo.png" alt="Logo One to One" height="40">
+            </div>
+          </div>
+        </div>
+      </footer>
+
+
+
+
+
+
+
+
+
+
+
   <script
   src="https://code.jquery.com/jquery-3.6.0.js"
   integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
   crossorigin="anonymous"></script>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
-    integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous">
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.min.js"
-    integrity="sha384-PsUw7Xwds7x08Ew3exXhqzbhuEYmA2xnwc8BuD6SEr+UmEHlX8/MCltYEodzWA4u" crossorigin="anonymous">
-  </script>
+    <!-- Scripts Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+
   <script src="scripts/calcu.js"></script>
+
+
+
+
+
 </body>
 
 </html>

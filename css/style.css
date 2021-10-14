@@ -5,6 +5,10 @@
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none !important;
+}
+
 /* SuperFly One */
 /*Regla que permite elegir mi fuente*/
 @font-face {
@@ -32,227 +36,436 @@
   font-family: "BentonBlack";
   src: url(../fonts/BentonSans-Black.ttf) format("woff");
 }
-/* MOBILE STYLES */
-@media only screen and (max-width: 450px) {
-  /* BIENVENIDOS */
-  .body-bienvenidos {
-    background-image: url(../img/fondo-mobile.png) !important;
-    background-size: cover !important;
-    background-position-y: 0px !important;
-  }
+/* HEADER */
+header {
+  position: absolute;
+  width: 100%;
+  height: 80px;
+  background-color: #002A3C;
+}
 
+header .navbar {
+  padding: 17px 0px;
+}
+
+.background-header .navbar {
+  padding: 17px 0px;
+}
+
+.background-header {
+  top: 0;
+  position: fixed;
+  background-color: #002a3c !important;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
+}
+
+.background-header .navbar-brand h2 {
+  color: #B4AC9D !important;
+}
+
+.background-header .navbar-nav a.nav-link {
+  color: #fff !important;
+}
+
+.navbar .navbar-brand {
+  float: left;
+  margin-top: -12px;
+  outline: none;
+}
+
+#navbarResponsive {
+  z-index: 999;
+}
+
+.navbar-collapse {
+  text-align: center;
+}
+
+.navbar .navbar-nav .nav-item {
+  margin: 0px 5px;
+}
+
+.navbar .navbar-nav a.nav-link {
+  text-transform: uppercase;
+  font-family: "BentonMedium";
+  font-size: 11px;
+  font-weight: 500;
+  color: #fff;
+  padding-bottom: 25px;
+  transition: all 0.5s;
+  margin-top: 5px;
+}
+
+.last-item {
+  margin-right: 30px !important;
+}
+
+.redes {
+  color: #fff;
+  font-size: 12px;
+  transition: all 0.5s;
+  margin-top: 13px !important;
+}
+
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .active > .nav-link {
+  color: #B4AC9D !important;
+}
+
+.redes:hover {
+  color: #B4AC9D !important;
+}
+
+.navbar .navbar-toggler {
+  border-color: #002A3C;
+  background-color: #002A3C !important;
+  height: 36px;
+  outline: none;
+  border-radius: 0px;
+  position: absolute;
+  right: 30px;
+  top: 20px;
+}
+
+.navbar .navbar-toggler-icon:after {
+  content: "\f0c9";
+  color: #fff;
+  font-size: 18px;
+  line-height: 26px;
+  font-family: "FontAwesome";
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
   .logo-one {
     height: 40px !important;
   }
 
-  .customers-bienvenidos {
-    font-family: "SuperFlyOne" !important;
-    font-size: 100px !important;
-    color: #002A3C;
+  .banner .text-content {
+    width: 90%;
+    margin-left: 5%;
   }
 
-  .background-opaco {
-    background-color: rgba(255, 255, 255, 0.9);
-    border: 1px transparent;
-    border-radius: 40px;
-    width: 85% !important;
+  .banner .text-content h4 {
+    font-size: 22px;
   }
-  .background-opaco .bienvenidos-gracias {
-    font-family: "BentonMedium" !important;
-    font-size: 16px !important;
-    color: #002A3C !important;
+
+  .banner .text-content h2 {
+    font-size: 36px;
+    letter-spacing: 0.5px;
   }
-  .background-opaco p {
-    font-family: "BentonBook" !important;
-    font-size: 14px !important;
-    color: #002A3C !important;
+
+  .banner-item-01,
+.banner-item-02,
+.banner-item-03 {
+    padding: 180px 0px;
   }
-  .background-opaco .login-iniciar-bienvenidos {
-    width: 50% !important;
-    font-family: "BentonBlack" !important;
-    font-size: 14px !important;
-    margin-top: -15px;
-    margin-bottom: 10px;
+
+  .page-heading .text-content h4 {
+    font-size: 22px;
+  }
+
+  .page-heading .text-content h2 {
+    font-size: 36px;
+    letter-spacing: 0.5px;
+  }
+
+  .latest-products .section-heading a {
+    float: none;
+    margin-top: 0px;
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  .product-item .down-content h4 {
+    margin-bottom: 20px !important;
+  }
+
+  .product-item .down-content h6 {
+    position: absolute !important;
+    top: 30px !important;
+    right: 30px !important;
+  }
+
+  .product-item .down-content span {
+    position: absolute !important;
+    right: 30px !important;
+    bottom: 30px !important;
+  }
+
+  .best-features .left-content {
+    margin-bottom: 30px;
+  }
+
+  .call-to-action .inner-content {
+    text-align: center;
+  }
+
+  .call-to-action .inner-content .filled-button {
+    text-align: center;
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .about-features img {
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 992px) {
+  .navbar .navbar-brand {
+    position: absolute;
+    left: 30px;
+    top: 32px;
+  }
+
+  .navbar .navbar-brand {
+    width: auto;
+  }
+
+  .navbar:after {
+    display: none;
+  }
+
+  #navbarResponsive {
+    z-index: 99999;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    text-align: center;
     background-color: #002A3C;
-    border-radius: 35px;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
   }
 
-  .imagen-whatsapp {
-    margin-top: 40%;
-    margin-right: 20px;
-    position: sticky !important;
-    filter: drop-shadow(0 0 0.5rem black);
+  .navbar .navbar-nav .nav-item {
+    border-bottom: 1px solid #002A3C;
   }
 
-  /* calculadora */
-  .titulo-calculadora {
-    font-size: 23px !important;
+  .navbar .navbar-nav .nav-item:last-child {
+    border-bottom: none;
   }
 
-  .parrafo-calculadora {
-    font-size: 16px !important;
+  .navbar .navbar-nav a.nav-link {
+    padding: 0px 30px;
+    color: #fff !important;
+    text-align: right !important;
   }
 
-  .subtitulo-calculadora {
-    font-size: 16px !important;
+  .last-item {
+    margin-right: 6px !important;
   }
 
-  .titulo-inputs-calculadora {
-    font-size: 16px !important;
+  .social-mobile {
+    display: flex !important;
+    justify-content: flex-end !important;
+    padding: 20px 30px 40px 290px !important;
   }
 
-  .opciones-box-input {
-    font-size: 16px !important;
+  .navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .active > .nav-link,
+.navbar .navbar-nav .nav-link.active,
+.navbar .navbar-nav .nav-link.show,
+.navbar .navbar-nav .show > .nav-link {
+    color: #B4AC9D !important;
   }
 
-  .subtitulo-inputs-calculadora {
-    font-size: 14px !important;
-  }
-
-  .boton-calculadora {
-    font-size: 15px !important;
-  }
-
-  .titulo-accordion {
-    font-size: 25px !important;
-  }
-
-  .accordion-body {
-    font-size: 16px !important;
-  }
-}
-/* LOGIN */
-.logo-login {
-  height: 50px !important;
-}
-
-.login-border {
-  border: 25px solid rgba(166, 175, 179, 0.507) !important;
-  border-radius: 40px !important;
-}
-
-.modal-content {
-  background-color: white !important;
-  border: 1px solid rgba(132, 125, 114, 0.507) !important;
-  border-radius: 15px !important;
-}
-
-.login-boton-cierre {
-  position: relative;
-  left: 270px !important;
-}
-
-.login-boton-cierre-2 {
-  position: relative;
-  left: 270px !important;
-}
-
-.form-control1 {
-  background-color: #a6afb3 !important;
-  border: 1px #002A3C solid !important;
-  border-radius: 15px !important;
-  color: #3f545b !important;
-}
-
-.form-label {
-  font-family: BentonBook !important;
-  font-size: 12px !important;
-}
-
-.form-label {
-  color: #3F545B !important;
-}
-
-.login-iniciar {
-  background-color: #002A3C !important;
-  border: 1px #847d72 solid !important;
-  border-radius: 15px !important;
-  color: white !important;
-  font-family: BentonBlack !important;
-  font-size: 15px !important;
-}
-
-.login-iniciar-rs {
-  background-color: #002A3C !important;
-  border: 1px #847d72 solid !important;
-  border-radius: 15px !important;
-  color: white !important;
-  font-family: BentonMedium !important;
-  font-size: 15px !important;
-}
-
-.login-border-iniciar {
-  border-bottom: 1px solid #847d72 !important;
-  padding: 15px;
-}
-
-.olvido-contraseña {
-  font-family: BentonBook !important;
-  font-size: 10px !important;
-  font-style: italic !important;
-}
-
-.login-cursiva {
-  font-family: BentonBook !important;
-  font-size: 12px !important;
-  font-style: italic !important;
-}
-
-.modal-body .login-crear-cuenta {
-  color: #002A3C !important;
-  font-family: BentonBlack !important;
-  font-size: 22px !important;
-}
-
-/* ///////////////////////////////////////////////////////////////////////////////////////////////////////// */
-/* MACBOOK PRO 13" - NOTEBOOKS STYLES */
-@media only screen and (min-width: 1200px) and (max-width: 1440px) {
-  /* BIENVENIDOS */
-  .body-bienvenidos {
-    background-image: url(../img/fondo-puerto.jpg);
-    background-size: cover !important;
-    background-position-y: 0px !important;
-  }
-
-  .customers-bienvenidos {
-    font-family: "SuperFlyOne" !important;
-    font-size: 160px !important;
-    color: #002A3C;
-  }
-
-  .background-opaco {
-    background-color: rgba(255, 255, 255, 0.9);
-    border: 1px transparent;
-    border-radius: 40px;
-    width: 30% !important;
-  }
-  .background-opaco .bienvenidos-gracias {
-    font-family: "BentonMedium" !important;
-    font-size: 22px !important;
-    color: #002A3C !important;
-  }
-  .background-opaco p {
-    font-family: "BentonBook" !important;
-    font-size: 18px !important;
-    color: #002A3C !important;
-  }
-  .background-opaco .login-iniciar-bienvenidos {
-    width: 50% !important;
-    font-family: "BentonBlack" !important;
-    font-size: 22px !important;
-    margin-top: -15px;
+  .product-item .down-content h4 {
     margin-bottom: 10px;
-    background-color: #002A3C;
-    border-radius: 35px;
   }
 
-  .imagen-whatsapp {
-    margin-top: 150px;
-    margin-right: 50px;
-    position: sticky !important;
-    filter: drop-shadow(0 0 0.5rem black);
+  .product-item .down-content h6 {
+    position: relative;
+    top: 0;
+    right: 0;
+    margin-bottom: 20px;
+  }
+
+  .product-item .down-content span {
+    position: relative;
+    right: 0;
+    bottom: 0;
   }
 }
+/* FOOTER */
+#footer {
+  color: #fff;
+  font-size: 14px;
+  background-color: #002A3C;
+}
+
+#footer-title {
+  color: #B4AC9D;
+  font-family: "SuperFlyOne";
+}
+
+#footer .footer-top {
+  padding: 60px 0 30px 0;
+  position: relative;
+}
+
+#footer .footer-top .footer-contact {
+  margin-bottom: 5px;
+}
+
+.p-footer {
+  color: #fff !important;
+}
+
+.footer-logo {
+  position: relative;
+  right: 15px !important;
+  bottom: 15px !important;
+}
+
+#footer .footer-top .footer-contact h3 {
+  font-size: 28px;
+  margin: 0 0 30px 0;
+  padding: 2px 0 2px 0;
+  line-height: 1;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+#footer .footer-top .footer-contact p {
+  font-size: 14px;
+  line-height: 24px;
+  margin-bottom: 0;
+  font-family: "BentonBook", sans-serif;
+  color: #fff !important;
+}
+
+#footer .footer-top h4 {
+  font-size: 16px;
+  position: relative;
+  padding-bottom: 12px;
+  font-family: "BentonBlack";
+  color: #fff;
+}
+
+#footer .footer-top .footer-links {
+  margin-bottom: 30px;
+}
+
+#footer .footer-top .footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#footer .footer-top .footer-links ul i {
+  padding-right: 2px;
+  font-family: "BentonMedium";
+  color: #fff;
+  font-size: 18px;
+  line-height: 1;
+}
+
+#footer .footer-top .footer-links ul li {
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+}
+
+#footer .footer-top .footer-links ul li:first-child {
+  padding-top: 0;
+}
+
+#footer .footer-top .footer-links ul a {
+  color: #fff;
+  transition: 0.3s;
+  display: inline-block;
+  line-height: 1;
+}
+
+#footer .footer-top .footer-links ul a:hover {
+  text-decoration: underline;
+  color: #B4AC9D;
+}
+
+#footer .footer-newsletter {
+  font-size: 15px;
+  color: #B4AC9D;
+}
+
+#footer .footer-newsletter h4 {
+  font-size: 16px;
+  font-weight: bold;
+  position: relative;
+  padding-bottom: 12px;
+  color: #fff !important;
+}
+
+#footer .footer-newsletter form {
+  margin-top: 30px;
+  background: #fff;
+  padding: 6px 10px;
+  position: relative;
+  border-radius: 5px;
+  text-align: left;
+  border: 1px solid white;
+}
+
+#footer .footer-newsletter form input[type=email] {
+  border: 0;
+  padding: 4px 8px;
+  width: calc(100% - 100px);
+}
+
+#footer .footer-newsletter form input[type=submit] {
+  position: absolute;
+  top: -1px;
+  right: -2px;
+  bottom: -1px;
+  border: 0;
+  background: none;
+  font-size: 16px;
+  padding: 0 20px;
+  background: #B4AC9D;
+  color: #fff !important;
+  transition: 0.3s;
+  border-radius: 0 5px 5px 0;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+#footer .footer-newsletter form input[type=submit]:hover {
+  background: #514E47;
+}
+
+#footer .copyright-wrap {
+  border-top: 1px solid #B4AC9D;
+}
+
+#footer .credits {
+  padding-top: 5px;
+  font-size: 13px;
+  color: #fff;
+}
+
+#footer .credits a {
+  color: #fff;
+}
+
+#footer .social-links a {
+  font-size: 18px;
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  line-height: 1;
+  padding: 8px 0;
+  margin-right: 4px;
+  border-radius: 50%;
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  transition: 0.3s;
+}
+
+#footer .social-links a:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  text-decoration: none;
+}
+
 .modal-header {
   border: none;
 }
@@ -335,15 +548,15 @@
   font-size: 30px !important;
 }
 
-.body-bienvenidos {
+.customers-bg {
   background-image: url(../img/fondo-puerto.jpg);
-  background-position-y: 950px !important;
 }
 
 .customers-bienvenidos {
   font-family: SuperFlyOne !important;
-  font-size: 200px !important;
+  font-size: 150px !important;
   color: #002A3C;
+  padding-top: 100PX !important;
 }
 
 .background-opaco {
@@ -385,14 +598,6 @@
     right: 20px;
     float: right;
 */
-header {
-  background-color: #002A3C !important;
-}
-header ul {
-  display: flex !important;
-  justify-content: end !important;
-}
-
 .bienvenido-usuario {
   background-color: #B4AC9D;
   padding: 1px 10px 1px 10px !important;
@@ -644,6 +849,222 @@ header ul {
   font-size: 30px;
   padding: 20px 0;
   font-family: "BentonMedium";
+}
+
+/* MOBILE STYLES */
+@media only screen and (max-width: 450px) {
+  /* BIENVENIDOS */
+  .body-bienvenidos {
+    background-image: url(../img/fondo-mobile.png) !important;
+    background-size: cover !important;
+    background-position-y: 0px !important;
+  }
+
+  .logo-one {
+    height: 40px !important;
+  }
+
+  .customers-bienvenidos {
+    font-family: "SuperFlyOne" !important;
+    font-size: 100px !important;
+    color: #002A3C;
+  }
+
+  .background-opaco {
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px transparent;
+    border-radius: 40px;
+    width: 85% !important;
+  }
+  .background-opaco .bienvenidos-gracias {
+    font-family: "BentonMedium" !important;
+    font-size: 16px !important;
+    color: #002A3C !important;
+  }
+  .background-opaco p {
+    font-family: "BentonBook" !important;
+    font-size: 14px !important;
+    color: #002A3C !important;
+  }
+  .background-opaco .login-iniciar-bienvenidos {
+    width: 50% !important;
+    font-family: "BentonBlack" !important;
+    font-size: 14px !important;
+    margin-top: -15px;
+    margin-bottom: 10px;
+    background-color: #002A3C;
+    border-radius: 35px;
+  }
+
+  .imagen-whatsapp {
+    margin-top: 40%;
+    margin-right: 20px;
+    position: sticky !important;
+    filter: drop-shadow(0 0 0.5rem black);
+  }
+
+  /* calculadora */
+  .titulo-calculadora {
+    font-size: 23px !important;
+  }
+
+  .parrafo-calculadora {
+    font-size: 16px !important;
+  }
+
+  .subtitulo-calculadora {
+    font-size: 16px !important;
+  }
+
+  .titulo-inputs-calculadora {
+    font-size: 16px !important;
+  }
+
+  .opciones-box-input {
+    font-size: 16px !important;
+  }
+
+  .subtitulo-inputs-calculadora {
+    font-size: 14px !important;
+  }
+
+  .boton-calculadora {
+    font-size: 15px !important;
+  }
+
+  .titulo-accordion {
+    font-size: 25px !important;
+  }
+
+  .accordion-body {
+    font-size: 16px !important;
+  }
+}
+/* LOGIN */
+.logo-login {
+  height: 50px !important;
+}
+
+.login-border {
+  border: 25px solid rgba(166, 175, 179, 0.507) !important;
+  border-radius: 40px !important;
+}
+
+.modal-content {
+  background-color: white !important;
+  border: 1px solid rgba(132, 125, 114, 0.507) !important;
+  border-radius: 15px !important;
+}
+
+.login-boton-cierre {
+  position: relative;
+  left: 270px !important;
+}
+
+.login-boton-cierre-2 {
+  position: relative;
+  left: 270px !important;
+}
+
+.form-control1 {
+  background-color: #a6afb3 !important;
+  border: 1px #002A3C solid !important;
+  border-radius: 15px !important;
+  color: #3f545b !important;
+}
+
+.form-label {
+  font-family: BentonBook !important;
+  font-size: 12px !important;
+}
+
+.form-label {
+  color: #3F545B !important;
+}
+
+.login-iniciar {
+  background-color: #002A3C !important;
+  border: 1px #847d72 solid !important;
+  border-radius: 15px !important;
+  color: white !important;
+  font-family: BentonBlack !important;
+  font-size: 15px !important;
+}
+
+.login-iniciar-rs {
+  background-color: #002A3C !important;
+  border: 1px #847d72 solid !important;
+  border-radius: 15px !important;
+  color: white !important;
+  font-family: BentonMedium !important;
+  font-size: 15px !important;
+}
+
+.login-border-iniciar {
+  border-bottom: 1px solid #847d72 !important;
+  padding: 15px;
+}
+
+.olvido-contraseña {
+  font-family: BentonBook !important;
+  font-size: 10px !important;
+  font-style: italic !important;
+}
+
+.login-cursiva {
+  font-family: BentonBook !important;
+  font-size: 12px !important;
+  font-style: italic !important;
+}
+
+.modal-body .login-crear-cuenta {
+  color: #002A3C !important;
+  font-family: BentonBlack !important;
+  font-size: 22px !important;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* MACBOOK PRO 13" - NOTEBOOKS STYLES */
+@media only screen and (min-width: 1200px) and (max-width: 1440px) {
+  /* BIENVENIDOS */
+  .customers-bienvenidos {
+    font-family: "SuperFlyOne" !important;
+    font-size: 160px !important;
+    color: #002A3C;
+  }
+
+  .background-opaco {
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px transparent;
+    border-radius: 40px;
+    width: 30% !important;
+  }
+  .background-opaco .bienvenidos-gracias {
+    font-family: "BentonMedium" !important;
+    font-size: 22px !important;
+    color: #002A3C !important;
+  }
+  .background-opaco p {
+    font-family: "BentonBook" !important;
+    font-size: 18px !important;
+    color: #002A3C !important;
+  }
+  .background-opaco .login-iniciar-bienvenidos {
+    width: 50% !important;
+    font-family: "BentonBlack" !important;
+    font-size: 22px !important;
+    margin-top: -15px;
+    margin-bottom: 10px;
+    background-color: #002A3C;
+    border-radius: 35px;
+  }
+
+  .imagen-whatsapp {
+    margin-top: 150px;
+    margin-right: 50px;
+    position: sticky !important;
+    filter: drop-shadow(0 0 0.5rem black);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -4,12 +4,17 @@
     box-sizing: border-box;
 }
 
+a{
+    text-decoration: none !important;
+}
+
 @import "base/colours.scss";
 @import "base/fonts.scss";
-@import "base/queries.scss";
+@import "components/header";
+@import "components/footer";
 @import "components/login";
 @import "components/bienvenidos";
-@import "components/header";
 @import "components/productos";
 @import "components/admin";
 @import "components/calculadora";
+@import "base/queries.scss";
