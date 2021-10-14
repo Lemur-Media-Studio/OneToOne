@@ -94,6 +94,7 @@ header .navbar {
   padding-bottom: 25px;
   transition: all 0.5s;
   margin-top: 5px;
+  -webkit-font-smoothing: antialiased;
 }
 
 .last-item {
@@ -556,7 +557,7 @@ header .navbar {
   font-family: SuperFlyOne !important;
   font-size: 150px !important;
   color: #002A3C;
-  padding-top: 100PX !important;
+  padding-top: 150PX !important;
 }
 
 .background-opaco {
@@ -585,12 +586,12 @@ header .navbar {
   border-radius: 35px;
 }
 
-/* .imagen-whatsapp {
-    position: relative;
-    left: 1850px;
-    top: 220px;
-    filter: drop-shadow(0 0 0.5rem black); 
-} */
+.imagen-whatsapp {
+  position: sticky !important;
+  filter: drop-shadow(0 0 0.5rem black);
+  padding: 200px 20px 0 0 !important;
+}
+
 /* sticky
     position: -webkit-sticky;
     position: sticky;
@@ -1037,7 +1038,8 @@ header .navbar {
     background-color: rgba(255, 255, 255, 0.9);
     border: 1px transparent;
     border-radius: 40px;
-    width: 30% !important;
+    width: 35% !important;
+    padding: 20px 0 !important;
   }
   .background-opaco .bienvenidos-gracias {
     font-family: "BentonMedium" !important;
@@ -1052,18 +1054,11 @@ header .navbar {
   .background-opaco .login-iniciar-bienvenidos {
     width: 50% !important;
     font-family: "BentonBlack" !important;
-    font-size: 22px !important;
+    font-size: 20px !important;
     margin-top: -15px;
     margin-bottom: 10px;
     background-color: #002A3C;
     border-radius: 35px;
-  }
-
-  .imagen-whatsapp {
-    margin-top: 150px;
-    margin-right: 50px;
-    position: sticky !important;
-    filter: drop-shadow(0 0 0.5rem black);
   }
 }
 

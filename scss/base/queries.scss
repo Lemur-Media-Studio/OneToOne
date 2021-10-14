@@ -195,7 +195,8 @@
         background-color: rgb(255, 255, 255, 0.9);
         border: 1px transparent;
         border-radius: 40px;
-        width: 30% !important;
+        width: 35% !important;
+        padding: 20px 0 !important;
 
         .bienvenidos-gracias {
             font-family: "BentonMedium" !important;
@@ -212,19 +213,12 @@
         .login-iniciar-bienvenidos {
             width: 50% !important;
             font-family: "BentonBlack" !important;
-            font-size: 22px !important;
+            font-size: 20px !important;
             margin-top: -15px;
             margin-bottom: 10px;
             background-color: $azul;
             border-radius: 35px;
         }
-    }
-
-    .imagen-whatsapp {
-        margin-top: 150px;
-        margin-right: 50px;
-        position: sticky !important;
-        filter: drop-shadow(0 0 0.5rem black);
     }
 }
 
