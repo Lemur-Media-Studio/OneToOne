@@ -129,7 +129,7 @@ header .navbar {
 }
 
 .navbar .navbar-toggler-icon:after {
-  content: "\f0c9";
+  content: "";
   color: #fff;
   font-size: 18px;
   line-height: 26px;
@@ -794,6 +794,7 @@ header .navbar {
   font-family: "BentonBlack";
   border-radius: 35px !important;
   padding: 5px 22px !important;
+  margin: 0px 100px !important;
   position: relative;
   top: 15px;
 }
@@ -805,11 +806,38 @@ header .navbar {
 
 /* modal */
 .modal-calculadora {
-  background-color: #002A3C !important;
+  background-color: #847d72 !important;
 }
 
 .titulo-modal {
   color: white !important;
+  font-family: "BentonMedium";
+  font-size: 22px;
+}
+
+.categoria-modal {
+  font-size: 20px;
+  font-family: "BentonBook";
+  margin: 0px 0px 10px 0px;
+}
+
+.texto-modal {
+  margin-left: 10px;
+  font-size: 18px;
+  font-family: "BentonBook";
+}
+
+.exclamacion-modal {
+  background-color: #ffd4d4;
+  color: red;
+  text-align: center;
+  padding: 10px 5px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  font-size: 16px;
+  font-family: "BentonBook";
 }
 
 /* Acordion */
@@ -921,6 +949,10 @@ header .navbar {
     font-size: 16px !important;
   }
 
+  .boton-calculadora {
+    margin: 0px 12px !important;
+  }
+
   .opciones-box-input {
     font-size: 16px !important;
   }
@@ -939,6 +971,11 @@ header .navbar {
 
   .accordion-body {
     font-size: 16px !important;
+  }
+}
+@media only screen and (min-width: 700px) and (max-width: 1199px) {
+  .boton-calculadora {
+    margin: 0px 15px !important;
   }
 }
 /* LOGIN */

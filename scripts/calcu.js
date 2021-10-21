@@ -1,10 +1,13 @@
+const ic = document.getElementById('categoria1');
 const pf = document.getElementById('productofinal');
 const pe = document.getElementById('productoenvio');
 var value;
 
 $('#Select1').on('change', function() {
   value = $(this).val();
+  sel = $('#Select1 :selected').text();
   console.log(value);
+  console.log(sel);
 });
 
 function calculo(valor, precio, x, xt, preciokg, xte){
@@ -25,8 +28,12 @@ function calculo(valor, precio, x, xt, preciokg, xte){
 
     xte = parseFloat(xt) + parseFloat(value);
     console.log(xte);
-    
-    pe.innerHTML = `<div><strong>El precio del envio es: USD ${xt}</strong></div>`
-    pf.innerHTML = `<div><strong>El precio final del producto es: USD ${xte}</strong></div>`
+   
+    ic.innerHTML = `<div>Categoria: <strong>${sel}</strong></div>` 
+    pe.innerHTML = `<div>Envío: <strong>USD ${xt}</strong></div>`
+    pf.innerHTML = `<div>Costo total del envío: <strong>USD ${xte}</strong></div>`
 
 }
+
+
+

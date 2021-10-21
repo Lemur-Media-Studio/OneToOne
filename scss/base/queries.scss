@@ -72,6 +72,10 @@
         font-size: 16px !important;
     }
 
+    .boton-calculadora {
+        margin: 0px 12px !important;
+    }
+
     .opciones-box-input {
         font-size: 16px !important;
     }
@@ -90,6 +94,12 @@
 
     .accordion-body {
         font-size: 16px !important;
+    }
+}
+
+@media only screen and (min-width: 700px) and (max-width: 1199px) {
+    .boton-calculadora {
+        margin: 0px 15px !important;
     }
 }
 

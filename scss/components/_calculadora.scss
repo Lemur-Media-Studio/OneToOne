@@ -108,6 +108,7 @@
     font-family: "BentonBlack";
     border-radius: 35px !important;
     padding: 5px 22px !important;
+    margin: 0px 100px !important;
     position: relative;
     top: 15px;
 }
@@ -120,11 +121,38 @@
 /* modal */
 
 .modal-calculadora {
-    background-color: $azul !important;
+    background-color: $beige-medio !important;
 }
 
 .titulo-modal {
     color: white !important;
+    font-family: "BentonMedium";
+    font-size: 22px;
+}
+
+.categoria-modal {
+    font-size: 20px;
+    font-family: "BentonBook";
+    margin: 0px 0px 10px 0px;
+}
+
+.texto-modal {
+    margin-left: 10px;
+    font-size: 18px;
+    font-family: "BentonBook";
+}
+
+.exclamacion-modal {
+    background-color: #ffd4d4;
+    color: red;
+    text-align: center;
+    padding: 10px 5px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    font-size: 16px;
+    font-family: "BentonBook";
 }
 
 /* Acordion */

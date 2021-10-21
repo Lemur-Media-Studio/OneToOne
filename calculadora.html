@@ -80,13 +80,13 @@
           <div class="input-group mb-3">
             <select class="form-select opcion-input" id="Select1">
               <option selected class="opciones-box-input">Ningún producto seleccionado...</option>
-              <option value="0" class="opciones-box-input">Accesorios</option>
+              <option value="0" class="opciones-box-input" id="idcategoria">Accesorios</option>
               <option value="0" class="opciones-box-input">Accesorios de electrónica, audio, foto y video</option>
               <option value="0" class="opciones-box-input">Belleza y salud</option>
               <option value="0" class="opciones-box-input">Biberones, Mamaderas</option>
               <option value="0" class="opciones-box-input">Carritos de bebé</option>
-              <option value="100" class="opciones-box-input">Computadoras, Notebooks, Laptops</option>
-              <option value="70" class="opciones-box-input">Tablets</option>
+              <option value="100" class="opciones-box-input">Computadoras, Notebooks, Laptops (+USD100)</option>
+              <option value="70" class="opciones-box-input">Tablets (+USD70)</option>
               <option value="0" class="opciones-box-input">Deportes y entretenimiento</option>
               <option value="0" class="opciones-box-input">Hogar</option>
               <option value="0" class="opciones-box-input">Joyería</option>
@@ -145,20 +145,15 @@
             <div class="modal-content">
               <div class="modal-header modal-calculadora">
                 <h5 class="modal-title titulo-modal" id="staticBackdropLabel">Costo de importación</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" fill="white" aria-label="Close"></button>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
-              <div class="modal-body" id="productoenvio">
-                
+              <div class="modal-body">
+                <h5 class="categoria-modal" id="categoria1"> </h5>
+                <p class="texto-modal" id="productoenvio"></p>
+                <p class="texto-modal" id="productofinal"></p>
+                <p class="exclamacion-modal"><strong>o</strong> El costo del envío varía en relación al peso final del paquete.</p>
               </div>
-              <div class="modal-body" id="productofinal">
-                
-              </div>
-              <div class="modal-body" id="productofinaltablet">
-                
-              </div>
-              <div class="modal-footer">
-
-              </div>
+              <div class="modal-footer"></div>
             </div>
           </div>
         </div>
