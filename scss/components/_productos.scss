@@ -1,6 +1,12 @@
 .bienvenido-usuario {
-    background-color: $beige-claro;
-    padding: 1px 10px 1px 10px !important;
+    background-color: $beige-claro !important;
+    padding-top: 90px;
+}
+
+.usuario {
+    display: block;
+    margin-right: 305px;
+    padding-bottom: 6px;
 }
 
 .productos-titulo {

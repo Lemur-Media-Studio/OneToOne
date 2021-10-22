@@ -59,13 +59,13 @@
 
 .position-subtitulo1 {
     position: relative;
-    right: 12px; 
-} 
+    right: 12px;
+}
 
 .position-subtitulo2 {
     position: relative;
     left: 12px;
-}  
+}
 
 .inputs-calculadora1 {
     border-bottom-left-radius: 20px !important;
@@ -172,7 +172,7 @@
     font-family: "BentonBlack";
     border-top-left-radius: 20px !important;
     border-top-right-radius: 20px !important;
-    filter: drop-shadow(0 0 0.5rem black); 
+    filter: drop-shadow(0 0 0.5rem black);
 }
 
 .accordion-button::after {
@@ -191,10 +191,10 @@
 
 .titulo-accordion {
     font-size: 30px;
-    padding: 20px 0;
+    padding: 10px 0;
     font-family: "BentonMedium";
 }
 
-
-
-
+.subtitulo-accordion {
+    padding: 0px 0px 10px 0px !important;
+}

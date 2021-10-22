@@ -600,8 +600,14 @@ header .navbar {
     float: right;
 */
 .bienvenido-usuario {
-  background-color: #B4AC9D;
-  padding: 1px 10px 1px 10px !important;
+  background-color: #B4AC9D !important;
+  padding-top: 90px;
+}
+
+.usuario {
+  display: block;
+  margin-right: 305px;
+  padding-bottom: 6px;
 }
 
 .productos-titulo {
@@ -876,8 +882,12 @@ header .navbar {
 
 .titulo-accordion {
   font-size: 30px;
-  padding: 20px 0;
+  padding: 10px 0;
   font-family: "BentonMedium";
+}
+
+.subtitulo-accordion {
+  padding: 0px 0px 10px 0px !important;
 }
 
 /* MOBILE STYLES */
