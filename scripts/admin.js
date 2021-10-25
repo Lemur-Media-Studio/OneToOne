@@ -5,25 +5,32 @@
     DECLARO UNA FUNCION PARA MANDAR DATOS A BASE DE DATOS   */
 const db = firebase.firestore();
 const todoForm = document.getElementById("todo_form")
-const taskContainer = document.getElementById("cont");
-const taskContainer2 = document.getElementById("cont2");
-const taskContainer3 = document.getElementById("cont3");
-const taskContainer4 = document.getElementById("cont4");
+const taskContainer = document.getElementById("nom");
+const taskContainer2 = document.getElementById("ape");
+const taskContainer3 = document.getElementById("fn");
+const taskContainer4 = document.getElementById("mail");
+const taskContainer5 = document.getElementById("uid");
+const taskContainer6 = document.getElementById("bot");
 const taskProdu = document.getElementById("prod1");
 const taskProdu2 = document.getElementById("prod2");
-const taskContainer5 = document.getElementById("cont5");
+const taskContainer7 = document.getElementById("cont7");
 const listarclientes = () => db.collection("Users").get();
 window.addEventListener("DOMContentLoaded", async (e) => {
   e.preventDefault();
   const querySnapshot = await listarclientes();
   querySnapshot.forEach((doc) => {
     console.log(doc.data())
-    taskContainer.innerHTML += `<div>${doc.data().email}</div>`;
-    taskContainer2.innerHTML += `<div>${doc.data().nombre}</div>`;
-    taskContainer3.innerHTML += `<div>${doc.data().UID}</div>`;
-    taskContainer4.innerHTML += `<div class="col btn-group"><button class="btn bg-success px-2" style="color: #fff;">UID</button>
-            <button class="btn bg-danger px-2"><i class="fas fa-trash-alt" style="color: #fff;"></i></button>
-            <button class="btn bg-warning px-2" style="color: #fff;">EDITAR</button> </div>`;
+    taskContainer.innerHTML += `<div class="info-admin">${doc.data().nombre}</div>`;
+    taskContainer2.innerHTML += `<div class="info-admin label-apellido">${doc.data().apellido}</div>`;
+    taskContainer3.innerHTML += `<div class="info-admin">${doc.data().fecha}</div>`;
+    taskContainer4.innerHTML += `<div class="info-admin">${doc.data().email}</div>`;
+    taskContainer5.innerHTML += `<div class="info-admin">${doc.data().UID}</div>`;
+    taskContainer6.innerHTML += `<div>
+    <button type="button" class="btn btn-success">UID</button>
+    <button type="button" class="btn btn-danger"><i class="fas fa-trash-alt" style="color: #fff;"></i></button>
+    <button type="button" class="btn btn-warning"><i class="fas fa-pen" style="color: #fff;"></></i></button>
+
+    </div>`;
   });
 });
 const create = (name, producto, id, description) => {
@@ -40,12 +47,8 @@ window.addEventListener("DOMContentLoaded", async (e) => {
   const querySnapshot = await listarprod();
   querySnapshot.forEach((doc) => {
     //console.log(doc.data())
-    taskProdu.innerHTML += `<div>${doc.data().producto}</div>`;
-    taskProdu2.innerHTML += `<div>${doc.data().description}</div>`;
-    taskContainer5.innerHTML += `<div class="col btn-group"><button class="btn bg-success px-2" style="color: #fff;">UID</button>
-            <button class="btn bg-info px-2" style="color: #fff;">FID</button>
-            <button class="btn bg-danger px-2"><i class="fas fa-trash-alt" style="color: #fff;"></i></button>
-            <button class="btn bg-warning px-2" style="color: #fff;">EDITAR</button> </div>`;
+    taskProdu.innerHTML += `<div class="info-admin">${doc.data().producto}</div>`;
+    taskProdu2.innerHTML += `<div class="info-admin">${doc.data().description}</div>`;
   });
 });
 todoForm.addEventListener("submit", async (e) => {
@@ -58,3 +61,11 @@ todoForm.addEventListener("submit", async (e) => {
   await create(name, id, producto, description); // Llamo a mi función create
   todoForm.reset(); // Reseteamos los campos
 });
+
+
+
+//<div class="col btn-group">
+    //<button class="btn bg-success botones-usuarios-registrados px-2" style="color: #fff;">UID</button>
+    //<button class="btn bg-danger px-2"><i class="fas fa-trash-alt" style="color: #fff;"></i></button>
+    //<button class="btn bg-warning px-2" style="color: #fff;"><i class="fas fa-pen" style="color: #fff;"></></i></button>
+    //</div>

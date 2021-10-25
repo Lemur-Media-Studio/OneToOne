@@ -737,6 +737,22 @@ header .navbar {
   top: 2px;
 }
 
+.label-admin {
+  background-color: white;
+  border: solid 2px black;
+  color: grey;
+  font-size: 16px;
+}
+
+.info-admin {
+  text-align: left;
+  font-size: 18px;
+}
+
+.botones-usuarios-registrados {
+  font-size: 10px !important;
+}
+
 /* Calculadora */
 .body-calculadora {
   background-image: url(../img/fondo-calculadora3.jpg);
