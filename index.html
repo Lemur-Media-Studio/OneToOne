@@ -185,18 +185,18 @@
                                     <h2 class="login-crear-cuenta">Crear una cuenta</h2>
                                     <form id="login-form">
                                         <div class="form-floating mb-3">
-                                            <input type="nombre" class="form-control form-control1" id="floatingInput1"
+                                            <input type="nombre" class="form-control form-control1" id="idname"
                                                 placeholder="nombre">
                                             <label for="floatingInput" class="form-label">Nombre</label>
                                         </div>
                                         <div class="form-floating mb-3">
-                                            <input type="apellido" class="form-control form-control1" id="floatingInput"
+                                            <input type="apellido" class="form-control form-control1" id="idapellido"
                                                 placeholder="apellido">
                                             <label for="floatingInput" class="form-label">Apellido</label>
                                         </div>
                                         <div class="form-floating mb-3">
                                             <input type="date" class="form-control form-control1"
-                                                id="floatingInputValue" placeholder="name@example.com">
+                                                id="idfecha">
                                             <label for="floatingInputValue" class="form-label">Fecha de
                                                 nacimiento</label>
                                         </div>
@@ -366,12 +366,13 @@
         firebase.initializeApp(firebaseConfig);
         firebase.analytics();
         const auth = firebase.auth();
-        const fs = firebase.firestore();
+        const db = firebase.firestore();
     </script>
 
     <!-- CONEXION CON BACK -->
 
     <script src="scripts/login.js"></script>
+    <script src="scripts/admin.js"></script>
 
 </body>
 
