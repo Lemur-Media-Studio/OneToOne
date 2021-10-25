@@ -613,7 +613,7 @@ header .navbar {
 .productos-titulo {
   font-family: "BentonBlack" !important;
   color: #002A3C;
-  font-size: 30px !important;
+  font-size: 35px !important;
   position: relative;
   left: 50px;
   padding-top: 80px;
@@ -623,6 +623,49 @@ header .navbar {
 .body-productos {
   background-color: #fff !important;
   background-image: none !important;
+}
+
+/* ordenes de compra */
+.seccion-productos {
+  position: relative;
+  bottom: 40px;
+}
+
+/* cards productos */
+.card-productos {
+  background-color: #e6e6e0 !important;
+}
+
+.titulo-trayecto {
+  font-size: 20px;
+  text-align: left !important;
+  position: relative;
+  top: 5px;
+}
+
+.producto-card {
+  text-align: left !important;
+}
+
+.boton-azul-productos {
+  background-color: #002A3C !important;
+  padding: 3px 40px !important;
+  border-radius: 8px !important;
+}
+
+.boton-beige-productos {
+  background-color: #B4AC9D !important;
+  color: white !important;
+  padding: 3px 40px !important;
+  border-radius: 8px !important;
+}
+
+.img-qr {
+  height: 125px !important;
+}
+
+.linea-blanco-productos {
+  border-left: 3px white solid;
 }
 
 .admin-body {
