@@ -668,6 +668,10 @@ header .navbar {
   border-left: 3px white solid;
 }
 
+.linea-blanco-right {
+  border-right: 3px white solid;
+}
+
 .admin-body {
   background-image: none !important;
   background-color: #fff !important;
