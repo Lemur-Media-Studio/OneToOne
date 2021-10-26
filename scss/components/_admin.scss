@@ -1,6 +1,6 @@
 .admin-body {
-    background-image: none !important;
-    background-color: #fff !important;
+    background-image: url(../img/fondo-calculadora3.jpg);
+    background-position-y: 950px !important;
 }
 
 .admin-header{
@@ -14,11 +14,11 @@
     padding-top: 5px;
 }
 
-.admin-form{
+.admin-form {
     font-family: BentonBook !important;
     font-size: 18px !important;
-    color: #3F545B !important;
-    background-color: rgba(166, 175, 179, 0.507) !important;
+    color: black !important;
+    background-color: rgba(212, 215, 216, 0.849) !important;
     margin: 5px;
 }
 
@@ -30,15 +30,25 @@
     margin: 5px;
 }
 
-.admin-productos {
-    position: relative !important;
-    left: 10px !important;
-}
-
 .admin-border {
     border: 1px transparent solid;
     border-top-left-radius: 30px;
-    background-color: rgba(166, 175, 179, 0.507) !important; 
+    background-color: rgba(141, 147, 148, 0.849) !important; 
+}
+
+.productos-border {
+    border: 1px transparent solid;
+    border-bottom-right-radius: 30px;
+    background-color: rgba(141, 147, 148, 0.849) !important ;
+}
+
+.boton-borrar {
+    padding: 3px !important;
+    background-color: $azul;
+}
+
+.container-botones {
+    padding-top: 4px !important;
 }
 
 /* BOTON ENVIAR */
@@ -73,7 +83,9 @@
 
 .info-admin {
     text-align: left;
-    font-size: 18px;
+    font-size: 16px;
+    padding-top: 15px !important;
+    color: white;
 }
 
 .botones-usuarios-registrados {
