@@ -3,12 +3,6 @@
     padding-top: 90px;
 }
 
-.usuario {
-    display: block;
-    margin-right: 305px;
-    padding-bottom: 6px;
-}
-
 .productos-titulo {
     font-family: "BentonBlack" !important;
     color: $azul;
@@ -70,4 +64,10 @@
 
 .linea-blanco-right {
     border-right: 3px white solid;
+}
+
+/* whatsapp logo */
+
+.imagen-whatsapp-productos {
+    position: sticky;
 }

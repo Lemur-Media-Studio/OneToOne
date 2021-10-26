@@ -15,17 +15,29 @@ const taskProdu = document.getElementById("prod1");
 const taskProdu2 = document.getElementById("prod2");
 const taskContainer7 = document.getElementById("cont7");
 const listarclientes = () => db.collection("Users").get();
+const deleteid = id => db.collection('Users').doc(id).delete();
 window.addEventListener("DOMContentLoaded", async (e) => {
   e.preventDefault();
   const querySnapshot = await listarclientes();
   querySnapshot.forEach((doc) => {
-    console.log(doc.data())
+    //console.log(doc.data())
+    const task = doc.data();
+    task.id = doc.id;
+    //console.log(task.id)
     taskContainer.innerHTML += `<div class="info-admin">${doc.data().nombre}</div>`;
     taskContainer2.innerHTML += `<div class="info-admin label-apellido">${doc.data().apellido}</div>`;
     taskContainer3.innerHTML += `<div class="info-admin">${doc.data().fecha}</div>`;
     taskContainer4.innerHTML += `<div class="info-admin">${doc.data().email}</div>`;
     taskContainer5.innerHTML += `<div class="info-admin">${doc.data().UID}</div>`;
-    taskContainer6.innerHTML += `<div class="container-botones"><button class="boton-borrar"><img src="img/basura.png" height="25" alt="basura"></button></div>`;
+    taskContainer6.innerHTML += `<div class="container-botones"><button class="boton-borrar boton-delete" data-id="${task.id}"><img src="img/basura.png" height="25" data-id="${task.id}" class="boton-delete" alt="basura"></button></div>`;
+
+    const btnsDelete = document.querySelectorAll('.boton-delete');
+    btnsDelete.forEach(btn => {
+      btn.addEventListener('click', async(e) =>{
+        await deleteid(e.target.dataset.id)
+        window.location.reload()
+      })
+    })
   });
 });
 const create = (name, producto, id, description) => {
@@ -44,6 +56,7 @@ window.addEventListener("DOMContentLoaded", async (e) => {
     //console.log(doc.data())
     taskProdu.innerHTML += `<div class="info-admin">${doc.data().producto}</div>`;
     taskProdu2.innerHTML += `<div class="info-admin">${doc.data().id}</div>`;
+    
   });
 });
 todoForm.addEventListener("submit", async (e) => {
@@ -52,6 +65,7 @@ todoForm.addEventListener("submit", async (e) => {
   const id = todoForm["todo_id"].value;
   const producto = todoForm["todo_url"].value;
   const description = todoForm["todo_description"].value;
+  window.location.reload()
 
   await create(name, id, producto, description); // Llamo a mi función create
   todoForm.reset(); // Reseteamos los campos

@@ -604,12 +604,6 @@ header .navbar {
   padding-top: 90px;
 }
 
-.usuario {
-  display: block;
-  margin-right: 305px;
-  padding-bottom: 6px;
-}
-
 .productos-titulo {
   font-family: "BentonBlack" !important;
   color: #002A3C;
@@ -672,6 +666,11 @@ header .navbar {
   border-right: 3px white solid;
 }
 
+/* whatsapp logo */
+.imagen-whatsapp-productos {
+  position: sticky;
+}
+
 .admin-body {
   background-image: url(../img/fondo-calculadora3.jpg);
   background-position-y: 950px !important;
@@ -685,7 +684,7 @@ header .navbar {
   background-color: #B4AC9D;
   font-family: "BentonMedium" !important;
   color: #002A3C;
-  padding-top: 5px;
+  padding-top: 80px;
 }
 
 .admin-form {
