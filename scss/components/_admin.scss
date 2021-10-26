@@ -7,7 +7,7 @@
     background-color: $azul !important;
 }
 
-.admin-titulo{
+.admin-titulo {
     background-color: $beige-claro;
     font-family: "BentonMedium" !important;
     color: $azul;
@@ -15,12 +15,25 @@
 }
 
 .admin-form {
-    font-family: BentonBook !important;
+    font-family: "BentonBook" !important;
     font-size: 18px !important;
     color: black !important;
-    background-color: rgba(212, 215, 216, 0.849) !important;
+    background-color: rgba(141, 147, 148, 0.849) !important;
     margin: 5px;
+    border: solid 2px $beige-oscuro;
 }
+
+.admin-form::placeholder { 
+    color: $beige-oscuro; 
+}
+
+
+.titulo-info-admin {
+    font-family: "BentonBlack";
+}
+/* .container-usuarios-productos {
+    filter: drop-shadow(0 0 0.5rem black);
+} */
 
 .admin-datos{
     font-family: "BentonBook" !important;
@@ -43,15 +56,16 @@
 }
 
 .boton-borrar {
-    padding: 3px !important;
+    padding: 2px !important;
     background-color: $azul;
+    border-radius: 5px;
 }
 
 .container-botones {
-    padding-top: 4px !important;
+    padding-top: 6px !important;
 }
 
-/* BOTON ENVIAR */
+/* BOTON ENVIAR/GUARDAR */
 
 .admin-btn-enviar {
     min-width: 130px;
@@ -61,6 +75,7 @@
     font-weight: bold;
     cursor: pointer;
     transition: all 0.3s ease;
+    font-family: "BentonBlack" !important;
     position: relative;
     display: inline-block;
     outline: none;
@@ -76,16 +91,23 @@
 
 .label-admin {
     background-color: white;
-    border: solid 2px black;
+    border: solid 2px $azul;
     color: grey;
-    font-size: 16px;
+    font-size: 18px;
+    padding: 5px;
+    font-family: "BentonBook" !important;
+}
+
+.label-container {
+    border-right: solid 1px rgb(187, 185, 185);
 }
 
 .info-admin {
     text-align: left;
-    font-size: 16px;
+    font-size: 15px;
     padding-top: 15px !important;
     color: white;
+    font-family: "BentonBook" !important;
 }
 
 .botones-usuarios-registrados {
