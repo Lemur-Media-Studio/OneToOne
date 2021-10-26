@@ -1,6 +1,10 @@
 .bienvenido-usuario {
     background-color: $beige-claro !important;
-    padding-top: 90px;
+    padding-top: 85px;
+}
+
+.usuario {
+    padding-bottom: 5px;
 }
 
 .productos-titulo {
@@ -32,7 +36,7 @@
 
 .titulo-trayecto {
     font-size: 20px;
-    text-align: left !important;
+    padding: 40px 0px;
     position: relative;
     top: 5px;
 }
@@ -68,6 +72,9 @@
 
 /* whatsapp logo */
 
-.imagen-whatsapp-productos {
-    position: sticky;
+.logo-sticky {
+    position: sticky !important;
+    top: 870px !important;
+    right: 20px !important;
+    float: right !important;
 }
