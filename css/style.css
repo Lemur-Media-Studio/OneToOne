@@ -735,13 +735,13 @@ header .navbar {
 }
 
 .boton-borrar {
-  padding: 2px !important;
+  padding: 1px !important;
   background-color: #002A3C;
   border-radius: 5px;
 }
 
 .container-botones {
-  padding-top: 6px !important;
+  padding-top: 5px !important;
 }
 
 /* BOTON ENVIAR/GUARDAR */
@@ -783,7 +783,7 @@ header .navbar {
 .info-admin {
   text-align: left;
   font-size: 15px;
-  padding-top: 15px !important;
+  padding-top: 14px !important;
   color: white;
   font-family: "BentonBook" !important;
 }
