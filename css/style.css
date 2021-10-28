@@ -671,8 +671,11 @@ header .navbar {
 }
 
 /* whatsapp logo */
-.imagen-whatsapp-productos {
-  position: sticky;
+.logo-sticky {
+  position: sticky !important;
+  top: 870px !important;
+  right: 20px !important;
+  float: right !important;
 }
 
 .admin-body {

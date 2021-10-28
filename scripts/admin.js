@@ -11,9 +11,15 @@ const taskContainer3 = document.getElementById("fn");
 const taskContainer4 = document.getElementById("mail");
 const taskContainer5 = document.getElementById("uid");
 const taskContainer6 = document.getElementById("bot");
+
 const taskProdu = document.getElementById("prod1");
 const taskProdu2 = document.getElementById("prod2");
-const taskContainer7 = document.getElementById("cont7");
+const taskProdu3 = document.getElementById("prod3");
+const taskProdu4 = document.getElementById("prod4");
+const taskProdu5 = document.getElementById("prod5");
+
+const listprod = document.getElementById("productlist");
+
 const listarclientes = () => db.collection("Users").get();
 const deleteid = id => db.collection('Users').doc(id).delete();
 window.addEventListener("DOMContentLoaded", async (e) => {
@@ -33,50 +39,56 @@ window.addEventListener("DOMContentLoaded", async (e) => {
 
     const btnsDelete = document.querySelectorAll('.boton-delete');
     btnsDelete.forEach(btn => {
-      btn.addEventListener('click', async(e) =>{
+      btn.addEventListener('click', async (e) => {
         await deleteid(e.target.dataset.id)
         window.location.reload()
       })
     })
   });
 });
-const create = (name, producto, id, description) => {
+const create = (name, producto, id, description, uid) => {
   db.collection("Productos").doc(producto).set({
     name,
     producto,
     id,
     description,
+    uid
   });
+
 };
 const listarprod = () => db.collection("Productos").get();
 window.addEventListener("DOMContentLoaded", async (e) => {
   e.preventDefault();
   const querySnapshot = await listarprod();
   querySnapshot.forEach((doc) => {
-    //console.log(doc.data())
-    taskProdu.innerHTML += `<div class="info-admin">${doc.data().producto}</div>`;
-    taskProdu2.innerHTML += `<div class="info-admin">${doc.data().id}</div>`;
-    
+    console.log(doc.data())
+    taskProdu.innerHTML += `<div class="info-admin">${doc.data().name}</div>`;
+    taskProdu2.innerHTML += `<div class="info-admin">${doc.data().producto}</div>`
+    taskProdu3.innerHTML += `<div class="info-admin">${doc.data().id}</div>`
+    taskProdu4.innerHTML += `<div class="info-admin">${doc.data().description}</div>`
+    taskProdu5.innerHTML += `<div class="info-admin">${doc.data().uid}</div>`
   });
 });
 todoForm.addEventListener("submit", async (e) => {
   e.preventDefault();
   const name = todoForm["todo_name"].value;
   const id = todoForm["todo_id"].value;
-  const producto = todoForm["todo_url"].value;
+  const producto = todoForm["todo_val"].value;
   const description = todoForm["todo_description"].value;
-  window.location.reload()
+  const uid = todoForm["todo_uid"].value;
 
-  await create(name, id, producto, description); // Llamo a mi función create
+
+  await create(name, id, producto, description, uid); // Llamo a mi función create
   todoForm.reset(); // Reseteamos los campos
 });
 
 
 
-//<div class="col btn-group">
-    //<button class="btn bg-success botones-usuarios-registrados px-2" style="color: #fff;">UID</button>
-    //<button class="btn bg-danger px-2"><i class="fas fa-trash-alt" style="color: #fff;"></i></button>
-    //<button class="btn bg-warning px-2" style="color: #fff;"><i class="fas fa-pen" style="color: #fff;"></></i></button>
-    //</div>
 
-    //<button type="button" class="btn btn-warning"><i class="fas fa-pen" style="color: #fff;"></></i></button> 
+//<div class="col btn-group">
+//<button class="btn bg-success botones-usuarios-registrados px-2" style="color: #fff;">UID</button>
+//<button class="btn bg-danger px-2"><i class="fas fa-trash-alt" style="color: #fff;"></i></button>
+//<button class="btn bg-warning px-2" style="color: #fff;"><i class="fas fa-pen" style="color: #fff;"></></i></button>
+//</div>
+
+//<button type="button" class="btn btn-warning"><i class="fas fa-pen" style="color: #fff;"></></i></button> 
