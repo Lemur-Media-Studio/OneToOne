@@ -735,13 +735,12 @@ header .navbar {
 }
 
 .boton-borrar {
-  padding: 1px !important;
   background-color: #002A3C;
   border-radius: 5px;
 }
 
 .container-botones {
-  padding-top: 5px !important;
+  padding-top: 6px !important;
 }
 
 /* BOTON ENVIAR/GUARDAR */
