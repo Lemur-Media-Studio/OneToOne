@@ -1,8 +1,4 @@
-/*  DOCUMENTACION DE FIREBASE: https://firebase.google.com/docs/auth/web/start
-    LINK DE BASE DE DATOS: https://console.firebase.google.com/u/1/project/inicio-logueo-one/overview
-***************************************************************************************************************
-***************************************************************************************************************
-    DECLARO UNA FUNCION PARA MANDAR DATOS A BASE DE DATOS   */
+const auth = firebase.auth();
 const db = firebase.firestore();
 const todoForm = document.getElementById("todo_form")
 const taskContainer = document.getElementById("nom");
@@ -20,8 +16,8 @@ const taskProdu5 = document.getElementById("prod5");
 
 const listprod = document.getElementById("productlist");
 
-const listarclientes = () => db.collection("Users").get();
-const deleteid = id => db.collection('Users').doc(id).delete();
+const listarclientes = () => db.collection("users").get();
+const deleteid = id => db.collection('users').doc(id).delete();
 window.addEventListener("DOMContentLoaded", async (e) => {
   e.preventDefault();
   const querySnapshot = await listarclientes();
@@ -47,7 +43,7 @@ window.addEventListener("DOMContentLoaded", async (e) => {
   });
 });
 const create = (name, producto, id, description, uid) => {
-  db.collection("Productos").doc(producto).set({
+  db.collection("Productos").doc(uid).set({
     name,
     producto,
     id,
