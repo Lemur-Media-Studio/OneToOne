@@ -43,7 +43,7 @@ window.addEventListener("DOMContentLoaded", async (e) => {
   });
 });
 const create = (name, producto, id, description, uid) => {
-  db.collection("Productos").doc(uid).set({
+  db.collection("Productos").doc().set({
     name,
     producto,
     id,

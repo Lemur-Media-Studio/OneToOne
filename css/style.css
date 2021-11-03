@@ -623,6 +623,12 @@ header .navbar {
   background-image: none !important;
 }
 
+/* Datos para realizar la compra */
+.info-productos {
+  font-size: 20px;
+  font-family: "BentonBook";
+}
+
 /* ordenes de compra */
 .seccion-productos {
   position: relative;
@@ -954,25 +960,25 @@ header .navbar {
 }
 
 .section-container-accordion {
-  padding: 100px 20px 20px 20px;
+  padding: 80px 20px 20px 20px;
 }
 
-.accordion-boton {
-  background-color: #002A3C !important;
-  color: white !important;
+.accordion-boton1 {
+  background-color: #d6d5d4 !important;
+  color: #002A3C !important;
   font-size: 25px !important;
   font-family: "BentonBlack";
+  border: solid 3px #002A3C !important;
   border-top-left-radius: 20px !important;
   border-top-right-radius: 20px !important;
-  filter: drop-shadow(0 0 0.5rem black);
 }
 
-.accordion-button::after {
-  background-image: url(../img/flecha2.png) !important;
-}
-
-.accordion-button:not(.collapsed)::after {
-  background-image: url(../img/flecha2.png) !important;
+.accordion-boton2 {
+  background-color: #d6d5d4 !important;
+  color: #002A3C !important;
+  font-size: 25px !important;
+  font-family: "BentonBlack";
+  border: solid 3px #002A3C !important;
 }
 
 .accordion-body {

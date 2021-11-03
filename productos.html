@@ -86,41 +86,45 @@
     <p id="nombre_usua"></p>
   </section>
 
+  <section class="container">
+    <h1 class="px-5 productos-titulo">Datos para realizar la compra</h1>
+
+    <div class="row gx-5">
+      <div class="col">
+        <div class="p-3 border bg-light">        
+          <p class="info-productos"><strong>1.</strong> Enviar tus compras/pedidos a nuestra oficina en LA:</p>
+          <p class="info-productos">• Nombre: Maria Kim</p>
+          <p class="info-productos">• Apellido: Nombre+Apellido propio</p>
+          <p class="info-productos">• Ph Number: +1 213 306 6554</p>
+          <p class="info-productos">• Dirección: 645 W 9TH ST UNIT 242, LOS ANGELES CA 90015</p></div>
+      </div>
+      <div class="col">
+        <div class="p-3 border bg-light">        
+          <p class="info-productos"><strong>2.</strong> Informar a OneToOne sobre la compra:</p>
+          <p class="info-productos">⁃ Detalle de la mercadería comprada </p>
+          <p class="info-productos">⁃ Tracking Number de la mercadería</p>
+          <p class="info-productos">⁃ Dirección de entrega en Argentina (nombre, dirección y teléfono de contacto)</p></div>
+      </div>
+      <div class="col">
+        <div class="p-3 border bg-light">        
+          <p class="info-productos">¿Cómo? A través de: </p>
+          <p class="info-productos">⁃ Email: info@one-oneconsulting.com</p>
+          <p class="info-productos">⁃ WhatsApp: +1 (213) 306 6554</p>
+      </div>
+    </div>
+  </section>
+
   <!-- titulo ordenes de compra -->
   <section class="container seccion-productos">
-    <h1 class="px-5 productos-titulo">Órdenes de compra</h1>
+    <h2 class="px-5 productos-titulo">Órdenes de compra</h2>
     <div align="center">
 
       <!-- card 1 -->
-      <div class="card mb-3 card-productos shadow p-3 mb-5 bg-body rounded" style="max-width: 1100px;">
-        <div class="row g-0 align-items-center" id="card-1">
-          <div class="col-md-2 linea-blanco-right">
-            <p id="estado"></p>
-          </div>
-          <div class="col-md-4">
-            <div class="card-body">
-              <h6 class="card-title producto-card" id="producto"></h6>
-              <p class="card-text producto-card" id="marca"></p>
-            </div>
-          </div>
-          <div class="col-md-1">
-            <div class="card-body">
-              <h6 class="card-title producto-card" id="precio"></h6>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="d-grid gap-2 col-6 mx-auto">
-              <button class="btn btn-dark boton-azul-productos" type="button">Ver factura</button>
-              <button class="btn boton-beige-productos" type="button">Ayuda</button>
-            </div>
-          </div>
-          <div class="col-md-2 linea-blanco-productos" id="qr">
-            
-          </div>
-        </div> 
+      <div id="card">
+ 
       </div>
 
-<!--        card 2 
+      <!--        card 2 
       <div class="card mb-3 card-productos shadow p-3 mb-5 bg-body rounded" style="max-width: 1100px;">
         <div class="row g-0 align-items-center">
           <div class="col-md-2 linea-blanco-right">
@@ -259,46 +263,46 @@
       </div>
     </div>
   </footer>
-    <!-- FIREBASE SCRIPTS -->
+  <!-- FIREBASE SCRIPTS -->
 
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
 
-    <!-- LIBRERIAS SDK PARA FIREBASE
+  <!-- LIBRERIAS SDK PARA FIREBASE
                 https://firebase.google.com/docs/web/setup#available-libraries -->
-    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-analytics.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-analytics.js"></script>
 
-    <!--Llamo libreria de firebase para poder hacer autenticacion de usuarios-->
-    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-firestore.js"></script>
+  <!--Llamo libreria de firebase para poder hacer autenticacion de usuarios-->
+  <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-firestore.js"></script>
 
-    <!-- Enlazo Base de datos(FireBase) en index.html)-->
-    <script>
-        // Your web app's Firebase configuration
-        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-        var firebaseConfig = {
-            apiKey: "AIzaSyDCHQ7kkPsQJBC_WWlr3HU75Xddgo-uEQE",
-            authDomain: "inicio-logueo-one.firebaseapp.com",
-            projectId: "inicio-logueo-one",
-            storageBucket: "inicio-logueo-one.appspot.com",
-            messagingSenderId: "906037161545",
-            appId: "1:906037161545:web:f3b79d7c386ae4e0f11998",
-            measurementId: "G-NKF36TK1LV"
-        };
-        // Initialize Firebase
-        firebase.initializeApp(firebaseConfig);
-        firebase.analytics();
-        const auth = firebase.auth();
-        const db = firebase.firestore();
-    </script>
+  <!-- Enlazo Base de datos(FireBase) en index.html)-->
+  <script>
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    var firebaseConfig = {
+      apiKey: "AIzaSyDCHQ7kkPsQJBC_WWlr3HU75Xddgo-uEQE",
+      authDomain: "inicio-logueo-one.firebaseapp.com",
+      projectId: "inicio-logueo-one",
+      storageBucket: "inicio-logueo-one.appspot.com",
+      messagingSenderId: "906037161545",
+      appId: "1:906037161545:web:f3b79d7c386ae4e0f11998",
+      measurementId: "G-NKF36TK1LV"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+    const auth = firebase.auth();
+    const db = firebase.firestore();
+  </script>
 
   <!--     LOGO whatsapp 
     <div class="logo-sticky">
       <a href="" target="_blank"><img src="img/Logo-Whatsapp-PNG.png" height="50"
         alt="Logo de WhatsApp"></a>
     </div> -->
-    <script src="scripts/admin2list.js"></script>
-    
+  <script src="scripts/admin2list.js"></script>
+
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
     integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous">
   </script>
