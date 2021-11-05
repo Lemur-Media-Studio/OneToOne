@@ -129,7 +129,7 @@ header .navbar {
 }
 
 .navbar .navbar-toggler-icon:after {
-  content: "";
+  content: "\f0c9";
   color: #fff;
   font-size: 18px;
   line-height: 26px;
@@ -467,88 +467,6 @@ header .navbar {
   text-decoration: none;
 }
 
-.modal-header {
-  border: none;
-}
-
-.login-border {
-  border: 25px solid rgba(166, 175, 179, 0.507) !important;
-  border-radius: 40px !important;
-}
-
-.modal-content {
-  background-color: white !important;
-  border: 1px solid rgba(132, 125, 114, 0.507) !important;
-  border-radius: 15px !important;
-}
-
-.login-boton-cierre {
-  position: relative;
-  left: 356px;
-}
-
-.login-boton-cierre-2 {
-  position: relative;
-  left: 415px;
-}
-
-.form-index {
-  background-color: #a6afb3 !important;
-  border: 1px #002A3C solid !important;
-  border-radius: 15px !important;
-  color: #3f545b !important;
-}
-
-.form-label {
-  font-family: BentonBook !important;
-  font-size: 18px !important;
-}
-
-.form-label {
-  color: #3F545B !important;
-}
-
-.login-iniciar {
-  background-color: #002A3C !important;
-  border: 1px #847d72 solid !important;
-  border-radius: 15px !important;
-  color: white !important;
-  font-family: BentonBlack !important;
-  font-size: 20px !important;
-}
-
-.login-iniciar-rs {
-  background-color: #002A3C !important;
-  border: 1px #847d72 solid !important;
-  border-radius: 15px !important;
-  color: white !important;
-  font-family: BentonMedium !important;
-  font-size: 20px !important;
-}
-
-.login-border-iniciar {
-  border-bottom: 1px solid #847d72 !important;
-  padding: 15px;
-}
-
-.olvido-contraseña {
-  font-family: BentonBook !important;
-  font-size: 12px !important;
-  font-style: italic !important;
-}
-
-.login-cursiva {
-  font-family: BentonBook !important;
-  font-size: 18px !important;
-  font-style: italic !important;
-}
-
-.modal-body .login-crear-cuenta {
-  color: #002A3C !important;
-  font-family: BentonBlack !important;
-  font-size: 30px !important;
-}
-
 .customers-bg {
   background-image: url(../img/fondo-puerto.jpg);
 }
@@ -601,7 +519,7 @@ header .navbar {
 */
 .bienvenido-usuario {
   background-color: #B4AC9D !important;
-  padding-top: 85px;
+  padding-top: 84px;
 }
 
 .usuario {
@@ -624,6 +542,10 @@ header .navbar {
 }
 
 /* Datos para realizar la compra */
+.container-datos {
+  border: solid 3px #002A3C !important;
+}
+
 .info-productos {
   font-size: 20px;
   font-family: "BentonBook";
@@ -797,6 +719,88 @@ header .navbar {
   font-size: 10px !important;
 }
 
+.modal-header {
+  border: none;
+}
+
+.login-border {
+  border: 25px solid rgba(166, 175, 179, 0.507) !important;
+  border-radius: 40px !important;
+}
+
+.modal-content {
+  background-color: white !important;
+  border: 1px solid rgba(132, 125, 114, 0.507) !important;
+  border-radius: 15px !important;
+}
+
+.login-boton-cierre {
+  position: relative;
+  left: 356px;
+}
+
+.login-boton-cierre-2 {
+  position: relative;
+  left: 415px;
+}
+
+.form-index {
+  background-color: #a6afb3 !important;
+  border: 1px #002A3C solid !important;
+  border-radius: 15px !important;
+  color: #3f545b !important;
+}
+
+.form-label {
+  font-family: BentonBook !important;
+  font-size: 18px !important;
+}
+
+.form-label {
+  color: #3F545B !important;
+}
+
+.login-iniciar {
+  background-color: #002A3C !important;
+  border: 1px #847d72 solid !important;
+  border-radius: 15px !important;
+  color: white !important;
+  font-family: BentonBlack !important;
+  font-size: 20px !important;
+}
+
+.login-iniciar-rs {
+  background-color: #002A3C !important;
+  border: 1px #847d72 solid !important;
+  border-radius: 15px !important;
+  color: white !important;
+  font-family: BentonMedium !important;
+  font-size: 20px !important;
+}
+
+.login-border-iniciar {
+  border-bottom: 1px solid #847d72 !important;
+  padding: 15px;
+}
+
+.olvido-contraseña {
+  font-family: BentonBook !important;
+  font-size: 12px !important;
+  font-style: italic !important;
+}
+
+.login-cursiva {
+  font-family: BentonBook !important;
+  font-size: 18px !important;
+  font-style: italic !important;
+}
+
+.modal-body .login-crear-cuenta {
+  color: #002A3C !important;
+  font-family: BentonBlack !important;
+  font-size: 30px !important;
+}
+
 /* Calculadora */
 .body-calculadora {
   background-image: url(../img/fondo-calculadora3.jpg);
@@ -964,7 +968,7 @@ header .navbar {
 }
 
 .accordion-boton1 {
-  background-color: #d6d5d4 !important;
+  background-color: white !important;
   color: #002A3C !important;
   font-size: 25px !important;
   font-family: "BentonBlack";
@@ -974,7 +978,7 @@ header .navbar {
 }
 
 .accordion-boton2 {
-  background-color: #d6d5d4 !important;
+  background-color: white !important;
   color: #002A3C !important;
   font-size: 25px !important;
   font-family: "BentonBlack";

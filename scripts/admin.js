@@ -79,8 +79,6 @@ todoForm.addEventListener("submit", async (e) => {
 });
 
 
-
-
 //<div class="col btn-group">
 //<button class="btn bg-success botones-usuarios-registrados px-2" style="color: #fff;">UID</button>
 //<button class="btn bg-danger px-2"><i class="fas fa-trash-alt" style="color: #fff;"></i></button>

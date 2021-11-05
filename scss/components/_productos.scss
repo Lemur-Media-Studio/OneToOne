@@ -1,6 +1,6 @@
 .bienvenido-usuario {
     background-color: $beige-claro !important;
-    padding-top: 85px;
+    padding-top: 84px;
 }
 
 .usuario {
@@ -23,6 +23,10 @@
 }
 
 /* Datos para realizar la compra */
+
+.container-datos {
+    border: solid 3px $azul !important;
+}
 
 .info-productos {
     font-size: 20px;
