@@ -17,26 +17,23 @@ $("#Select2").on("change", function () {
   console.log(value2, sel2);
 });
 
-function calculo(valor, precio, x, xt, preciokg, xte) {
-  var valor = document.getElementById("idvalor").value;
+function calculo( precio, x, xt, preciokg, xte) {
+  //var valor = document.getElementById("idvalor").value;
   var precio = document.getElementById("idpeso").value;
 
   var x,
-    xt = 0;
+  xt = 0;
   var preciokg = 0;
   preciokg = value2;
 
   console.log(preciokg);
-  //console.log(valor);
-  //console.log(precio);
+  console.log(precio);
   x = preciokg * precio;
-  //console.log(x);
-  //window.alert("El precio del envio es: $" + (x));
-  xt = parseFloat(valor) + parseFloat(x);
-  //console.log(xt);
-  //window.alert("El precio final (con envio): $" + (xt));
+  console.log(x);
 
-  xte = parseFloat(xt) + parseFloat(value);
+  //window.alert("El precio final (con envio): $" + (x));
+
+  xte = parseFloat(x) + parseFloat(value);
   //console.log(xte);
 
   ic.innerHTML = `<div>Categoria: <strong>${sel}</strong></div>`;
