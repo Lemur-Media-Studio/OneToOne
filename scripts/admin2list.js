@@ -87,12 +87,7 @@ auth.onAuthStateChanged(user => {
           </div>
           <div class="row"> 
           <div class="col-12">
-          <div class="progress">
-              <div class="progress-bar progress-bar-striped progress-bar-animated bg-dark" id="barra"
-               role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-               <a href="traking.html">traking</a>
-            
-              </div>
+               <a href="tracking.html" target="_blank">tracking</a>
           </div>
           </div>
             </div>

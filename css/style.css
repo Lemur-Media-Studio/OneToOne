@@ -606,16 +606,6 @@ header .navbar {
   float: right !important;
 }
 
-/* progress bar */
-.progress-bar1 {
-  background-color: #002A3C !important;
-  width: 100% !important;
-}
-
-.progress {
-  border: solid 1px #514E47 !important;
-}
-
 .admin-body {
   background-image: url(../img/fondo-calculadora3.jpg);
   background-position-y: 950px !important;
@@ -744,14 +734,19 @@ header .navbar {
   border-radius: 15px !important;
 }
 
+.login-border-iniciar {
+  border-bottom: 1px solid #847d72 !important;
+  padding: 15px;
+}
+
 .login-boton-cierre {
   position: relative;
-  left: 356px;
+  left: 335px !important;
 }
 
 .login-boton-cierre-2 {
   position: relative;
-  left: 415px;
+  left: 415px !important;
 }
 
 .form-index {
@@ -763,7 +758,7 @@ header .navbar {
 
 .form-label {
   font-family: BentonBook !important;
-  font-size: 18px !important;
+  font-size: 12px !important;
 }
 
 .form-label {
@@ -776,7 +771,7 @@ header .navbar {
   border-radius: 15px !important;
   color: white !important;
   font-family: BentonBlack !important;
-  font-size: 20px !important;
+  font-size: 15px !important;
 }
 
 .login-iniciar-rs {
@@ -785,30 +780,32 @@ header .navbar {
   border-radius: 15px !important;
   color: white !important;
   font-family: BentonMedium !important;
-  font-size: 20px !important;
-}
-
-.login-border-iniciar {
-  border-bottom: 1px solid #847d72 !important;
-  padding: 15px;
+  font-size: 15px !important;
 }
 
 .olvido-contraseña {
   font-family: BentonBook !important;
-  font-size: 12px !important;
+  font-size: 10px !important;
   font-style: italic !important;
 }
 
 .login-cursiva {
   font-family: BentonBook !important;
-  font-size: 18px !important;
+  font-size: 12px !important;
   font-style: italic !important;
+}
+
+.form-control1 {
+  background-color: #a6afb3 !important;
+  border: 1px #002A3C solid !important;
+  border-radius: 15px !important;
+  color: #3f545b !important;
 }
 
 .modal-body .login-crear-cuenta {
   color: #002A3C !important;
   font-family: BentonBlack !important;
-  font-size: 30px !important;
+  font-size: 22px !important;
 }
 
 /* Calculadora */
@@ -1011,6 +1008,33 @@ header .navbar {
   padding: 0px 0px 10px 0px !important;
 }
 
+/* progress bar */
+.section-tracking {
+  padding-top: 110px !important;
+  padding-bottom: 170px;
+}
+
+progress {
+  width: 1115px;
+  height: 25px;
+  background: transparent;
+}
+
+progress::-webkit-progress-value {
+  background: #002A3C;
+  border-radius: 20px;
+  transition: width 2.5s ease-in-out;
+}
+
+progress::-moz-progress-bar {
+  background: lightcolor;
+}
+
+progress::-webkit-progress-bar {
+  background-color: white;
+  border-radius: 20px;
+}
+
 /* MOBILE STYLES */
 @media only screen and (max-width: 450px) {
   /* BIENVENIDOS */
@@ -1109,89 +1133,6 @@ header .navbar {
     margin: 0px 15px !important;
   }
 }
-/* LOGIN */
-.logo-login {
-  height: 50px !important;
-}
-
-.login-border {
-  border: 25px solid rgba(166, 175, 179, 0.507) !important;
-  border-radius: 40px !important;
-}
-
-.modal-content {
-  background-color: white !important;
-  border: 1px solid rgba(132, 125, 114, 0.507) !important;
-  border-radius: 15px !important;
-}
-
-.login-boton-cierre {
-  position: relative;
-  left: 335px !important;
-}
-
-.login-boton-cierre-2 {
-  position: relative;
-  left: 415px !important;
-}
-
-.form-control1 {
-  background-color: #a6afb3 !important;
-  border: 1px #002A3C solid !important;
-  border-radius: 15px !important;
-  color: #3f545b !important;
-}
-
-.form-label {
-  font-family: BentonBook !important;
-  font-size: 12px !important;
-}
-
-.form-label {
-  color: #3F545B !important;
-}
-
-.login-iniciar {
-  background-color: #002A3C !important;
-  border: 1px #847d72 solid !important;
-  border-radius: 15px !important;
-  color: white !important;
-  font-family: BentonBlack !important;
-  font-size: 15px !important;
-}
-
-.login-iniciar-rs {
-  background-color: #002A3C !important;
-  border: 1px #847d72 solid !important;
-  border-radius: 15px !important;
-  color: white !important;
-  font-family: BentonMedium !important;
-  font-size: 15px !important;
-}
-
-.login-border-iniciar {
-  border-bottom: 1px solid #847d72 !important;
-  padding: 15px;
-}
-
-.olvido-contraseña {
-  font-family: BentonBook !important;
-  font-size: 10px !important;
-  font-style: italic !important;
-}
-
-.login-cursiva {
-  font-family: BentonBook !important;
-  font-size: 12px !important;
-  font-style: italic !important;
-}
-
-.modal-body .login-crear-cuenta {
-  color: #002A3C !important;
-  font-family: BentonBlack !important;
-  font-size: 22px !important;
-}
-
 /* ///////////////////////////////////////////////////////////////////////////////////////////////////////// */
 /* MACBOOK PRO 13" - NOTEBOOKS STYLES */
 @media only screen and (min-width: 1200px) and (max-width: 1440px) {

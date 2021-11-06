@@ -1,4 +1,4 @@
-
+const tracking = document.getElementById("track")
 auth.onAuthStateChanged(user => {
     if (user) {
       console.log('user logged in: ');
@@ -20,8 +20,21 @@ auth.onAuthStateChanged(user => {
   
           if (doc.data().uid == user.uid) {
             console.log(guide);
-    
-              
+
+            tracking.innerHTML +=  `<hr>
+            <p data-aos="fade-left">${doc.data().name}</p>
+          <div data-aos="fade-left" class="row">
+            <div class="col text-left">
+              En proceso
+            </div>
+            <div class="col text-center">
+              Los Angeles
+            </div>
+            <div class="col text-right">
+              Buenos Aires
+            </div>
+          </div>
+            <progress data-aos="fade-left" class="progress-bar1" id="file" max="100" value="${doc.data().track}"></progress>`
           }
   
         });
