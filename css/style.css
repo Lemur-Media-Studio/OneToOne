@@ -639,9 +639,6 @@ header .navbar {
   font-family: "BentonBlack";
 }
 
-/* .container-usuarios-productos {
-    filter: drop-shadow(0 0 0.5rem black);
-} */
 .admin-datos {
   font-family: "BentonBook" !important;
   font-size: 18px !important;
@@ -717,6 +714,10 @@ header .navbar {
 
 .botones-usuarios-registrados {
   font-size: 10px !important;
+}
+
+.boton-editar {
+  background-color: white !important;
 }
 
 .modal-header {
