@@ -159,28 +159,33 @@
 .accordion-item {
     border-top-left-radius: 20px !important;
     border-top-right-radius: 20px !important;
+    border-bottom-left-radius: 20px !important;
+    border-bottom-right-radius: 20px !important;
+
 }
 
 .section-container-accordion {
-    padding: 100px 20px 20px 20px;
+    padding: 80px 20px 20px 20px;
 }
 
-.accordion-boton {
-    background-color: $azul !important;
-    color: white !important;
+.accordion-boton1 {
+    background-color: white !important;
+    color: $azul !important;
     font-size: 25px !important;
     font-family: "BentonBlack";
+    border: solid 3px $azul !important;
     border-top-left-radius: 20px !important;
     border-top-right-radius: 20px !important;
-    filter: drop-shadow(0 0 0.5rem black);
 }
 
-.accordion-button::after {
-    background-image: url(../img/flecha2.png) !important;
-}
-
-.accordion-button:not(.collapsed)::after {
-    background-image: url(../img/flecha2.png) !important;
+.accordion-boton2 {
+    background-color: white !important;
+    color: $azul !important;
+    font-size: 25px !important;
+    font-family: "BentonBlack";
+    border: solid 3px $azul !important;
+    border-bottom-left-radius: 20px !important;
+    border-bottom-right-radius: 20px !important;
 }
 
 .accordion-body {

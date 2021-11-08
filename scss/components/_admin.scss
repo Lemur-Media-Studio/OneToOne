@@ -27,13 +27,9 @@
     color: $beige-oscuro; 
 }
 
-
 .titulo-info-admin {
     font-family: "BentonBlack";
 }
-/* .container-usuarios-productos {
-    filter: drop-shadow(0 0 0.5rem black);
-} */
 
 .admin-datos{
     font-family: "BentonBook" !important;
@@ -82,7 +78,7 @@
     border: none;
     box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5), 7px 7px 20px 0px rgba(0,0,0,.1), 4px 4px 5px 0px rgba(0,0,0,.1);
     background: $azul;
-  }
+}
 
   .admin-btn-enviar:active {
     top: 2px;
@@ -111,4 +107,8 @@
 
 .botones-usuarios-registrados {
     font-size: 10px !important;
+}
+
+.boton-editar {
+    background-color: white !important;
 }
