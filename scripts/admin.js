@@ -19,7 +19,7 @@ let editStatus = false;
 let id = '';
 
 
-const saveProduto = (producto, marca,valor,idt,uid,estado) =>
+const saveProduto = (producto, marca, valor, idt, uid, estado) =>
   db.collection("tasks").doc().set({
     producto,
     marca,
@@ -44,8 +44,13 @@ const getTask = (id) => db.collection("tasks").doc(id).get();
 const updateTask = (id, updatedTask) => db.collection('tasks').doc(id).update(updatedTask);
 
 window.addEventListener("DOMContentLoaded", async (e) => {
-  getUsers((querySnapshot)=>{
-
+  getUsers((querySnapshot) => {
+    taskContainer.innerHTML = `<h6 class="label-admin">Nombre</h6>`;
+    taskContainer2.innerHTML = `<h6 class="label-admin label-apellido">Apellido</h6>`;
+    taskContainer3.innerHTML = `<h6 class="label-admin">F/N</h6>`;
+    taskContainer4.innerHTML = `<h6 class="label-admin">E-mail</h6>`;
+    taskContainer5.innerHTML = `<h6 class="label-admin">UID</h6>`;
+    taskContainer6.innerHTML = `<h6 class="label-admin">Borrar</h6>`;
     querySnapshot.forEach((doc) => {
       //console.log(doc.data())
       const task = doc.data();
@@ -58,7 +63,7 @@ window.addEventListener("DOMContentLoaded", async (e) => {
       taskContainer5.innerHTML += `<div class="info-admin">${doc.data().UID}</div>`;
       taskContainer6.innerHTML += `<div class="container-botones"><button class="boton-borrar boton-delete" data-id="${task.id}">
       <img src="img/basura.png" height="25" data-id="${task.id}" class="boton-delete" alt="basura"></button></div>`;
-  
+
       const btnsDelete = document.querySelectorAll('.boton-delete');
       btnsDelete.forEach(btn => {
         btn.addEventListener('click', async (e) => {
@@ -68,17 +73,17 @@ window.addEventListener("DOMContentLoaded", async (e) => {
     });
   });
 
-  })
+})
 
 
 window.addEventListener("DOMContentLoaded", async (e) => {
   onGetTasks((querySnapshot) => {
-    taskProdu.innerHTML = `<h6 class="label-admin">Nombre</h6>`;
-    taskProdu2.innerHTML =  `<h6 class="label-admin label-apellido">Marca</h6>`;
-    taskProdu3.innerHTML =  `<h6 class="label-admin">Valor</h6>`;
-    taskProdu4.innerHTML =  `<h6 class="label-admin">ID/T</h6>`;
-    taskProdu5.innerHTML =  `<h6 class="label-admin">UID</h6>`;
-    botones.innerHTML =  `<h6 class="label-admin">Botones</h6>`;
+    taskProdu.innerHTML = `<h6 class="label-admin">Producto</h6>`;
+    taskProdu2.innerHTML = `<h6 class="label-admin label-apellido">Marca</h6>`;
+    taskProdu3.innerHTML = `<h6 class="label-admin">Valor</h6>`;
+    taskProdu4.innerHTML = `<h6 class="label-admin">ID/T</h6>`;
+    taskProdu5.innerHTML = `<h6 class="label-admin">UID</h6>`;
+    botones.innerHTML = `<h6 class="label-admin">Botones</h6>`;
     estados.innerHTML = `<h6 class="label-admin">Estado</h6>`;
 
     querySnapshot.forEach((doc) => {
@@ -97,25 +102,25 @@ window.addEventListener("DOMContentLoaded", async (e) => {
       <button class="boton-borrar btn-edit" data-id="${task.id}">
       <img src="img/editar.png" data-id="${doc.id}" height="25" class="boton-editar" alt="lapiz"></button>
       </div>`
-/*
-      tasksContainer.innerHTML += `<div class="card card-body mt-2 border-primary">
-    <h3 class="h5">${task.producto}</h3>
-    <p>${task.marca}</p>
-    <p>${task.valor}</p>
-    <p>${task.idt}</p>
-    <p>${task.uid}</p>
-    <p>${task.estado}</p>
-    <div>
+      /*
+            tasksContainer.innerHTML += `<div class="card card-body mt-2 border-primary">
+          <h3 class="h5">${task.producto}</h3>
+          <p>${task.marca}</p>
+          <p>${task.valor}</p>
+          <p>${task.idt}</p>
+          <p>${task.uid}</p>
+          <p>${task.estado}</p>
+          <div>
 
-      <button class="btn btn-primary btn-delete" data-id="${doc.id}">
-        🗑 Delete
-      </button>
-      <button class="btn btn-secondary btn-edit" data-id="${doc.id}">
-        🖉 Edit
-      </button>
-    </div>
-  </div>`;
-*/
+            <button class="btn btn-primary btn-delete" data-id="${doc.id}">
+              🗑 Delete
+            </button>
+            <button class="btn btn-secondary btn-edit" data-id="${doc.id}">
+              🖉 Edit
+            </button>
+          </div>
+        </div>`;
+      */
     });
 
     const btnsDelete = botones.querySelectorAll(".botondelete");
@@ -189,6 +194,8 @@ taskForm.addEventListener("submit", async (e) => {
     console.log(error);
   }
 });
+
+
 
 
 
