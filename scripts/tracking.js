@@ -30,41 +30,41 @@ auth.onAuthStateChanged(user => {
 
           if (guide1 == 'Buenos Aires') {
             tracking.innerHTML += `<hr>
-            <h4>${doc.data().producto}</h4>
+            <h4 class="producto-tracking">${doc.data().producto}</h4>
               <div class="row">
-                <div class="col text-left">
+                <div class="col estado-tracking text-left">
                   En proceso
                 </div>
-                <div class="col text-center">
+                <div class="col estado-tracking text-center">
                   Los Angeles
                 </div>
-                <div class="col text-right">
+                <div class="col estado-tracking text-right">
                   Buenos Aires
                 </div>
             </div>
             <div class="row">
               <div class="col-12">
-                <progress id="file" max="100" value="100"></progress>
+                <progress id="file" max="100" style="width: 100%;" value="100"></progress>
               </div>
             </div>`
 
           } else {
             tracking.innerHTML += `<hr>
-          <h4>${doc.data().producto}</h4>
+          <h4 class="producto-tracking">${doc.data().producto}</h4>
           <div class="row">
-            <div class="col text-left">
+            <div class="col estado-tracking text-left">
               En proceso
             </div>
-            <div class="col text-center">
+            <div class="col estado-tracking text-center">
               Los Angeles
             </div>
-            <div class="col text-right">
+            <div class="col estado-tracking text-right">
               Buenos Aires
             </div>
           </div>
           <div class="row">
             <div class="col-12">
-              <progress id="file" max="100" value="50"></progress>
+              <progress id="file" max="100" style="width: 100%;" value="50"></progress>
             </div>
           </div>`
           }

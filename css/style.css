@@ -1223,7 +1223,25 @@ progress::-webkit-progress-bar {
   .linea-blanco-right {
     display: none;
   }
+
+  /* TRACKING */
+  /* ///////////////////////////////////////////////////////////////////////////////////////////////////////// */
+  .titulo-tracking {
+    font-size: 28px;
+  }
+
+  .producto-tracking {
+    text-align: center;
+    font-size: 20px;
+    font-family: "BentonBlack" !important;
+  }
+
+  .estado-tracking {
+    font-size: 12px;
+    font-family: "BentonBook";
+  }
 }
+/* calculadora */
 @media only screen and (min-width: 700px) and (max-width: 1199px) {
   .boton-calculadora {
     margin: 0px 15px !important;
