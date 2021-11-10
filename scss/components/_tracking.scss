@@ -4,6 +4,21 @@
     padding-bottom: 170px;
 }
 
+.titulo-tracking {
+    color: $azul;
+    text-align: center;
+    font-size: 35px;
+    font-family: "BentonBlack" !important;
+}
+
+.boton-modal-tracking {
+    padding-top: 100px;
+}
+
+.boton-tracking {
+    background-color: $azul;
+}
+
 progress {
     width: 1115px;
     height: 25px;

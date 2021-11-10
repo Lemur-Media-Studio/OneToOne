@@ -19,21 +19,10 @@ auth.onAuthStateChanged(user => {
         const uid = (doc.data().UID)
         console.log(uid);
         cositas(snapshot.docs)
-
-
-
-
-
-
-        taskName.innerHTML += `<div class="container usuario text-end">Bienvenido, ${doc.data().nombre}<img src="img/usuario-predeterminado.png"
-            class="mx-1" height="35" alt="imagen de perfil del usuario"><button class="btn btn-dark boton-logout"
-            type="button" id="logout">LOG OUT</button></div>`;
-
+        taskName.innerHTML += `<div data-aos="fade-left" class="container usuario text-end">Bienvenido, ${doc.data().nombre}<img src="img/usuario-predeterminado.png"
+            class="mx-1 img-usuarios" height="35" alt="imagen de perfil del usuario"></div>`;
       })
-
     });
-
-
     const cositas = (data) => {
       data.forEach(doc => {
         const guide = doc.data().uid;
@@ -41,37 +30,29 @@ auth.onAuthStateChanged(user => {
 
         if (doc.data().uid == user.uid) {
           console.log(guide);
-
-          card.innerHTML += `<div class="card mb-3 card-productos shadow p-3 mb-5 bg-body rounded" style="max-width: 1100px;">
+          card.innerHTML += `<div data-aos="zoom-in" class="card mb-3 card-productos shadow p-3 mb-5 bg-body rounded" style="max-width: 1100px;">
             <div class="row g-0 align-items-center">
-            <div class="col-md-2 linea-blanco-right">
+            <div class="col">
               <p class="titulo-trayecto"><strong>EN CAMINO</strong></p>
             </div>
             <div class="col">
               <div class="card-body">
-                <h6 class="card-title producto-card">${doc.data().producto}</h6>
+                <p class="card-title producto-card">${doc.data().producto}</p>
                 <p class="card-text producto-card">${doc.data().marca}</p>
+                <h6 class="card-text producto-card">$ ${doc.data().valor}</h6>
               </div>
             </div>
             <div class="col">
-              <div class="card-body">
-                <h6 class="card-title producto-card">$ ${doc.data().valor}</h6>
+              <div class="d-grid container-botones gap-2 mx-auto" id="bot1">
+                <button type="button" class="btn btn-secondary boton-azul-productos btn-block">Ver factura</button>
+                <button type="button" class="btn btn-secondary boton-beige-productos btn-block">Ayuda</button>
               </div>
             </div>
             <div class="col">
-              <div class="d-grid gap-2 col-6 mx-auto" id="bot1">
-                <button class="btn btn-dark boton-azul-productos" type="button">Ver factura</button>
-                <button class="btn boton-beige-productos" type="button">Ayuda</button>
-              </div>
-            </div>
-          </div>
-          <div class="row"> 
-          <div class="col-12">
-               <a href="tracking.html" target="_blank">tracking</a>
+            <a href="https://lemur-media-studio.github.io/OneToOne/tracking.html" target="_blank"><img src="img/qrcode.png" class="img-qr" alt="qr"></a>
           </div>
           </div>
-            </div>
-            `
+            </div>`
         }
 
       });
@@ -79,16 +60,7 @@ auth.onAuthStateChanged(user => {
 
   } else {
     console.log('user logged out');
+    card.innerHTML += `<div>Usted todavia no tiene productos registrados o no inicio sesion</div>`
   }
 })
 
-
-
-
-/*
-const logout = document.querySelector('#logout');
-logout.addEventListener('click', (e)=>{
-  e.preventDefault();
-  auth.signOut().then()
-})
-*/

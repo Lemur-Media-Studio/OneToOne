@@ -526,6 +526,10 @@ header .navbar {
   padding-bottom: 5px;
 }
 
+.boton-logout {
+  background-color: #002A3C;
+}
+
 .productos-titulo {
   font-family: "BentonBlack" !important;
   color: #002A3C;
@@ -547,7 +551,7 @@ header .navbar {
 }
 
 .info-productos {
-  font-size: 20px;
+  font-size: 18px !important;
   font-family: "BentonBook";
 }
 
@@ -558,6 +562,11 @@ header .navbar {
 }
 
 /* cards productos */
+.card-datos {
+  padding: 0px 5px;
+  border: transparent;
+}
+
 .card-productos {
   background-color: #e6e6e0 !important;
 }
@@ -570,40 +579,74 @@ header .navbar {
 }
 
 .producto-card {
-  text-align: left !important;
+  text-align: left;
+}
+
+.container-botones {
+  padding: 0px 38px;
 }
 
 .boton-azul-productos {
   background-color: #002A3C !important;
-  padding: 3px 40px !important;
   border-radius: 8px !important;
+  font-size: 15px;
 }
 
 .boton-beige-productos {
   background-color: #B4AC9D !important;
   color: white !important;
-  padding: 3px 40px !important;
+  font-size: 15px;
   border-radius: 8px !important;
 }
 
 .img-qr {
-  height: 125px !important;
-}
-
-.linea-blanco-productos {
-  border-left: 3px white solid;
+  height: 125px;
 }
 
 .linea-blanco-right {
   border-right: 3px white solid;
 }
 
-/* whatsapp logo */
-.logo-sticky {
-  position: sticky !important;
-  top: 870px !important;
-  right: 20px !important;
-  float: right !important;
+/* progress bar */
+.section-tracking {
+  padding-top: 110px !important;
+  padding-bottom: 170px;
+}
+
+.titulo-tracking {
+  color: #002A3C;
+  text-align: center;
+  font-size: 35px;
+  font-family: "BentonBlack" !important;
+}
+
+.boton-modal-tracking {
+  padding-top: 100px;
+}
+
+.boton-tracking {
+  background-color: #002A3C;
+}
+
+progress {
+  width: 1115px;
+  height: 25px;
+  background: transparent;
+}
+
+progress::-webkit-progress-value {
+  background: #002A3C;
+  border-radius: 20px;
+  transition: width 2.5s ease-in-out;
+}
+
+progress::-moz-progress-bar {
+  background: lightcolor;
+}
+
+progress::-webkit-progress-bar {
+  background-color: white;
+  border-radius: 20px;
 }
 
 .admin-body {
@@ -1025,36 +1068,10 @@ header .navbar {
   padding: 0px 0px 10px 0px !important;
 }
 
-/* progress bar */
-.section-tracking {
-  padding-top: 110px !important;
-  padding-bottom: 170px;
-}
-
-progress {
-  width: 1115px;
-  height: 25px;
-  background: transparent;
-}
-
-progress::-webkit-progress-value {
-  background: #002A3C;
-  border-radius: 20px;
-  transition: width 2.5s ease-in-out;
-}
-
-progress::-moz-progress-bar {
-  background: lightcolor;
-}
-
-progress::-webkit-progress-bar {
-  background-color: white;
-  border-radius: 20px;
-}
-
 /* MOBILE STYLES */
 @media only screen and (max-width: 450px) {
   /* BIENVENIDOS */
+  /* ///////////////////////////////////////////////////////////////////////////////////////////////////////// */
   .body-bienvenidos {
     background-image: url(../img/fondo-mobile.png) !important;
     background-size: cover !important;
@@ -1105,6 +1122,7 @@ progress::-webkit-progress-bar {
   }
 
   /* calculadora */
+  /* ///////////////////////////////////////////////////////////////////////////////////////////////////////// */
   .titulo-calculadora {
     font-size: 23px !important;
   }
@@ -1143,6 +1161,67 @@ progress::-webkit-progress-bar {
 
   .accordion-body {
     font-size: 16px !important;
+  }
+
+  /* PRODUCTOS */
+  /* ///////////////////////////////////////////////////////////////////////////////////////////////////////// */
+  .bienvenido-usuario {
+    font-size: 13px;
+  }
+
+  .img-usuarios {
+    height: 30px;
+  }
+
+  .boton-logout {
+    font-size: 10px;
+  }
+
+  .container-botones {
+    padding: 0px 10px;
+  }
+
+  .boton-azul-productos {
+    padding: 5px 45px;
+    font-size: 18px;
+  }
+
+  .boton-beige-productos {
+    padding: 5px 45px;
+    font-size: 18px;
+  }
+
+  .productos-titulo {
+    font-size: 25px !important;
+    text-align: center;
+    position: relative;
+    left: 0px;
+    padding-top: 80px;
+    padding-bottom: 25px;
+  }
+
+  .info-productos {
+    font-size: 15px;
+  }
+
+  .img-qr {
+    height: 170px;
+    position: relative;
+    top: 8px;
+  }
+
+  .producto-card {
+    text-align: center;
+    font-size: 15px;
+  }
+
+  .seccion-productos {
+    position: relative;
+    bottom: 25px !important;
+  }
+
+  .linea-blanco-right {
+    display: none;
   }
 }
 @media only screen and (min-width: 700px) and (max-width: 1199px) {

@@ -7,6 +7,10 @@
     padding-bottom: 5px;
 }
 
+.boton-logout {
+    background-color: $azul;
+}
+
 .productos-titulo {
     font-family: "BentonBlack" !important;
     color: $azul;
@@ -29,7 +33,7 @@
 }
 
 .info-productos {
-    font-size: 20px;
+    font-size: 18px !important;
     font-family: "BentonBook";
 }
 
@@ -40,6 +44,11 @@
 }
 
 /* cards productos */
+
+.card-datos {
+    padding: 0px 5px;
+    border: transparent;
+}
 
 .card-productos {
     background-color: rgb(230, 230, 224) !important;
@@ -53,39 +62,31 @@
 }
 
 .producto-card {
-    text-align: left !important;
+    text-align: left;
+}
+
+.container-botones {
+    padding: 0px 38px;
 }
 
 .boton-azul-productos {
     background-color: $azul !important;
-    padding: 3px 40px !important;
     border-radius: 8px !important;
+    font-size: 15px;
 }
 
 .boton-beige-productos {
     background-color: $beige-claro !important;
     color: white !important;
-    padding: 3px 40px !important;
+    font-size: 15px;
     border-radius: 8px !important;
 }
 
 .img-qr {
-    height: 125px !important;
-}
-
-.linea-blanco-productos {
-    border-left: 3px white solid;
+    height: 125px;
 }
 
 .linea-blanco-right {
     border-right: 3px white solid;
 }
 
-/* whatsapp logo */
-
-.logo-sticky {
-    position: sticky !important;
-    top: 870px !important;
-    right: 20px !important;
-    float: right !important;
-}

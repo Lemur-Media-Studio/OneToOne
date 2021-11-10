@@ -78,7 +78,7 @@ window.addEventListener("DOMContentLoaded", async (e) => {
 
 window.addEventListener("DOMContentLoaded", async (e) => {
   onGetTasks((querySnapshot) => {
-    taskProdu.innerHTML = `<h6 class="label-admin">Producto</h6>`;
+    taskProdu.innerHTML = `<h6 class="label-admin">Nombre</h6>`;
     taskProdu2.innerHTML = `<h6 class="label-admin label-apellido">Marca</h6>`;
     taskProdu3.innerHTML = `<h6 class="label-admin">Valor</h6>`;
     taskProdu4.innerHTML = `<h6 class="label-admin">ID/T</h6>`;

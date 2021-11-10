@@ -2,6 +2,7 @@
 @media only screen and (max-width: 450px) {
 
     /* BIENVENIDOS */
+    /* ///////////////////////////////////////////////////////////////////////////////////////////////////////// */
     .body-bienvenidos {
         background-image: url(../img/fondo-mobile.png) !important;
         background-size: cover !important;
@@ -55,7 +56,7 @@
     }
 
     /* calculadora */
-
+    /* ///////////////////////////////////////////////////////////////////////////////////////////////////////// */
     .titulo-calculadora {
         font-size: 23px !important;
     }
@@ -94,6 +95,67 @@
 
     .accordion-body {
         font-size: 16px !important;
+    }
+
+    /* PRODUCTOS */
+    /* ///////////////////////////////////////////////////////////////////////////////////////////////////////// */
+    .bienvenido-usuario {
+        font-size: 13px;
+    }
+
+    .img-usuarios {
+        height: 30px;
+    }
+
+    .boton-logout {
+        font-size: 10px;
+    }
+
+    .container-botones {
+        padding: 0px 10px;
+    }
+
+    .boton-azul-productos {
+        padding: 5px 45px;
+        font-size: 18px;
+    }
+    
+    .boton-beige-productos {
+        padding: 5px 45px;
+        font-size: 18px;
+    }
+
+    .productos-titulo {
+        font-size: 25px !important;
+        text-align: center;
+        position: relative;
+        left: 0px;
+        padding-top: 80px;
+        padding-bottom: 25px;
+    }
+
+    .info-productos {
+        font-size: 15px;
+    }
+
+    .img-qr {
+        height: 170px;
+        position: relative;
+        top: 8px;
+    }
+
+    .producto-card {
+        text-align: center;
+        font-size: 15px;
+    }
+
+    .seccion-productos {
+        position: relative;
+        bottom: 25px !important;
+    }
+    
+    .linea-blanco-right {
+        display: none;
     }
 }
 

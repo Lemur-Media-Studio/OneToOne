@@ -1,5 +1,5 @@
 const sigupForm = document.querySelector("#login-form");
-
+auth.signOut().then()
 sigupForm.addEventListener("submit", (e) => {
   e.preventDefault();
   const email = document.querySelector("#idemail").value;

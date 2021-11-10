@@ -1,4 +1,5 @@
 const tracking = document.getElementById("track")
+const iniciotracking = document.getElementById("botoninicio")
 auth.onAuthStateChanged(user => {
   if (user) {
     console.log('user logged in: ');
@@ -21,12 +22,36 @@ auth.onAuthStateChanged(user => {
 
 
         if (doc.data().uid == user.uid) {
+          $( document ).ready(function() {
+            $('#exampleModalCenter').modal('hide')
+          });
+
           console.log(guide1);
 
           if (guide1 == 'Buenos Aires') {
             tracking.innerHTML += `<hr>
-            <p data-aos="fade-left">${doc.data().producto}</p>
-          <div data-aos="fade-left" class="row">
+            <h4>${doc.data().producto}</h4>
+              <div class="row">
+                <div class="col text-left">
+                  En proceso
+                </div>
+                <div class="col text-center">
+                  Los Angeles
+                </div>
+                <div class="col text-right">
+                  Buenos Aires
+                </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <progress id="file" max="100" value="100"></progress>
+              </div>
+            </div>`
+
+          } else {
+            tracking.innerHTML += `<hr>
+          <h4>${doc.data().producto}</h4>
+          <div class="row">
             <div class="col text-left">
               En proceso
             </div>
@@ -37,36 +62,48 @@ auth.onAuthStateChanged(user => {
               Buenos Aires
             </div>
           </div>
-            <progress data-aos="fade-left" class="progress-bar1" id="file" max="100" value="100"></progress>`
-
-          }else{tracking.innerHTML += `<hr>
-          <p data-aos="fade-left">${doc.data().producto}</p>
-        <div data-aos="fade-left" class="row">
-          <div class="col text-left">
-            En proceso
-          </div>
-          <div class="col text-center">
-            Los Angeles
-          </div>
-          <div class="col text-right">
-            Buenos Aires
-          </div>
-        </div>
-          <progress data-aos="fade-left" class="progress-bar1" id="file" max="100" value="50"></progress>`
+          <div class="row">
+            <div class="col-12">
+              <progress id="file" max="100" value="50"></progress>
+            </div>
+          </div>`
           }
-
-
-
-          
         }
-
       });
     }
 
   } else {
+    $( document ).ready(function() {
+      $('#exampleModalCenter').modal('toggle')
+    });
     console.log('user logged out');
+    const signinForm = document.querySelector("#formcon");
+    signinForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const email = document.querySelector("#exampleInputEmail1").value;
+      const password = document.querySelector("#exampleInputPassword1").value;
+      console.log(email);
+      console.log(password);
+      auth
+        .signInWithEmailAndPassword(email, password)
+        .then((userCredential) => {
+          signinForm.reset();
+          
+         
+        })
+        .catch((error) => {
+          const errorCode = error.code;
+          const errorMessage = error.message;
+          console.log(errorCode);
+          console.log(errorMessage);
+          window.alert(errorMessage);
+        });
+      signinForm.reset();
+    });
   }
 })
+
+
 
 
 
