@@ -85,16 +85,29 @@
     <div>
       <input type="text" class="admin-form w-50" id="task-track" placeholder="ID tracking">
     </div>
-    <div>
-      <input type="text" class="admin-form w-50" id="task-estado" placeholder="Estado">
+    <div class="desplegable-admin">
+      <select class="form-select btn-secondary admin-form w-50" id="task-estado" aria-label="select example">
+        <option selected>Ningun estado seleccionado...</option>
+        <option value="En proceso">En proceso</option>
+        <option value="Los Angeles">Los Angeles</option>
+        <option value="Buenos Aires">Buenos Aires</option>
+      </select>
     </div>
     <div>
       <input type="text" class="admin-form w-50" id="task-uid" placeholder="ID usuario">
+    </div>
+    <div class="desplegable-admin mb-3">
+      <input type="file" class="form-control admin-form w-50" id="facturas">
     </div>
     <button class="admin-btn-enviar" id='btn_todo_form'>Save</button>
   </form>
   <!-- FIN FORM -->
 
+
+
+<!--   <div>
+    <input type="text" class="admin-form w-50" id="task-estado" placeholder="Estado">
+  </div> -->
 
   <!-- FORM USUARIOS Y PRODUCTOS  -->
   <section class="container container-usuarios-productos text-center mt-5">
@@ -136,7 +149,7 @@
         <hr>
 
         <div class="row">
-          <div class="col-1 label-container" id="prod1">
+          <div class="col-2 label-container" id="prod1">
             
           </div>
           <div class="col-2 label-container" id="prod2">
@@ -151,7 +164,7 @@
           <div class="col-1 label-container" id="prod4">
             
           </div>
-          <div class="col-3" id="prod5">
+          <div class="col-2" id="prod5">
             
           </div>
           <div class="col-2" id="cont7">
@@ -163,7 +176,7 @@
 <!-- FIN PRODUCTOS -->
 
 <!-- TRACKING -->
-<!--     <div class="row">
+<!--   <div class="row">
       <div class="col-12 tracking-border">
         <h3 class="titulo-info-admin text-start mx-3 mt-3">TRACKING</h3>
 
@@ -184,7 +197,7 @@
           </div>
         </div>
       </div>
-    </div> -->
+    </div>  -->
     <!-- FIN TRACKING -->
   </section>
   <!-- FIN PANEL DE ADMIN -->

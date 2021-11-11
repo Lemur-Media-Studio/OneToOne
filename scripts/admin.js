@@ -1,3 +1,4 @@
+
 const db = firebase.firestore();
 const taskForm = document.getElementById("task-form")
 const taskContainer = document.getElementById("nom");
@@ -14,6 +15,8 @@ const taskProdu4 = document.getElementById("prod4");
 const taskProdu5 = document.getElementById("prod5");
 const botones = document.getElementById("cont7");
 const estados = document.getElementById("estado");
+
+
 
 let editStatus = false;
 let id = '';
@@ -78,7 +81,7 @@ window.addEventListener("DOMContentLoaded", async (e) => {
 
 window.addEventListener("DOMContentLoaded", async (e) => {
   onGetTasks((querySnapshot) => {
-    taskProdu.innerHTML = `<h6 class="label-admin">Nombre</h6>`;
+    taskProdu.innerHTML = `<h6 class="label-admin">Producto</h6>`;
     taskProdu2.innerHTML = `<h6 class="label-admin label-apellido">Marca</h6>`;
     taskProdu3.innerHTML = `<h6 class="label-admin">Valor</h6>`;
     taskProdu4.innerHTML = `<h6 class="label-admin">ID/T</h6>`;
@@ -157,8 +160,16 @@ window.addEventListener("DOMContentLoaded", async (e) => {
         }
       });
     });
+    factura = function(){
+
+      var file = ($('#facturas'))[0].files[0];
+      console.log(file);
+
+    }
   });
 });
+
+
 
 taskForm.addEventListener("submit", async (e) => {
   e.preventDefault();

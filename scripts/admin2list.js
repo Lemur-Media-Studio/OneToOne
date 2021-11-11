@@ -19,7 +19,7 @@ auth.onAuthStateChanged(user => {
         const uid = (doc.data().UID)
         console.log(uid);
         cositas(snapshot.docs)
-        taskName.innerHTML += `<div data-aos="fade-left" class="container usuario text-end">Bienvenido, ${doc.data().nombre}<img src="img/usuario-predeterminado.png"
+        taskName.innerHTML += `<div class="container usuario text-end">Bienvenido, ${doc.data().nombre}<img src="img/usuario-predeterminado.png"
             class="mx-1 img-usuarios" height="35" alt="imagen de perfil del usuario"></div>`;
       })
     });
@@ -33,7 +33,7 @@ auth.onAuthStateChanged(user => {
           card.innerHTML += `<div data-aos="zoom-in" class="card mb-3 card-productos shadow p-3 mb-5 bg-body rounded" style="max-width: 1100px;">
             <div class="row g-0 align-items-center">
             <div class="col">
-              <p class="titulo-trayecto"><strong>EN CAMINO</strong></p>
+              <p class="titulo-trayecto"><strong>${doc.data().estado}</strong></p>
             </div>
             <div class="col">
               <div class="card-body">

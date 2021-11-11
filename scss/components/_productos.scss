@@ -3,14 +3,6 @@
     padding-top: 84px;
 }
 
-.usuario {
-    padding-bottom: 5px;
-}
-
-.boton-logout {
-    background-color: $azul;
-}
-
 .productos-titulo {
     font-family: "BentonBlack" !important;
     color: $azul;
@@ -38,9 +30,14 @@
 }
 
 /* ordenes de compra */
+.seccion-datos {
+    position: relative;
+    bottom: 20px;
+}
+
 .seccion-productos {
     position: relative;
-    bottom: 40px;
+    bottom: 20px;
 }
 
 /* cards productos */

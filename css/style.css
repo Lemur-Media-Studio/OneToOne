@@ -522,14 +522,6 @@ header .navbar {
   padding-top: 84px;
 }
 
-.usuario {
-  padding-bottom: 5px;
-}
-
-.boton-logout {
-  background-color: #002A3C;
-}
-
 .productos-titulo {
   font-family: "BentonBlack" !important;
   color: #002A3C;
@@ -556,9 +548,14 @@ header .navbar {
 }
 
 /* ordenes de compra */
+.seccion-datos {
+  position: relative;
+  bottom: 20px;
+}
+
 .seccion-productos {
   position: relative;
-  bottom: 40px;
+  bottom: 20px;
 }
 
 /* cards productos */
@@ -679,6 +676,12 @@ progress::-webkit-progress-bar {
 }
 
 .admin-form::placeholder {
+  color: black;
+}
+
+.desplegable-admin {
+  display: flex;
+  justify-content: center;
   color: #514E47;
 }
 
@@ -747,7 +750,7 @@ progress::-webkit-progress-bar {
   background-color: white;
   border: solid 2px #002A3C;
   color: grey;
-  font-size: 18px;
+  font-size: 16px;
   padding: 5px;
   font-family: "BentonBook" !important;
 }
@@ -758,7 +761,7 @@ progress::-webkit-progress-bar {
 
 .info-admin {
   text-align: left;
-  font-size: 15px;
+  font-size: 14px;
   padding-top: 14px !important;
   color: white;
   font-family: "BentonBook" !important;
@@ -976,7 +979,7 @@ progress::-webkit-progress-bar {
   top: 15px;
 }
 
-.form-select {
+.form-select1 {
   background-image: url(../img/flecha.png) !important;
   background-size: 15px 10px !important;
 }
@@ -1245,6 +1248,17 @@ progress::-webkit-progress-bar {
 @media only screen and (min-width: 700px) and (max-width: 1199px) {
   .boton-calculadora {
     margin: 0px 15px !important;
+  }
+}
+/* calculadora */
+@media only screen and (min-width: 451px) and (max-width: 540px) {
+  .productos-titulo {
+    font-size: 30px !important;
+    text-align: center;
+    position: relative;
+    left: 0px;
+    padding-top: 80px;
+    padding-bottom: 25px;
   }
 }
 /* ///////////////////////////////////////////////////////////////////////////////////////////////////////// */
