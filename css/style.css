@@ -486,18 +486,18 @@ header .navbar {
 }
 .background-opaco .bienvenidos-gracias {
   font-family: BentonMedium !important;
-  font-size: 25px !important;
+  font-size: 25px;
   color: #002A3C !important;
 }
 .background-opaco p {
   font-family: BentonBook !important;
-  font-size: 22px !important;
+  font-size: 20px !important;
   color: #002A3C !important;
 }
 .background-opaco .login-iniciar-bienvenidos {
   width: 70% !important;
   font-family: BentonBlack !important;
-  font-size: 28px !important;
+  font-size: 20px !important;
   margin-top: -15px;
   margin-bottom: 10px;
   background-color: #002A3C;
@@ -505,18 +505,10 @@ header .navbar {
 }
 
 .imagen-whatsapp {
-  position: sticky !important;
   filter: drop-shadow(0 0 0.5rem black);
-  padding: 200px 20px 0 0 !important;
+  padding: 200px 20px 0 0;
 }
 
-/* sticky
-    position: -webkit-sticky;
-    position: sticky;
-    top: 870px !important;
-    right: 20px;
-    float: right;
-*/
 .bienvenido-usuario {
   background-color: #B4AC9D !important;
   padding-top: 84px;
@@ -1079,19 +1071,13 @@ progress::-webkit-progress-bar {
 @media only screen and (max-width: 450px) {
   /* BIENVENIDOS */
   /* ///////////////////////////////////////////////////////////////////////////////////////////////////////// */
-  .body-bienvenidos {
-    background-image: url(../img/fondo-mobile.png) !important;
-    background-size: cover !important;
-    background-position-y: 0px !important;
-  }
-
   .logo-one {
     height: 40px !important;
   }
 
   .customers-bienvenidos {
     font-family: "SuperFlyOne" !important;
-    font-size: 100px !important;
+    font-size: 80px !important;
     color: #002A3C;
   }
 
@@ -1122,10 +1108,8 @@ progress::-webkit-progress-bar {
   }
 
   .imagen-whatsapp {
-    margin-top: 40%;
-    margin-right: 20px;
-    position: sticky !important;
-    filter: drop-shadow(0 0 0.5rem black);
+    height: 25px;
+    padding: 70px 20px 0 0;
   }
 
   /* calculadora */
@@ -1253,6 +1237,18 @@ progress::-webkit-progress-bar {
   .boton-calculadora {
     margin: 0px 15px !important;
   }
+
+  .customers-bienvenidos {
+    font-size: 145px !important;
+  }
+
+  .bienvenidos-gracias {
+    font-size: 22px !important;
+  }
+
+  .background-opaco {
+    width: 45% !important;
+  }
 }
 /* calculadora */
 @media only screen and (min-width: 451px) and (max-width: 540px) {
@@ -1263,6 +1259,18 @@ progress::-webkit-progress-bar {
     left: 0px;
     padding-top: 80px;
     padding-bottom: 25px;
+  }
+
+  .customers-bienvenidos {
+    font-size: 115px !important;
+  }
+
+  .bienvenidos-gracias {
+    font-size: 18px !important;
+  }
+
+  .background-opaco {
+    width: 43% !important;
   }
 }
 /* ///////////////////////////////////////////////////////////////////////////////////////////////////////// */
@@ -1279,7 +1287,7 @@ progress::-webkit-progress-bar {
     background-color: rgba(255, 255, 255, 0.9);
     border: 1px transparent;
     border-radius: 40px;
-    width: 35% !important;
+    width: 30% !important;
     padding: 20px 0 !important;
   }
   .background-opaco .bienvenidos-gracias {
