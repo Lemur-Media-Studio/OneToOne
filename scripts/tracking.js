@@ -22,7 +22,7 @@ auth.onAuthStateChanged(user => {
 
 
         if (doc.data().uid == user.uid) {
-          $( document ).ready(function() {
+          $(document).ready(function () {
             $('#exampleModalCenter').modal('hide')
           });
 
@@ -36,17 +36,45 @@ auth.onAuthStateChanged(user => {
                   En proceso
                 </div>
                 <div class="col estado-tracking text-center">
-                  Los Angeles
+                Recepción USA: Confirmada
                 </div>
                 <div class="col estado-tracking text-right">
                   Buenos Aires
                 </div>
             </div>
+              <div class="row">
+                <div class="col estado-tracking text-left">
+                  |
+                </div>
+                <div class="col estado-tracking text-center">
+                  |
+                </div>
+                <div class="col estado-tracking text-right">
+                  |
+                </div>
+              </div>
+
             <div class="row">
               <div class="col-12">
                 <progress id="file" max="100" style="width: 100%;" value="100"></progress>
               </div>
-            </div>`
+            </div>
+            <div class="row">
+            <div class="col estado-tracking text-center">
+              |
+            </div>
+            <div class="col estado-tracking text-center">
+              |
+            </div>
+          </div>
+            <div class="row">
+            <div class="col estado-tracking text-center">
+            Enviado a USA
+            </div>
+            <div class="col estado-tracking text-center">
+            En camino a Argentina
+            </div>
+          </div>`
 
           } else {
             tracking.innerHTML += `<hr>
@@ -56,24 +84,51 @@ auth.onAuthStateChanged(user => {
               En proceso
             </div>
             <div class="col estado-tracking text-center">
-              Los Angeles
+            Recepción USA: Confirmada
             </div>
             <div class="col estado-tracking text-right">
               Buenos Aires
             </div>
           </div>
           <div class="row">
+          <div class="col estado-tracking text-left">
+            |
+          </div>
+          <div class="col estado-tracking text-center">
+            |
+          </div>
+          <div class="col estado-tracking text-right">
+            |
+          </div>
+        </div>
+          <div class="row">
             <div class="col-12">
               <progress id="file" max="100" style="width: 100%;" value="50"></progress>
             </div>
-          </div>`
+          </div>
+          <div class="row">
+          <div class="col estado-tracking text-center">
+            |
+          </div>
+          <div class="col estado-tracking text-center">
+            |
+          </div>
+        </div>
+          <div class="row">
+          <div class="col estado-tracking text-center">
+          Enviado a USA
+          </div>
+          <div class="col estado-tracking text-center">
+          En camino a Argentina
+          </div>
+        </div>`
           }
         }
       });
     }
 
   } else {
-    $( document ).ready(function() {
+    $(document).ready(function () {
       $('#exampleModalCenter').modal('toggle')
     });
     console.log('user logged out');
@@ -88,8 +143,8 @@ auth.onAuthStateChanged(user => {
         .signInWithEmailAndPassword(email, password)
         .then((userCredential) => {
           signinForm.reset();
-          
-         
+
+
         })
         .catch((error) => {
           const errorCode = error.code;

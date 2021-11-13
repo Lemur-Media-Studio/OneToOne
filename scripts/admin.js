@@ -160,13 +160,13 @@ window.addEventListener("DOMContentLoaded", async (e) => {
         }
       });
     });
-    factura = function(){
 
-      var file = ($('#facturas'))[0].files[0];
-      console.log(file);
-
-    }
   });
+
+  facturas = function(){
+    var imagen = ($('#facturas'))[0].files[0];
+    console.log(imagen);
+  }
 });
 
 

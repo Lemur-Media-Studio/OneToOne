@@ -41,7 +41,7 @@
   <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-auth.js"></script>
 
   <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
-  
+
   <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-storage.js"></script>
 
 
@@ -63,6 +63,7 @@
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
     firebase.analytics();
+
     var storage = firebase.storage();
   </script>
 </head>
@@ -90,11 +91,15 @@
     </div>
     <div class="desplegable-admin">
       <select class="form-select btn-secondary admin-form w-50" id="task-estado" aria-label="select example">
-        <option selected>Ningun estado seleccionado...</option>
+        <option selected>Ningún estado seleccionado...</option>
         <option value="En proceso">En proceso</option>
-        <option value="Los Angeles">Los Angeles</option>
-        <option value="Buenos Aires">Buenos Aires</option>
+        <option value="Enviado USA">Enviado a nuestra oficina de USA</option>
+        <option value="Recepción USA: Confirmada">Recepción en oficina de USA confirmada</option>
+        <option value="En camino a Argentina">En camino a Argentina</option>
+        <option value="Buenos Aires">En Buenos Aires</option>
+        <option value="Entregado">Entregado</option>
       </select>
+      
     </div>
     <div>
       <input type="text" class="admin-form w-50" id="task-uid" placeholder="ID usuario">
