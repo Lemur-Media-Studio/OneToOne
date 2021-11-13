@@ -129,7 +129,7 @@ header .navbar {
 }
 
 .navbar .navbar-toggler-icon:after {
-  content: "\f0c9";
+  content: "";
   color: #fff;
   font-size: 18px;
   line-height: 26px;
@@ -608,6 +608,10 @@ header .navbar {
 .section-tracking {
   padding-top: 110px !important;
   padding-bottom: 170px;
+}
+
+.tracking-padding {
+  padding-top: 25px;
 }
 
 .titulo-tracking {

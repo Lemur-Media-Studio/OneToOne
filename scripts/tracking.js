@@ -30,15 +30,16 @@ auth.onAuthStateChanged(user => {
 
           if (guide1 == 'Buenos Aires') {
             tracking.innerHTML += `<hr>
+            <div class="tracking-padding">
             <h4 class="producto-tracking">${doc.data().producto}</h4>
               <div class="row">
                 <div class="col estado-tracking text-left">
                   En proceso
                 </div>
-                <div class="col estado-tracking text-center">
+                <div class="col estado-tracking text-left">
                 Recepción USA: Confirmada
                 </div>
-                <div class="col estado-tracking text-right">
+                <div class="col estado-tracking text-left">
                   Buenos Aires
                 </div>
             </div>
@@ -46,10 +47,290 @@ auth.onAuthStateChanged(user => {
                 <div class="col estado-tracking text-left">
                   |
                 </div>
-                <div class="col estado-tracking text-center">
+                <div class="col estado-tracking text-left">
                   |
                 </div>
-                <div class="col estado-tracking text-right">
+                <div class="col estado-tracking text-left">
+                  |
+                </div>
+              </div>
+
+            <div class="row">
+              <div class="col-12">
+                <progress id="file" max="100" style="width: 100%;" value="69"></progress>
+              </div>
+            </div>
+            <div class="row">
+            <div class="col estado-tracking text-center">
+              |
+            </div>
+            <div class="col estado-tracking text-center">
+              |
+            </div>
+            <div class="col estado-tracking text-right">
+            |
+          </div>
+          </div>
+            <div class="row">
+            <div class="col estado-tracking text-center">
+            Enviado a USA
+            </div>
+            <div class="col estado-tracking text-center">
+            En camino a Argentina
+            </div>
+            <div class="col estado-tracking text-right">
+            Entregado
+            </div>
+          </div>
+          </div>`
+          }
+          if (guide1 == 'En proceso') {
+            tracking.innerHTML += `<hr>
+            <div class="tracking-padding">
+            <h4 class="producto-tracking">${doc.data().producto}</h4>
+              <div class="row">
+                <div class="col estado-tracking text-left">
+                  En proceso
+                </div>
+                <div class="col estado-tracking text-left">
+                Recepción USA: Confirmada
+                </div>
+                <div class="col estado-tracking text-left">
+                  Buenos Aires
+                </div>
+            </div>
+              <div class="row">
+                <div class="col estado-tracking text-left">
+                  |
+                </div>
+                <div class="col estado-tracking text-left">
+                  |
+                </div>
+                <div class="col estado-tracking text-left">
+                  |
+                </div>
+              </div>
+
+            <div class="row">
+              <div class="col-12">
+                <progress id="file" max="100" style="width: 100%;" value="2"></progress>
+              </div>
+            </div>
+            <div class="row">
+            <div class="col estado-tracking text-center">
+              |
+            </div>
+            <div class="col estado-tracking text-center">
+              |
+            </div>
+            <div class="col estado-tracking text-right">
+            |
+          </div>
+          </div>
+            <div class="row">
+            <div class="col estado-tracking text-center">
+            Enviado a USA
+            </div>
+            <div class="col estado-tracking text-center">
+            En camino a Argentina
+            </div>
+            <div class="col estado-tracking text-right">
+            Entregado
+            </div>
+          </div>
+          </div>`
+          }
+          if (guide1 == 'Enviado USA') {
+            tracking.innerHTML += `<hr>
+            <div class="tracking-padding">
+            <h4 class="producto-tracking">${doc.data().producto}</h4>
+              <div class="row">
+                <div class="col estado-tracking text-left">
+                  En proceso
+                </div>
+                <div class="col estado-tracking text-left">
+                Recepción USA: Confirmada
+                </div>
+                <div class="col estado-tracking text-left">
+                  Buenos Aires
+                </div>
+            </div>
+              <div class="row">
+                <div class="col estado-tracking text-left">
+                  |
+                </div>
+                <div class="col estado-tracking text-left">
+                  |
+                </div>
+                <div class="col estado-tracking text-left">
+                  |
+                </div>
+              </div>
+
+            <div class="row">
+              <div class="col-12">
+                <progress id="file" max="100" style="width: 100%;" value="16"></progress>
+              </div>
+            </div>
+            <div class="row">
+            <div class="col estado-tracking text-center">
+              |
+            </div>
+            <div class="col estado-tracking text-center">
+              |
+            </div>
+            <div class="col estado-tracking text-right">
+            |
+          </div>
+          </div>
+            <div class="row">
+            <div class="col estado-tracking text-center">
+            Enviado a USA
+            </div>
+            <div class="col estado-tracking text-center">
+            En camino a Argentina
+            </div>
+            <div class="col estado-tracking text-right">
+            Entregado
+            </div>
+          </div>
+          </div>`
+          }
+          if (guide1 == 'Recepción USA: Confirmada') {
+            tracking.innerHTML += `<hr>
+            <div class="tracking-padding">
+            <h4 class="producto-tracking">${doc.data().producto}</h4>
+              <div class="row">
+                <div class="col estado-tracking text-left">
+                  En proceso
+                </div>
+                <div class="col estado-tracking text-left">
+                Recepción USA: Confirmada
+                </div>
+                <div class="col estado-tracking text-left">
+                  Buenos Aires
+                </div>
+            </div>
+              <div class="row">
+                <div class="col estado-tracking text-left">
+                  |
+                </div>
+                <div class="col estado-tracking text-left">
+                  |
+                </div>
+                <div class="col estado-tracking text-left">
+                  |
+                </div>
+              </div>
+
+            <div class="row">
+              <div class="col-12">
+                <progress id="file" max="100" style="width: 100%;" value="35"></progress>
+              </div>
+            </div>
+            <div class="row">
+            <div class="col estado-tracking text-center">
+              |
+            </div>
+            <div class="col estado-tracking text-center">
+              |
+            </div>
+            <div class="col estado-tracking text-right">
+            |
+          </div>
+          </div>
+            <div class="row">
+            <div class="col estado-tracking text-center">
+            Enviado a USA
+            </div>
+            <div class="col estado-tracking text-center">
+            En camino a Argentina
+            </div>
+            <div class="col estado-tracking text-right">
+            Entregado
+            </div>
+          </div>
+          </div>`
+          }
+          if (guide1 == 'En camino a Argentina') {
+            tracking.innerHTML += `<hr>
+            <div class="tracking-padding">
+            <h4 class="producto-tracking">${doc.data().producto}</h4>
+              <div class="row">
+                <div class="col estado-tracking text-left">
+                  En proceso
+                </div>
+                <div class="col estado-tracking text-left">
+                Recepción USA: Confirmada
+                </div>
+                <div class="col estado-tracking text-left">
+                  Buenos Aires
+                </div>
+            </div>
+              <div class="row">
+                <div class="col estado-tracking text-left">
+                  |
+                </div>
+                <div class="col estado-tracking text-left">
+                  |
+                </div>
+                <div class="col estado-tracking text-left">
+                  |
+                </div>
+              </div>
+
+            <div class="row">
+              <div class="col-12">
+                <progress id="file" max="100" style="width: 100%;" value="50"></progress>
+              </div>
+            </div>
+            <div class="row">
+            <div class="col estado-tracking text-center">
+              |
+            </div>
+            <div class="col estado-tracking text-center">
+              |
+            </div>
+            <div class="col estado-tracking text-right">
+            |
+          </div>
+          </div>
+            <div class="row">
+            <div class="col estado-tracking text-center">
+            Enviado a USA
+            </div>
+            <div class="col estado-tracking text-center">
+            En camino a Argentina
+            </div>
+            <div class="col estado-tracking text-right">
+            Entregado
+            </div>
+          </div>
+          </div>`
+          }
+          if (guide1 == 'Entregado') {
+            tracking.innerHTML += `<hr>
+            <div class="tracking-padding">
+            <h4 class="producto-tracking">${doc.data().producto}</h4>
+              <div class="row">
+                <div class="col estado-tracking text-left">
+                  En proceso
+                </div>
+                <div class="col estado-tracking text-left">
+                Recepción USA: Confirmada
+                </div>
+                <div class="col estado-tracking text-left">
+                  Buenos Aires
+                </div>
+            </div>
+              <div class="row">
+                <div class="col estado-tracking text-left">
+                  |
+                </div>
+                <div class="col estado-tracking text-left">
+                  |
+                </div>
+                <div class="col estado-tracking text-left">
                   |
                 </div>
               </div>
@@ -66,6 +347,9 @@ auth.onAuthStateChanged(user => {
             <div class="col estado-tracking text-center">
               |
             </div>
+            <div class="col estado-tracking text-right">
+            |
+          </div>
           </div>
             <div class="row">
             <div class="col estado-tracking text-center">
@@ -74,54 +358,11 @@ auth.onAuthStateChanged(user => {
             <div class="col estado-tracking text-center">
             En camino a Argentina
             </div>
-          </div>`
-
-          } else {
-            tracking.innerHTML += `<hr>
-          <h4 class="producto-tracking">${doc.data().producto}</h4>
-          <div class="row">
-            <div class="col estado-tracking text-left">
-              En proceso
-            </div>
-            <div class="col estado-tracking text-center">
-            Recepción USA: Confirmada
-            </div>
             <div class="col estado-tracking text-right">
-              Buenos Aires
+            Entregado
             </div>
           </div>
-          <div class="row">
-          <div class="col estado-tracking text-left">
-            |
-          </div>
-          <div class="col estado-tracking text-center">
-            |
-          </div>
-          <div class="col estado-tracking text-right">
-            |
-          </div>
-        </div>
-          <div class="row">
-            <div class="col-12">
-              <progress id="file" max="100" style="width: 100%;" value="50"></progress>
-            </div>
-          </div>
-          <div class="row">
-          <div class="col estado-tracking text-center">
-            |
-          </div>
-          <div class="col estado-tracking text-center">
-            |
-          </div>
-        </div>
-          <div class="row">
-          <div class="col estado-tracking text-center">
-          Enviado a USA
-          </div>
-          <div class="col estado-tracking text-center">
-          En camino a Argentina
-          </div>
-        </div>`
+          </div>`
           }
         }
       });
