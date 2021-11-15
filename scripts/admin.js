@@ -1,6 +1,5 @@
-
 const db = firebase.firestore();
-const taskForm = document.getElementById("task-form")
+const taskForm = document.getElementById("task-form");
 const taskContainer = document.getElementById("nom");
 const taskContainer2 = document.getElementById("ape");
 const taskContainer3 = document.getElementById("fn");
@@ -17,26 +16,25 @@ const botones = document.getElementById("cont7");
 const estados = document.getElementById("estado");
 
 
-
+const ref = firebase.storage().ref();
 let editStatus = false;
-let id = '';
 
-
-const saveProduto = (producto, marca, valor, idt, uid, estado) =>
+const saveProduto = (producto, marca, valor, idt, uid, estado, name) =>
   db.collection("tasks").doc().set({
     producto,
     marca,
     valor,
     idt,
     uid,
-    estado
+    estado,
+    name
   });
 
 const getTasks = () => db.collection("tasks").get();
 
 const getUsers = (callback) => db.collection("users").onSnapshot(callback);
 
-const deleteid = id => db.collection('users').doc(id).delete();
+const deleteid = (id) => db.collection("users").doc(id).delete();
 
 const onGetTasks = (callback) => db.collection("tasks").onSnapshot(callback);
 
@@ -44,7 +42,8 @@ const deleteTask = (id) => db.collection("tasks").doc(id).delete();
 
 const getTask = (id) => db.collection("tasks").doc(id).get();
 
-const updateTask = (id, updatedTask) => db.collection('tasks').doc(id).update(updatedTask);
+const updateTask = (id, updatedTask) =>
+  db.collection("tasks").doc(id).update(updatedTask);
 
 window.addEventListener("DOMContentLoaded", async (e) => {
   getUsers((querySnapshot) => {
@@ -59,25 +58,33 @@ window.addEventListener("DOMContentLoaded", async (e) => {
       const task = doc.data();
       task.id = doc.id;
       //console.log(task.id)
-      taskContainer.innerHTML += `<div class="info-admin">${doc.data().nombre}</div>`;
-      taskContainer2.innerHTML += `<div class="info-admin label-apellido">${doc.data().apellido}</div>`;
-      taskContainer3.innerHTML += `<div class="info-admin">${doc.data().fecha}</div>`;
-      taskContainer4.innerHTML += `<div class="info-admin">${doc.data().email}</div>`;
-      taskContainer5.innerHTML += `<div class="info-admin">${doc.data().UID}</div>`;
+      taskContainer.innerHTML += `<div class="info-admin">${
+        doc.data().nombre
+      }</div>`;
+      taskContainer2.innerHTML += `<div class="info-admin label-apellido">${
+        doc.data().apellido
+      }</div>`;
+      taskContainer3.innerHTML += `<div class="info-admin">${
+        doc.data().fecha
+      }</div>`;
+      taskContainer4.innerHTML += `<div class="info-admin">${
+        doc.data().email
+      }</div>`;
+      taskContainer5.innerHTML += `<div class="info-admin">${
+        doc.data().UID
+      }</div>`;
       taskContainer6.innerHTML += `<div class="container-botones"><button class="boton-borrar boton-delete" data-id="${task.id}">
       <img src="img/basura.png" height="25" data-id="${task.id}" class="boton-delete" alt="basura"></button></div>`;
 
-      const btnsDelete = document.querySelectorAll('.boton-delete');
-      btnsDelete.forEach(btn => {
-        btn.addEventListener('click', async (e) => {
-          await deleteid(e.target.dataset.id)
-        })
-      })
+      const btnsDelete = document.querySelectorAll(".boton-delete");
+      btnsDelete.forEach((btn) => {
+        btn.addEventListener("click", async (e) => {
+          await deleteid(e.target.dataset.id);
+        });
+      });
     });
   });
-
-})
-
+});
 
 window.addEventListener("DOMContentLoaded", async (e) => {
   onGetTasks((querySnapshot) => {
@@ -91,40 +98,25 @@ window.addEventListener("DOMContentLoaded", async (e) => {
 
     querySnapshot.forEach((doc) => {
       const task = doc.data();
-      console.log(task)
-      taskProdu.innerHTML += `<div class="info-admin">${task.producto}</div>`
-      taskProdu2.innerHTML += `<div class="info-admin">${task.marca}</div>`
-      taskProdu3.innerHTML += `<div class="info-admin">${task.valor}</div>`
-      taskProdu4.innerHTML += `<div class="info-admin">${task.idt}</div>`
-      taskProdu5.innerHTML += `<div class="info-admin">${task.uid}</div>`
-      estados.innerHTML += `<div class="info-admin">${task.estado}</div>`
+      taskProdu.innerHTML += `<div class="info-admin">${task.producto}</div>`;
+      taskProdu2.innerHTML += `<div class="info-admin">${task.marca}</div>`;
+      taskProdu3.innerHTML += `<div class="info-admin">${task.valor}</div>`;
+      taskProdu4.innerHTML += `<div class="info-admin">${task.idt}</div>`;
+      taskProdu5.innerHTML += `<div class="info-admin">${task.uid}</div>`;
+      estados.innerHTML += `<div class="info-admin">${task.estado}</div>`;
       botones.innerHTML += `<div class="container-botones">
       <button class="boton-borrar botondelete" data-id="${task.id}">
       <img src="img/basura.png" data-id="${doc.id}" height="25" class="botondelete" alt="basura"></button>
 
       <button class="boton-borrar btn-edit" data-id="${task.id}">
       <img src="img/editar.png" data-id="${doc.id}" height="25" class="boton-editar" alt="lapiz"></button>
-      </div>`
-      /*
-            tasksContainer.innerHTML += `<div class="card card-body mt-2 border-primary">
-          <h3 class="h5">${task.producto}</h3>
-          <p>${task.marca}</p>
-          <p>${task.valor}</p>
-          <p>${task.idt}</p>
-          <p>${task.uid}</p>
-          <p>${task.estado}</p>
-          <div>
+      </div>`;
 
-            <button class="btn btn-primary btn-delete" data-id="${doc.id}">
-              🗑 Delete
-            </button>
-            <button class="btn btn-secondary btn-edit" data-id="${doc.id}">
-              🖉 Edit
-            </button>
-          </div>
-        </div>`;
-      */
+      URLd = firebase.storage().ref(task.name).getDownloadURL().then(url =>{
+        console.log(url); 
+      })
     });
+
 
     const btnsDelete = botones.querySelectorAll(".botondelete");
     btnsDelete.forEach((btn) =>
@@ -154,22 +146,13 @@ window.addEventListener("DOMContentLoaded", async (e) => {
           editStatus = true;
           id = doc.id;
           taskForm["btn_todo_form"].innerText = "Update";
-
         } catch (error) {
           console.log(error);
         }
       });
     });
-
   });
-
-  facturas = function(){
-    var imagen = ($('#facturas'))[0].files[0];
-    console.log(imagen);
-  }
 });
-
-
 
 taskForm.addEventListener("submit", async (e) => {
   e.preventDefault();
@@ -180,10 +163,22 @@ taskForm.addEventListener("submit", async (e) => {
   const idt = taskForm["task-track"];
   const uid = taskForm["task-uid"];
   const estado = taskForm["task-estado"];
+  console.log(ref);
+  const file = document.querySelector("#facturas").files[0];
+  const name = file.name;
+  const task = ref.child(name).put(file);
 
   try {
     if (!editStatus) {
-      await saveProduto(producto.value, marca.value, valor.value, idt.value, uid.value, estado.value);
+      await saveProduto(
+        producto.value,
+        marca.value,
+        valor.value,
+        idt.value,
+        uid.value,
+        estado.value,
+        name
+      );
     } else {
       await updateTask(id, {
         producto: producto.value,
@@ -192,11 +187,11 @@ taskForm.addEventListener("submit", async (e) => {
         idt: idt.value,
         uid: uid.value,
         estado: estado.value,
-      })
+      });
 
       editStatus = false;
-      id = '';
-      taskForm['btn_todo_form'].innerText = 'Save';
+      id = "";
+      taskForm["btn_todo_form"].innerText = "Save";
     }
 
     taskForm.reset();

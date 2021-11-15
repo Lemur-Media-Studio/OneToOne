@@ -30,7 +30,9 @@ auth.onAuthStateChanged(user => {
 
         if (doc.data().uid == user.uid) {
           console.log(guide);
-          card.innerHTML += `<div data-aos="zoom-in" class="card mb-3 card-productos shadow p-3 mb-5 bg-body rounded" style="max-width: 1100px;">
+          URLd = firebase.storage().ref(doc.data().name).getDownloadURL().then(url =>{
+            console.log(url);
+            card.innerHTML += `<div data-aos="zoom-in" class="card mb-3 card-productos shadow p-3 mb-5 bg-body rounded" style="max-width: 1100px;">
             <div class="row g-0 align-items-center">
             <div class="col">
               <p class="titulo-trayecto"><strong>${doc.data().estado}</strong></p>
@@ -44,8 +46,8 @@ auth.onAuthStateChanged(user => {
             </div>
             <div class="col">
               <div class="d-grid container-botones gap-2 mx-auto" id="bot1">
-                <button type="button" class="btn btn-secondary boton-azul-productos btn-block">Ver factura</button>
-                <button type="button" class="btn btn-secondary boton-beige-productos btn-block">Ayuda</button>
+              <a class="btn btn-secondary boton-azul-productos btn-block" href="${url}" target="_blank" role="button">Ver factura</a>
+              <a class="btn btn-secondary boton-beige-productos btn-block" href="" target="_blank" role="button">Ayuda</a>
               </div>
             </div>
             <div class="col">
@@ -53,14 +55,13 @@ auth.onAuthStateChanged(user => {
           </div>
           </div>
             </div>`
+          })
         }
-
       });
     }
-
   } else {
     console.log('user logged out');
-    card.innerHTML += `<div>Usted todavia no tiene productos registrados o no inicio sesion</div>`
+    card.innerHTML += `<div>Usted todavía no tiene productos registrados o no inicio sesion</div>`
   }
 })
 
