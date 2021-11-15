@@ -1,17 +1,43 @@
 /* progress bar */
+
+.body-tracking {
+    background-color: rgba(132, 125, 114, 0.507);
+} 
+
 .section-tracking {
     padding-top: 110px !important;
     padding-bottom: 170px;
 }
 
+.estado-tracking {
+    font-size: 18px;
+    font-family: "BentonBook" !important;
+}
+
+.card-header-tracking {
+    color: white !important;
+    background-color: #3F545B !important;
+}
+
+.fondo-body-tracking {
+    background-color: rgba($color: rgb(166, 175, 179), $alpha: 0.8) !important;
+}
+
+.card-padding {
+    background-color: transparent !important;
+    border: transparent !important;
+    padding-top: 30px;
+}
+
 .tracking-padding {
-    padding-top: 25px;
+    padding-top: 15px;
 }
 
 .titulo-tracking {
+    padding: 0 0 35px 0;
     color: $azul;
     text-align: center;
-    font-size: 35px;
+    font-size: 45px;
     font-family: "BentonBlack" !important;
 }
 
