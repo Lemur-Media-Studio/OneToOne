@@ -64,7 +64,7 @@ window.addEventListener("DOMContentLoaded", async (e) => {
       taskContainer2.innerHTML += `<div class="info-admin label-apellido">${
         doc.data().apellido
       }</div>`;
-      taskContainer3.innerHTML += `<div class="info-admin">${
+      taskContainer3.innerHTML += `<div class="info-fecha-nacimiento">${
         doc.data().fecha
       }</div>`;
       taskContainer4.innerHTML += `<div class="info-admin">${
