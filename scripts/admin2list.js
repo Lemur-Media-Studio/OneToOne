@@ -47,11 +47,11 @@ auth.onAuthStateChanged(user => {
             <div class="col">
               <div class="d-grid container-botones gap-2 mx-auto" id="bot1">
               <a class="btn btn-secondary boton-azul-productos btn-block" href="${url}" target="_blank" role="button">Ver factura</a>
-              <a class="btn btn-secondary boton-beige-productos btn-block" href="" target="_blank" role="button">Ayuda</a>
+              <a class="btn btn-secondary boton-beige-productos btn-block" href="https://api.whatsapp.com/send?phone=+1 (213) 306 6554" target="_blank" role="button">Ayuda</a>
               </div>
             </div>
             <div class="col">
-            <a href="https://lemur-media-studio.github.io/OneToOne/tracking.html" target="_blank"><img src="img/qrcode.png" class="img-qr" alt="qr"></a>
+            <a href="tracking.html" target="_blank"></a>
           </div>
           </div>
             </div>`
