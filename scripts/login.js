@@ -7,7 +7,8 @@ sigupForm.addEventListener("submit", (e) => {
   const nombre = document.querySelector("#idname").value;
   const apellido = document.querySelector("#idapellido").value;
   const fecha = document.querySelector("#idfecha").value;
-  auth
+  const mailField = document.getElementById('loginemail');
+ auth 
     .createUserWithEmailAndPassword(email, password)
     .then((userCredential) => {
       const user = userCredential.user;
@@ -52,5 +53,10 @@ signinForm.addEventListener("submit", (e) => {
       console.log(errorMessage);
       window.alert(errorMessage);
     });
+
   signinForm.reset();
 });
+
+
+
+

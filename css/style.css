@@ -893,6 +893,13 @@ progress::-webkit-progress-bar {
   font-size: 22px !important;
 }
 
+.fondo-contra {
+  padding: 25px;
+  background-color: whitesmoke;
+  border-radius: 20px;
+  border: solid 3px black;
+}
+
 /* Calculadora */
 .body-calculadora {
   background-image: url(../img/fondo-calculadora3.jpg);
