@@ -51,7 +51,7 @@ auth.onAuthStateChanged(user => {
               </div>
             </div>
             <div class="col">
-            <a href="tracking.html" target="_blank">eeeeeh</a>
+            <a href="tracking.html" target="_blank">Tracking</a>
           </div>
           </div>
             </div>`
