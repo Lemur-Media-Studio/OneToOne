@@ -51,7 +51,7 @@ auth.onAuthStateChanged(user => {
               </div>
             </div>
             <div class="col">
-            <a href="tracking.html" target="_blank">Tracking</a>
+            <a href="tracking.html" target="_blank"><img src="img/qrcode.png" class="img-qr" alt="qr del tracking"></a>
           </div>
           </div>
             </div>`
