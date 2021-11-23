@@ -1,44 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
+const functions = require("firebase-functions");
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+const admin = require('firebase-admin');
+admin.initializeApp(functions.config().firebase);
+
+const nodemailer = require('nodemailer');
 
 
-    <!--Llamo libreria de firebase para poder hacer autenticacion de usuarios-->
-    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-auth.js"></script>
 
-    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
+const transporter = nodemailer.createTransport({
+    host: 'mail.one-oneconsulting.com',
+    port: 465,
+    secure: true, // use SSL
+    auth: {
+        user: '_mainaccount@one-oneconsulting.com',
+        pass: '1g!n9HP]Ur07Hd'
+    }
+});
 
-    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-functions.js"></script>
+exports.newEmail = functions.firestore.document('/users/{documentId}')
+    .onCreate((snap, context)=>{
+        const doc = snap.data();
+        return sendEmail(email = doc.email);
 
-    <!-- Enlazo Base de datos(FireBase) en index.html)-->
-    <script>
-        // Your web app's Firebase configuration
-        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-        var firebaseConfig = {
-            apiKey: "AIzaSyDCHQ7kkPsQJBC_WWlr3HU75Xddgo-uEQE",
-            authDomain: "inicio-logueo-one.firebaseapp.com",
-            projectId: "inicio-logueo-one",
-            storageBucket: "inicio-logueo-one.appspot.com",
-            messagingSenderId: "906037161545",
-            appId: "1:906037161545:web:f3b79d7c386ae4e0f11998",
-            measurementId: "G-NKF36TK1LV"
-        };
-        // Initialize Firebase
-        firebase.initializeApp(firebaseConfig);
-        firebase.analytics();
+    });
 
-        var storage = firebase.storage();
-    </script>
-    <script src="scripts/email.js"></script>
-</head>
 
-<body>
-    <table style="max-width: 600px; padding: 10px; margin: 0 auto;">
+function sendEmail( to, body){
+    const mailOptions = {
+        from: '_mainaccount@one-oneconsulting.com',
+        to: email,
+        subject: "bienvenido",
+        html: `<div> <table style="max-width: 600px; padding: 10px; margin: 0 auto;">
         <!-- tr para armar una fila -->
         <tr>
             <!-- td define una celda -->
@@ -98,7 +90,18 @@
                 <p style="color: grey; font-size: 15px; text-align: center;margin: 20px 0 0;">One to one | trade consulting®</p>
             </td>
         </tr>
-    </table>
-</body>
+    </table></div>`
+    };
 
-</html>
+    return transporter.sendMail( mailOptions , (error,data) => {
+        if( error ){
+            console.log(error);
+            return;
+        }
+
+        console.log("sent");
+        return;
+    });
+}
+
+
