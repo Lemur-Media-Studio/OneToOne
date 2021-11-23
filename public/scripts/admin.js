@@ -80,7 +80,6 @@ window.addEventListener("DOMContentLoaded", async (e) => {
       btnsDelete.forEach((btn) => {
         btn.addEventListener("click", async (e) => {
           await deleteid(e.target.dataset.id);
-          await deleteuserid();
         });
       });
     });
@@ -93,7 +92,7 @@ window.addEventListener("DOMContentLoaded", async (e) => {
     taskProdu2.innerHTML = `<h6 class="label-admin label-apellido">Marca</h6>`;
     taskProdu3.innerHTML = `<h6 class="label-admin">Valor</h6>`;
     taskProdu4.innerHTML = `<h6 class="label-admin">ID/T</h6>`;
-    //taskProdu5.innerHTML = `<h6 class="label-admin">UID</h6>`;
+    taskProdu5.innerHTML = `<h6 class="label-admin">UID</h6>`;
     botones.innerHTML = `<h6 class="label-admin">Botones</h6>`;
     estados.innerHTML = `<h6 class="label-admin">Estado</h6>`;
 
@@ -103,7 +102,7 @@ window.addEventListener("DOMContentLoaded", async (e) => {
       taskProdu2.innerHTML += `<div class="info-admin">${task.marca}</div>`;
       taskProdu3.innerHTML += `<div class="info-admin">${task.valor}</div>`;
       taskProdu4.innerHTML += `<div class="info-admin">${task.idt}</div>`;
-      //taskProdu5.innerHTML += `<div class="info-admin">${task.uid}</div>`;
+      taskProdu5.innerHTML += `<div class="info-admin">${task.uid}</div>`;
       estados.innerHTML += `<div class="info-admin">${task.estado}</div>`;
       botones.innerHTML += `<div class="container-botones">
       <button class="boton-borrar botondelete" data-id="${task.id}">

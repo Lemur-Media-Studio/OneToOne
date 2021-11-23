@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/f2f2acd656.js" crossorigin="anonymous"></script>
+
+    <!-- iluminacion palabras -->
+    <style>
+        ::-moz-selection {
+            color: #002A3C;
+            background: #B4AC9D;
+        }
+
+        ::selection {
+            color: #002A3C;
+            background: #B4AC9D;
+        }
+    </style>
+    <title>Customers - One to One Trade Consulting</title>
+</head>
+
+<body class="customers-bg">
+
+    <!-- restablecer contraseña -->
+    <section class="container">
+        <h1 class="titulo-tracking pt-5">Restablecer contraseña...</h1>
+        <div class="d-flex justify-content-center">
+            <form class="fondo-contra" id="resta-form">
+                <div class="modal-header">
+                    <h5 class="modal-title mx-auto" id="exampleModalLabel"><img src="img/logo.png"
+                            alt="logo one to one" height="50" class="img-fluid logo-login"></h5>
+                </div>
+                <hr>
+                <div class="form-floating">
+                    <input id="email" type="email" class="form-control form-control1" placeholder="name@example.com">
+                    <label for="floatingInput" class="form-label">Tu mail</label>
+                </div>
+                <div id="emailHelp" class="form-text mb-3" style="text-align: justify; font-size: 11px;">Introduce el mail que tienes asociado a tu cuenta y te enviaremos un mail para que puedas cambiar tu contraseña.</div>
+                <div class="text-center">
+                    <button class="btn btn-dark login-iniciar" id="buttonmail">Enviar mail</button>
+                </div>
+            </form>
+        </div>
+    </section>
+    
+
+
+    <!-- FIREBASE SCRIPTS -->
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+
+    <!-- LIBRERIAS SDK PARA FIREBASE
+                https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-analytics.js"></script>
+
+    <!--Llamo libreria de firebase para poder hacer autenticacion de usuarios-->
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-firestore.js"></script>
+
+    <!-- Enlazo Base de datos(FireBase) en index.html)-->
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyDCHQ7kkPsQJBC_WWlr3HU75Xddgo-uEQE",
+            authDomain: "inicio-logueo-one.firebaseapp.com",
+            projectId: "inicio-logueo-one",
+            storageBucket: "inicio-logueo-one.appspot.com",
+            messagingSenderId: "906037161545",
+            appId: "1:906037161545:web:f3b79d7c386ae4e0f11998",
+            measurementId: "G-NKF36TK1LV"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+        const auth = firebase.auth();
+        const db = firebase.firestore();
+    </script>
+
+    <!--     LOGO whatsapp 
+    <div class="logo-sticky">
+      <a href="" target="_blank"><img src="img/Logo-Whatsapp-PNG.png" height="50"
+        alt="Logo de WhatsApp"></a>
+    </div> -->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="scripts/resta.js"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous">
+    </script>
+
+</body>
+
+</html>

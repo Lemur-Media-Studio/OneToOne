@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/f2f2acd656.js" crossorigin="anonymous"></script>
+
+    <!-- iluminacion palabras -->
+    <style>
+        ::-moz-selection {
+            color: #002A3C;
+            background: #B4AC9D;
+        }
+
+        ::selection {
+            color: #002A3C;
+            background: #B4AC9D;
+        }
+    </style>
+
+    <title>Customers - One to One Trade Consulting</title>
+</head>
+
+<body class="customers-bg">
+    <!-- TÍTULO -->
+    <section class="pb-5">
+        <h1 class="customers-bienvenidos d-flex justify-content-center">Bienvenidos</h1>
+
+        <!-- SECCION BOTONES -->
+        <div class="background-opaco w-50 mx-auto">
+            <h2 class="d-flex justify-content-center pt-2 bienvenidos-gracias text-center">Gracias por utilizar nuestros
+                servicios
+            </h2>
+
+            <p class="d-flex justify-content-center text-center">Si usted ya tiene una cuenta:</p>
+
+            <!-- DESCRIPCIÓN Y MODALS -->
+            <section class="d-flex justify-content-center">
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-dark login-iniciar-bienvenidos" data-bs-toggle="modal"
+                    data-bs-target="#exampleModal">
+                    Iniciar sesión
+                </button>
+
+                <!-- LOGIN MODAL -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="login-border">
+                            <div class="modal-content">
+                                <!-- BOTÓN DE CIERRE -->
+                                <button type="button" class="btn-close login-boton-cierre pt-4 d-block"
+                                    data-bs-dismiss="modal" aria-label="Close"></button>
+                                <div class="modal-header">
+                                    <h5 class="modal-title mx-auto" id="exampleModalLabel"><img src="img/logo.png"
+                                            alt="logo one to one" height="50" class="img-fluid logo-login"></h5>
+                                </div>
+                                <div class="modal-body">
+                                    <form id="signin-form">
+                                        <div class="form-floating mb-3">
+                                            <input type="email" class="form-control form-control1" id="loginemail"
+                                                placeholder="name@example.com">
+                                            <label for="floatingInput" class="form-label">E-mail</label>
+                                        </div>
+                                        <div class="row align-items-center">
+                                            <div class="form-floating">
+                                                <input type="password" class="form-control form-control1" id="loginpass"
+                                                    placeholder="Password">
+                                                <label for="floatingPassword" class="form-label mx-2">Contraseña</label>
+                                            </div>
+                                            <div class="col-auto">
+                                                <span id="passwordHelpInline" class="form-text olvido-contraseña">
+                                                        <a href="contrasena.html">¿Olvidó su contraseña?</a>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="d-grid gap-2 col-6 mx-auto pt-2 w-100">
+                                            <button class="btn btn-dark login-iniciar" type="submit">Iniciar
+                                                sesión</button>
+                                        </div>
+                                        <hr>
+                                    </form>
+                                </div>
+                                <div class="col-auto mx-auto">
+                                    <span id="passwordHelpInline" class="form-text login-cursiva">
+                                        Si no tiene una cuenta:
+                                    </span>
+                                    <div class="d-flex justify-content-center mb-4">
+                                        <a href="index.html">Regístrese</a>
+                                    </div>
+<!--                                     <div class="d-flex justify-content-center pt-2 login-cursiva">
+                                        o
+                                    </div> -->
+                                </div>
+                                <div class="col-auto">
+                                    <span id="passwordHelpInline" class="form-text">
+                                    </span>
+                                </div>
+<!--                                 <div class="d-grid gap-2 col-6 mx-auto w-100 p-3">
+                                    <button class="btn btn-dark login-iniciar-rs" type="button"><i
+                                            class="fab fa-facebook-square"></i> Iniciar sesión con Facebook</button>
+                                    <button class="btn btn-dark login-iniciar-rs" type="button" id="googleLogin"><i
+                                            class="fab fa-google"></i>
+                                        Iniciar sesión con Google</button>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <p class="d-flex justify-content-center">De lo contrario:</p>
+
+            <!-- DESCRIPCIÓN Y MODALS 2 -->
+            <section class="d-flex justify-content-center pb-2">
+                <!-- Button trigger modal 2 -->
+                <button type="button" class="btn btn-dark login-iniciar-bienvenidos" data-bs-toggle="modal"
+                    data-bs-target="#exampleModal2">
+                    Registrarse
+                </button>
+
+                <!-- SIGUNP MODAL -->
+                <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog"
+                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="login-border">
+                            <div class="modal-content">
+                                <!-- BOTÓN DE CIERRE 2 -->
+                                <button type="button" class="btn-close pt-4 login-boton-cierre-2 d-block"
+                                    data-bs-dismiss="modal" aria-label="Close"></button>
+                                <div class="modal-header">
+                                    <h5 class="modal-title mx-auto" id="exampleModalLabel"><img src="img/logo.png"
+                                            alt="logo one to one" height="50" class="img-fluid"></h5>
+                                </div>
+                                <div class="modal-body">
+                                    <h2 class="login-crear-cuenta">Crear una cuenta</h2>
+                                    <form id="login-form">
+                                        <div class="form-floating mb-3">
+                                            <input type="nombre" class="form-control form-control1" id="idname"
+                                                placeholder="nombre">
+                                            <label for="floatingInput" class="form-label">Nombre</label>
+                                        </div>
+                                        <div class="form-floating mb-3">
+                                            <input type="apellido" class="form-control form-control1" id="idapellido"
+                                                placeholder="apellido">
+                                            <label for="floatingInput" class="form-label">Apellido</label>
+                                        </div>
+                                        <div class="form-floating mb-3">
+                                            <input type="date" class="form-control form-control1" id="idfecha">
+                                            <label for="floatingInputValue" class="form-label">Fecha de
+                                                nacimiento</label>
+                                        </div>
+                                        <!-- Servicio en el que está interesado -->
+                                        <div class="form-floating mb-3">
+                                            <select class="form-select form-control1" id="floatingSelect"
+                                                aria-label="Floating label select example">
+                                                <option selected>Ningún servicio seleccionado...</option>
+                                                <option value="1">Servicio de courier</option>
+                                                <option value="2">Consultoría</option>
+                                                <option value="3">Otros</option>
+                                            </select>
+                                            <label for="floatingSelect" class="form-label">Servicio en el que está
+                                                interesado</label>
+                                        </div>
+                                        <!-- pais de residencia -->
+                                        <div class="form-floating mb-3">
+                                            <input type="country" class="form-control form-control1"
+                                                placeholder="Ej. Argentina">
+                                            <label for="floatingInput" class="form-label">País de residencia</label>
+                                        </div>
+                                        <!-- telefono -->
+                                        <div class="form-floating mb-3">
+                                            <input type="number" class="form-control form-control1"
+                                                placeholder="+54 11 65627241">
+                                            <label for="floatingInput" class="form-label">Número de teléfono</label>
+                                        </div>
+                                        <div class="form-floating mb-3">
+                                            <input type="email" class="form-control form-control1" id="idemail"
+                                                placeholder="name@example.com" required>
+                                            <label for="floatingInput" class="form-label">E-mail</label>
+                                        </div>
+                                        <div class="row align-items-center">
+                                            <div class="form-floating">
+                                                <input type="password" class="form-control form-control1" id="idpass"
+                                                    placeholder="Password" required>
+                                                <label for="floatingPassword" class="form-label mx-2">Contraseña</label>
+                                            </div>
+                                            <div class="d-grid gap-2 col-6 mx-auto pt-3 login-border-iniciar w-100">
+                                                <button class="btn btn-dark login-iniciar" type="submit">Crear
+                                                    cuenta</button>
+                                            </div>
+                                            <div class="col-auto pt-2">
+                                                <span id="passwordHelpInline" class="form-text login-cursiva">
+                                                    <a href="index.html">¿Ya tiene una cuenta?</a>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+
+        <!-- WHATSAPP STICKY -->
+
+        <section class="text-end imagen-whatsapp">
+            <a href="https://api.whatsapp.com/send?phone=+1 (213) 306 6554" target="_blank"><img
+                    src="img/Logo-Whatsapp-PNG.png" height="40" alt="Logo de WhatsApp"></a>
+        </section>
+
+    </section>
+
+    <!-- FIREBASE SCRIPTS -->
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+
+    <!-- LIBRERIAS SDK PARA FIREBASE
+                https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-analytics.js"></script>
+
+    <!--Llamo libreria de firebase para poder hacer autenticacion de usuarios-->
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-firestore.js"></script>
+
+    <!-- Enlazo Base de datos(FireBase) en index.html)-->
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyDCHQ7kkPsQJBC_WWlr3HU75Xddgo-uEQE",
+            authDomain: "inicio-logueo-one.firebaseapp.com",
+            projectId: "inicio-logueo-one",
+            storageBucket: "inicio-logueo-one.appspot.com",
+            messagingSenderId: "906037161545",
+            appId: "1:906037161545:web:f3b79d7c386ae4e0f11998",
+            measurementId: "G-NKF36TK1LV"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+        const auth = firebase.auth();
+        const db = firebase.firestore();
+    </script>
+
+    <!-- Scripts Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous">
+    </script>
+
+    <!-- CONEXION CON BACK -->
+
+    <script src="scripts/login.js"></script>
+
+</body>
+
+</html>

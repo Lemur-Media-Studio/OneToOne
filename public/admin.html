@@ -78,16 +78,16 @@
   <!-- FORM ADMIN -->
   <form id="task-form" class="text-center mt-5">
     <div>
-      <input value = "Producto adquirido" type="text" class="admin-form w-50" id="task-title" placeholder="Producto adquirido">
+      <input type="text" class="admin-form w-50" id="task-title" placeholder="Producto adquirido">
     </div>
     <div>
-      <input value = "Marca" type="text" class="admin-form w-50" id="task-description" placeholder="Marca">
+      <input type="text" class="admin-form w-50" id="task-description" placeholder="Marca">
     </div>
     <div>
-      <input value = "Valor" type="text" class="admin-form w-50" id="task-valor" placeholder="Valor">
+      <input type="text" class="admin-form w-50" id="task-valor" placeholder="Valor">
     </div>
     <div>
-      <input value = "ID tracking" type="text" class="admin-form w-50" id="task-track" placeholder="ID tracking">
+      <input type="text" class="admin-form w-50" id="task-track" placeholder="ID tracking">
     </div>
     <div class="desplegable-admin">
       <select class="form-select btn-secondary admin-form w-50" id="task-estado" aria-label="select example">
@@ -155,7 +155,7 @@
         <hr>
 
         <div class="row">
-          <div class="col-3 label-container" id="prod1">
+          <div class="col-2 label-container" id="prod1">
             
           </div>
           <div class="col-2 label-container" id="prod2">
@@ -167,8 +167,11 @@
           <div class="col-2 label-container" id="estado">
             
           </div>
-          <div class="col-2" id="prod4">
-      
+          <div class="col-1 label-container" id="prod4">
+            
+          </div>
+          <div class="col-2" id="prod5">
+            
           </div>
           <div class="col-2" id="cont7">
             
@@ -178,10 +181,8 @@
     </div>
 <!-- FIN PRODUCTOS -->
 
-
-
 <!-- TRACKING -->
-<!-- <div class="row">
+<!--   <div class="row">
       <div class="col-12 tracking-border">
         <h3 class="titulo-info-admin text-start mx-3 mt-3">TRACKING</h3>
 
@@ -189,12 +190,12 @@
   
         <div class="row">
           <div class="col-3 label-container" id="">
-            <h6 class="label-admin">Info adicional</h6>
+            <h6 class="label-admin">Nombre</h6>
           </div>
-          <div class="col-3 label-container">
-            <h6 class="label-admin">UID</h6>
+          <div class="col-3 label-container" id="">
+            <h6 class="label-admin">Marca</h6>
           </div>
-          <div class="col-3" >
+          <div class="col-3" id="">
             <h6 class="label-admin">Id tracking</h6>
           </div>
           <div class="col-3" id="">
@@ -202,11 +203,10 @@
           </div>
         </div>
       </div>
-    </div>
-    
-  </section> -->
+    </div>  -->
+    <!-- FIN TRACKING -->
+  </section>
   <!-- FIN PANEL DE ADMIN -->
- 
   
 
   <!-- llamo a mi app.js.... dentro esta declarada la funcion del boton "Enviar"
