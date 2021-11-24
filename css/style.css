@@ -741,7 +741,7 @@ progress::-webkit-progress-bar {
 }
 
 .container-botones {
-  padding-top: 6px !important;
+  padding-top: 5px !important;
 }
 
 /* BOTON ENVIAR/GUARDAR */
@@ -802,6 +802,17 @@ progress::-webkit-progress-bar {
 
 .boton-editar {
   background-color: white !important;
+}
+
+/* tabla admin */
+.tabla-admin {
+  background-color: rgba(141, 147, 148, 0.849) !important;
+  border-top-left-radius: 20px !important;
+  border-bottom: solid 3px #3F545B;
+}
+
+.table {
+  border-top-left-radius: 20px !important;
 }
 
 .modal-header {

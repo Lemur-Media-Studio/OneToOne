@@ -73,7 +73,7 @@ window.addEventListener("DOMContentLoaded", async (e) => {
       taskContainer5.innerHTML += `<div class="info-admin">${
         doc.data().UID
       }</div>`;
-      taskContainer6.innerHTML += `<div class="container-botones"><button class="boton-borrar boton-delete" data-id="${task.id}">
+      taskContainer6.innerHTML += `<div class="container container-botones"><button class="boton-borrar boton-delete" data-id="${task.id}">
       <img src="img/basura.png" height="25" data-id="${task.id}" class="boton-delete" alt="basura"></button></div>`;
 
       const btnsDelete = document.querySelectorAll(".boton-delete");
