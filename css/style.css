@@ -129,7 +129,7 @@ header .navbar {
 }
 
 .navbar .navbar-toggler-icon:after {
-  content: "";
+  content: "\f0c9";
   color: #fff;
   font-size: 18px;
   line-height: 26px;
@@ -804,15 +804,27 @@ progress::-webkit-progress-bar {
   background-color: white !important;
 }
 
-/* tabla admin */
+/* admin productos tabla */
 .tabla-admin {
   background-color: rgba(141, 147, 148, 0.849) !important;
-  border-top-left-radius: 20px !important;
   border-bottom: solid 3px #3F545B;
 }
 
+.titulo-tabla {
+  font-family: "BentonBlack";
+  font-size: 18px;
+  color: grey !important;
+  background-color: white !important;
+  border: solid 2px #002A3C !important;
+  text-align: center;
+}
+
 .table {
-  border-top-left-radius: 20px !important;
+  color: white;
+}
+
+.table-bordered {
+  border: white !important;
 }
 
 .modal-header {

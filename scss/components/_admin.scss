@@ -135,15 +135,26 @@
 .boton-editar {
     background-color: white !important;
 }
-
-/* tabla admin */
+/* admin productos tabla */
 
 .tabla-admin {
     background-color: rgba(141, 147, 148, 0.849) !important;
-    border-top-left-radius: 20px !important;
     border-bottom: solid 3px #3F545B;
 }
 
+.titulo-tabla {
+    font-family: "BentonBlack";
+    font-size: 18px;
+    color: grey !important;
+    background-color: white !important;
+    border: solid 2px $azul !important;
+    text-align: center;
+}
+
 .table {
-    border-top-left-radius: 20px !important;
+    color: white;
+}
+
+.table-bordered {
+    border: white !important;
 }

@@ -15,9 +15,37 @@ const taskProdu5 = document.getElementById("prod5");
 const botones = document.getElementById("cont7");
 const estados = document.getElementById("estado");
 
+//tabla
+const t1 = document.getElementById("t1");
+const t2 = document.getElementById("t2");
+const t3 = document.getElementById("t3");
 
 const ref = firebase.storage().ref();
 let editStatus = false;
+
+$(document).ready(function(){
+
+  $("#search").keyup(function(){
+
+  _this = this;
+
+  
+
+      $.each($("#t1 tbody tr"), function() {
+
+      if($(this).text().toLowerCase().indexOf($(_this).val().toLowerCase()) === -1)
+
+      $(this).hide();
+
+      else
+
+      $(this).show();
+
+      });
+
+  });
+
+});
 
 const saveProduto = (producto, marca, valor, idt, uid, estado, name) =>
   db.collection("tasks").doc().set({
@@ -27,7 +55,7 @@ const saveProduto = (producto, marca, valor, idt, uid, estado, name) =>
     idt,
     uid,
     estado,
-    name
+    name,
   });
 
 const getTasks = () => db.collection("tasks").get();
@@ -58,22 +86,12 @@ window.addEventListener("DOMContentLoaded", async (e) => {
       const task = doc.data();
       task.id = doc.id;
       //console.log(task.id)
-      taskContainer.innerHTML += `<div class="info-admin">${
-        doc.data().nombre
-      }</div>`;
-      taskContainer2.innerHTML += `<div class="info-admin label-apellido">${
-        doc.data().apellido
-      }</div>`;
-      taskContainer3.innerHTML += `<div class="info-fecha-nacimiento">${
-        doc.data().fecha
-      }</div>`;
-      taskContainer4.innerHTML += `<div class="info-admin">${
-        doc.data().email
-      }</div>`;
-      taskContainer5.innerHTML += `<div class="info-admin">${
-        doc.data().UID
-      }</div>`;
-      taskContainer6.innerHTML += `<div class="container container-botones"><button class="boton-borrar boton-delete" data-id="${task.id}">
+      taskContainer.innerHTML += `<div class="info-admin">${doc.data().nombre}</div>`;
+      taskContainer2.innerHTML += `<div class="info-admin label-apellido">${doc.data().apellido}</div>`;
+      taskContainer3.innerHTML += `<div class="info-fecha-nacimiento">${doc.data().fecha}</div>`;
+      taskContainer4.innerHTML += `<div class="info-admin">${doc.data().email}</div>`;
+      taskContainer5.innerHTML += `<div class="info-admin">${doc.data().UID}</div>`;
+      taskContainer6.innerHTML += `<div class="container-botones"><button class="boton-borrar boton-delete" data-id="${task.id}">
       <img src="img/basura.png" height="25" data-id="${task.id}" class="boton-delete" alt="basura"></button></div>`;
 
       const btnsDelete = document.querySelectorAll(".boton-delete");
@@ -89,40 +107,63 @@ window.addEventListener("DOMContentLoaded", async (e) => {
 
 window.addEventListener("DOMContentLoaded", async (e) => {
   onGetTasks((querySnapshot) => {
-    taskProdu.innerHTML = `<h6 class="label-admin">Producto</h6>`;
-    taskProdu2.innerHTML = `<h6 class="label-admin label-apellido">Marca</h6>`;
-    taskProdu3.innerHTML = `<h6 class="label-admin">Valor</h6>`;
-    taskProdu4.innerHTML = `<h6 class="label-admin">ID/T</h6>`;
-    //taskProdu5.innerHTML = `<h6 class="label-admin">UID</h6>`;
-    botones.innerHTML = `<h6 class="label-admin">Botones</h6>`;
-    estados.innerHTML = `<h6 class="label-admin">Estado</h6>`;
-
     querySnapshot.forEach((doc) => {
       const task = doc.data();
-      taskProdu.innerHTML += `<div class="info-admin">${task.producto}</div>`;
-      taskProdu2.innerHTML += `<div class="info-admin">${task.marca}</div>`;
-      taskProdu3.innerHTML += `<div class="info-admin">${task.valor}</div>`;
-      taskProdu4.innerHTML += `<div class="info-admin">${task.idt}</div>`;
-      //taskProdu5.innerHTML += `<div class="info-admin">${task.uid}</div>`;
-      estados.innerHTML += `<div class="info-admin">${task.estado}</div>`;
-      botones.innerHTML += `<div class="container-botones">
-      <button class="boton-borrar botondelete" data-id="${task.id}">
-      <img src="img/basura.png" data-id="${doc.id}" height="25" class="botondelete" alt="basura"></button>
+      task.id=doc.id;
 
-      <button class="boton-borrar btn-edit" data-id="${task.id}">
-      <img src="img/editar.png" data-id="${doc.id}" height="25" class="boton-editar" alt="lapiz"></button>
-      </div>`;
+      
+      t1.innerHTML += `
+    <tbody>
+      <tr>
+        <th scope="row"></th>
+        <td >${task.producto}</td>
+        <td >${task.marca}</td>
+        <td >${task.valor}</td>
+        <td >${task.idt}</td>
+        <td >${task.uid}</td>
+        <td >${task.estado}</td>
+        <td ><div class="container-botones" data-id="MIID">
+        <button class="boton-borrar" botondelete" data-id="${task.id}">
+        <img src="img/basura.png" data-id="${doc.id}" height="25" class="botondelete" alt="basura"></button>
+  
+        <button class="boton-borrar btn-edit" data-id="${task.id}">
+        <img src="img/editar.png" data-id="${doc.id}" height="25" class="boton-editar" alt="lapiz"></button>
+        </div>
+        </td>
 
-      URLd = firebase.storage().ref(task.name).getDownloadURL().then(url =>{
-        console.log(url); 
-      })
+      </tr>
+    </tbody>`;
+    rows = t1.getElementsByTagName('tr')
+    text = 'textContent' in document ? 'textContent' : 'innerText';
+
+    for (var i = 0, len = rows.length; i < len; i++){
+        rows[i].children[0][text] = i ;
+    }
+
+
+      URLd = firebase
+        .storage()
+        .ref(task.name)
+        .getDownloadURL()
+        .then((url) => {
+          console.log(url);
+        });
     });
 
+    const btnsDelete = document.querySelectorAll(".botondelete");   
+    btnsDelete.forEach(btn => {
+      btn.addEventListener("click", async (e)=>{
+        await deleteTask(e.target.dataset.id)
+        location.reload();
+      
+      })
+    })
 
-    const btnsDelete = botones.querySelectorAll(".botondelete");
+
+    /*
     btnsDelete.forEach((btn) =>
       btn.addEventListener("click", async (e) => {
-        console.log(e.target.dataset.id);
+        console.(e.target.dataset.id);
         try {
           await deleteTask(e.target.dataset.id);
         } catch (error) {
@@ -130,8 +171,9 @@ window.addEventListener("DOMContentLoaded", async (e) => {
         }
       })
     );
+    */
 
-    const btnsEdit = botones.querySelectorAll(".btn-edit");
+    const btnsEdit = document.querySelectorAll(".btn-edit");
     btnsEdit.forEach((btn) => {
       btn.addEventListener("click", async (e) => {
         try {
@@ -147,10 +189,13 @@ window.addEventListener("DOMContentLoaded", async (e) => {
           editStatus = true;
           id = doc.id;
           taskForm["btn_todo_form"].innerText = "Update";
+          
         } catch (error) {
           console.log(error);
         }
+        
       });
+      
     });
   });
 });
@@ -180,6 +225,7 @@ taskForm.addEventListener("submit", async (e) => {
         estado.value,
         name
       );
+      
     } else {
       await updateTask(id, {
         producto: producto.value,
@@ -201,9 +247,6 @@ taskForm.addEventListener("submit", async (e) => {
     console.log(error);
   }
 });
-
-
-
 
 
 /*

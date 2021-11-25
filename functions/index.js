@@ -63,7 +63,7 @@ function sendEmail( to, body){
                 </div>
                 <!-- redes -->
                 <div style="width: 100%; margin: 20px 0;text-align: center;">
-                    <a href="https://www.facebook.com/101142124972352/" style="text-decoration: none;">
+                    <a href="https://www.facebook.com/Onetoone.consultingok" style="text-decoration: none;">
                         <img src="https://logodownload.org/wp-content/uploads/2014/09/facebook-logo-5-1.png" alt="logo de facebook"
                             style="width: 25px;border: solid 3px #002A3C;border-radius: 40px;margin: 15px;">
                     </a>
