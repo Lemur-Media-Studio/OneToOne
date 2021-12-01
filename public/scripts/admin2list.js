@@ -26,10 +26,10 @@ auth.onAuthStateChanged(user => {
     const cositas = (data) => {
       data.forEach(doc => {
         const guide = doc.data().uid;
-        console.log(guide)
+      
 
         if (doc.data().uid == user.uid) {
-          console.log(guide);
+          //console.log(guide);
           URLd = firebase.storage().ref(doc.data().name).getDownloadURL().then(url =>{
             console.log(url);
             card.innerHTML += `<div data-aos="zoom-in" class="card mb-3 card-productos shadow p-3 mb-5 bg-body rounded" style="max-width: 1100px;">
@@ -51,7 +51,7 @@ auth.onAuthStateChanged(user => {
               </div>
             </div>
             <div class="col">
-            <a href="tracking.html" target="_blank">Tracking</a>
+            <a href="tracking.html" target="_blank"><img src="https://firebasestorage.googleapis.com/v0/b/inicio-logueo-one.appspot.com/o/d793fd24ed84d3eea5abb390b49fe7f0.png?alt=media&token=382765db-7b69-407e-89c7-950fef62884f" class="img-qr" alt="qr del tracking"></a>
           </div>
           </div>
             </div>`

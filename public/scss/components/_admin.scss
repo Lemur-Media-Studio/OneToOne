@@ -72,7 +72,7 @@
 }
 
 .container-botones {
-    padding-top: 6px !important;
+    padding-top: 5px !important;
 }
 
 /* BOTON ENVIAR/GUARDAR */
@@ -134,4 +134,27 @@
 
 .boton-editar {
     background-color: white !important;
+}
+/* admin productos tabla */
+
+.tabla-admin {
+    background-color: rgba(141, 147, 148, 0.849) !important;
+    border-bottom: solid 3px #3F545B;
+}
+
+.titulo-tabla {
+    font-family: "BentonBlack";
+    font-size: 18px;
+    color: grey !important;
+    background-color: white !important;
+    border: solid 2px $azul !important;
+    text-align: center;
+}
+
+.table {
+    color: white;
+}
+
+.table-bordered {
+    border: white !important;
 }

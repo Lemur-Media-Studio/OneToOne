@@ -690,20 +690,18 @@ progress::-webkit-progress-bar {
 .admin-form {
   font-family: "BentonBook" !important;
   font-size: 18px !important;
-  color: black !important;
   background-color: rgba(141, 147, 148, 0.849) !important;
   margin: 5px;
   border: solid 2px #514E47;
 }
 
 .admin-form::placeholder {
-  color: black;
+  color: white;
 }
 
 .desplegable-admin {
   display: flex;
   justify-content: center;
-  color: #514E47;
 }
 
 .titulo-info-admin {
@@ -825,6 +823,20 @@ progress::-webkit-progress-bar {
 
 .table-bordered {
   border: white !important;
+}
+
+.referencia-admin {
+  position: relative;
+  left: 6px;
+}
+
+.fecha-admin {
+  position: relative;
+  right: 6px;
+}
+
+.color-admin::placeholder {
+  color: white !important;
 }
 
 .modal-header {

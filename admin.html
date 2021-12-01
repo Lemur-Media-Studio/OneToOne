@@ -80,37 +80,37 @@
   <!-- FORM ADMIN -->
   <form id="task-form" class="text-center mt-5">
     <div>
-      <input value = "Producto adquirido" type="text" class="admin-form w-50" id="task-title" placeholder="Producto adquirido">
+      <input type="text" class="admin-form color-admin w-50" id="task-title" placeholder="Producto adquirido">
     </div>
     <div>
-      <input value = "Marca" type="text" class="admin-form w-50" id="task-description" placeholder="Marca">
+      <input type="text" class="admin-form color-admin w-50" id="task-description" placeholder="Marca">
     </div>
     <div>
-      <input value = "Valor" type="text" class="admin-form w-50" id="task-valor" placeholder="Valor">
+      <input type="text" class="admin-form color-admin w-50" id="task-valor" placeholder="Valor">
     </div>
     <div>
-      <input value = "ID tracking" type="text" class="admin-form w-50" id="task-track" placeholder="ID tracking">
-    </div>
-    <div>
-      <input value = "Nota" type="text" class="admin-form w-50" id="task-nota" placeholder="Nota">
+      <input type="text" class="admin-form color-admin w-50" id="task-track" placeholder="ID tracking">
     </div>
     <div class="desplegable-admin">
       <select class="form-select btn-secondary admin-form w-50" id="task-estado" aria-label="select example">
-        <option selected>Ningún estado seleccionado...</option>
-        <option value="En proceso">En proceso</option>
-        <option value="Enviado a USA">Enviado a nuestra oficina de USA</option>
-        <option value="USA: Confirmada">Recepción en oficina de USA confirmada</option>
-        <option value="En camino a Argentina">En camino a Argentina</option>
-        <option value="Buenos Aires">En Buenos Aires</option>
-        <option value="Entregado">Entregado</option>
+        <option class="color-admin" selected>Ningún estado seleccionado...</option>
+        <option class="color-admin" value="En proceso">En proceso</option>
+        <option class="color-admin" value="Enviado a USA">Enviado a nuestra oficina de USA</option>
+        <option class="color-admin" value="USA: Confirmada">Recepción en oficina de USA confirmada</option>
+        <option class="color-admin" value="En camino a Argentina">En camino a Argentina</option>
+        <option class="color-admin" value="Buenos Aires">En Buenos Aires</option>
+        <option class="color-admin" value="Entregado">Entregado</option>
       </select>
-      
     </div>
     <div>
-      <input type="text" class="admin-form w-50" id="task-uid" placeholder="ID usuario">
+      <input type="text" class="admin-form w-50 color-admin" id="task-uid" placeholder="ID usuario">
+    </div>
+    <div>
+      <input type="text" class="admin-form color-admin referencia-admin w-25" id="task-nota" placeholder="Referencia">
+      <input type="date" class="admin-form color-admin fecha-admin w-25" id="task-fecha">
     </div>
     <div class="desplegable-admin mb-3">
-      <input type="file" class="form-control admin-form w-50" id="facturas">
+      <input type="file" class="form-control color-admin admin-form w-50" id="facturas">
     </div>
     <button class="admin-btn-enviar" id='btn_todo_form'>Save</button>
   </form>
@@ -225,13 +225,15 @@
       <hr>
       <tr>
         <th scope="col" class="titulo-tabla">#</th>
+        <th scope="col" class="titulo-tabla">FECHA(DD/MM/AAAA)</th>
         <th scope="col" class="titulo-tabla">PRODUCTO</th>
         <th scope="col" class="titulo-tabla">MARCA</th>
         <th scope="col" class="titulo-tabla">PRECIO</th>
         <th scope="col" class="titulo-tabla">ID/T</th>
         <th scope="col" class="titulo-tabla">UID</th>
         <th scope="col" class="titulo-tabla">ESTADO</th>
-        <th scope="col" class="titulo-tabla">NOTA</th>
+        <th scope="col" class="titulo-tabla">REFERENCIA</th>
+        
         <th scope="col" class="titulo-tabla">BOTONES</th>
       </tr>
     </thead>

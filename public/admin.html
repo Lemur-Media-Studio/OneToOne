@@ -44,6 +44,8 @@
 
   <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-storage.js"></script>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
 
 
 
@@ -78,16 +80,19 @@
   <!-- FORM ADMIN -->
   <form id="task-form" class="text-center mt-5">
     <div>
-      <input type="text" class="admin-form w-50" id="task-title" placeholder="Producto adquirido">
+      <input value = "Producto adquirido" type="text" class="admin-form w-50" id="task-title" placeholder="Producto adquirido">
     </div>
     <div>
-      <input type="text" class="admin-form w-50" id="task-description" placeholder="Marca">
+      <input value = "Marca" type="text" class="admin-form w-50" id="task-description" placeholder="Marca">
     </div>
     <div>
-      <input type="text" class="admin-form w-50" id="task-valor" placeholder="Valor">
+      <input value = "Valor" type="text" class="admin-form w-50" id="task-valor" placeholder="Valor">
     </div>
     <div>
-      <input type="text" class="admin-form w-50" id="task-track" placeholder="ID tracking">
+      <input value = "ID tracking" type="text" class="admin-form w-50" id="task-track" placeholder="ID tracking">
+    </div>
+    <div>
+      <input value = "Nota" type="text" class="admin-form w-50" id="task-nota" placeholder="Nota">
     </div>
     <div class="desplegable-admin">
       <select class="form-select btn-secondary admin-form w-50" id="task-estado" aria-label="select example">
@@ -122,7 +127,7 @@
     <div class="row">
       <!-- USUARIOS  -->
       <div class="admin-border">
-        <h3 class="titulo-info-admin text-start mx-3 mt-3">USUARIOS REGISTRADOS</h3>
+        <h2 class="titulo-info-admin text-start mx-3 mt-3">USUARIOS REGISTRADOS</h2>
         <hr>
         <div class="row">
           <div class="col-2 label-container" id="nom">
@@ -149,13 +154,13 @@
     <!-- FIN USUARIOS  -->
 
     <!-- PRODUCTOS -->
-    <div class="row">
+ <!--    <div class="row">
       <div class="productos-border">
         <h3 class="titulo-info-admin text-start mx-3 mt-3">PRODUCTOS</h3>
         <hr>
 
         <div class="row">
-          <div class="col-2 label-container" id="prod1">
+          <div class="col-3 label-container" id="prod1">
             
           </div>
           <div class="col-2 label-container" id="prod2">
@@ -167,22 +172,21 @@
           <div class="col-2 label-container" id="estado">
             
           </div>
-          <div class="col-1 label-container" id="prod4">
-            
-          </div>
-          <div class="col-2" id="prod5">
-            
+          <div class="col-2" id="prod4">
+      
           </div>
           <div class="col-2" id="cont7">
             
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
 <!-- FIN PRODUCTOS -->
 
+
+
 <!-- TRACKING -->
-<!--   <div class="row">
+<!-- <div class="row">
       <div class="col-12 tracking-border">
         <h3 class="titulo-info-admin text-start mx-3 mt-3">TRACKING</h3>
 
@@ -190,12 +194,12 @@
   
         <div class="row">
           <div class="col-3 label-container" id="">
-            <h6 class="label-admin">Nombre</h6>
+            <h6 class="label-admin">Info adicional</h6>
           </div>
-          <div class="col-3 label-container" id="">
-            <h6 class="label-admin">Marca</h6>
+          <div class="col-3 label-container">
+            <h6 class="label-admin">UID</h6>
           </div>
-          <div class="col-3" id="">
+          <div class="col-3" >
             <h6 class="label-admin">Id tracking</h6>
           </div>
           <div class="col-3" id="">
@@ -203,10 +207,37 @@
           </div>
         </div>
       </div>
-    </div>  -->
-    <!-- FIN TRACKING -->
-  </section>
+    </div>
+  -->
+  </section> 
   <!-- FIN PANEL DE ADMIN -->
+
+  <section class="container-usuarios-productos">
+  <table class="table table-bordered tabla-admin" id="t1">
+    <thead>
+      <div>
+      <h2 class="titulo-info-admin text-start mx-3 mt-3">PRODUCTOS</h2>
+      </div>
+      <div align="right">
+      <input type="text" placeholder="Ingresa algún parámetro..." class="form-control-sm form-control" id="search" style="border-radius:0px;width:280px;">
+      </div>
+      
+      <hr>
+      <tr>
+        <th scope="col" class="titulo-tabla">#</th>
+        <th scope="col" class="titulo-tabla">PRODUCTO</th>
+        <th scope="col" class="titulo-tabla">MARCA</th>
+        <th scope="col" class="titulo-tabla">PRECIO</th>
+        <th scope="col" class="titulo-tabla">ID/T</th>
+        <th scope="col" class="titulo-tabla">UID</th>
+        <th scope="col" class="titulo-tabla">ESTADO</th>
+        <th scope="col" class="titulo-tabla">NOTA</th>
+        <th scope="col" class="titulo-tabla">BOTONES</th>
+      </tr>
+    </thead>
+  </table>
+</section>
+ 
   
 
   <!-- llamo a mi app.js.... dentro esta declarada la funcion del boton "Enviar"
@@ -224,7 +255,11 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"
     integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous">
   </script>
+  
+
+
 
 </body>
 
+</html>
 </html>

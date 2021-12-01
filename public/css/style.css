@@ -129,7 +129,7 @@ header .navbar {
 }
 
 .navbar .navbar-toggler-icon:after {
-  content: "";
+  content: "\f0c9";
   color: #fff;
   font-size: 18px;
   line-height: 26px;
@@ -741,7 +741,7 @@ progress::-webkit-progress-bar {
 }
 
 .container-botones {
-  padding-top: 6px !important;
+  padding-top: 5px !important;
 }
 
 /* BOTON ENVIAR/GUARDAR */
@@ -802,6 +802,29 @@ progress::-webkit-progress-bar {
 
 .boton-editar {
   background-color: white !important;
+}
+
+/* admin productos tabla */
+.tabla-admin {
+  background-color: rgba(141, 147, 148, 0.849) !important;
+  border-bottom: solid 3px #3F545B;
+}
+
+.titulo-tabla {
+  font-family: "BentonBlack";
+  font-size: 18px;
+  color: grey !important;
+  background-color: white !important;
+  border: solid 2px #002A3C !important;
+  text-align: center;
+}
+
+.table {
+  color: white;
+}
+
+.table-bordered {
+  border: white !important;
 }
 
 .modal-header {

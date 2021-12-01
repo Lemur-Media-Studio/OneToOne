@@ -47,7 +47,7 @@ $(document).ready(function(){
 
 });
 
-const saveProduto = (producto, marca, valor, idt, uid, estado, name, nota) =>
+const saveProduto = (producto, marca, valor, idt, uid, estado, name, nota, fecha) =>
   db.collection("tasks").doc().set({
     producto,
     marca,
@@ -56,7 +56,8 @@ const saveProduto = (producto, marca, valor, idt, uid, estado, name, nota) =>
     uid,
     estado,
     name,
-    nota
+    nota,
+    fecha
   });
 
 const getTasks = () => db.collection("tasks").get();
@@ -117,6 +118,7 @@ window.addEventListener("DOMContentLoaded", async (e) => {
     <tbody>
       <tr>
         <th scope="row"></th>
+        <td >${task.fecha}</td>
         <td >${task.producto}</td>
         <td >${task.marca}</td>
         <td >${task.valor}</td>
@@ -124,6 +126,7 @@ window.addEventListener("DOMContentLoaded", async (e) => {
         <td >${task.uid}</td>
         <td >${task.estado}</td>
         <td >${task.nota}</td>
+        
         <td ><div class="container-botones" data-id="MIID">
         <button class="boton-borrar" botondelete" data-id="${task.id}">
         <img src="img/basura.png" data-id="${doc.id}" height="25" class="botondelete" alt="basura"></button>
@@ -188,6 +191,7 @@ window.addEventListener("DOMContentLoaded", async (e) => {
           taskForm["task-uid"].value = task.uid;
           taskForm["task-estado"].value = task.estado;
           taskForm["task-nota"].value = task.nota;
+          taskForm["task-fecha"].value = task.fecha;
 
           editStatus = true;
           id = doc.id;
@@ -213,6 +217,7 @@ taskForm.addEventListener("submit", async (e) => {
   const uid = taskForm["task-uid"];
   const estado = taskForm["task-estado"];
   const nota = taskForm["task-nota"];
+  const fecha = taskForm["task-fecha"];
   console.log(ref);
   const file = document.querySelector("#facturas").files[0];
   const name = file.name;
@@ -228,7 +233,8 @@ taskForm.addEventListener("submit", async (e) => {
         uid.value,
         estado.value,
         name,
-        nota.value
+        nota.value,
+        fecha.value
       );
       
     } else {
@@ -240,7 +246,8 @@ taskForm.addEventListener("submit", async (e) => {
         uid: uid.value,
         estado: estado.value,
         name: name,
-        nota: nota.value
+        nota: nota.value,
+        fecha:fecha.value
       });
 
       editStatus = false;
